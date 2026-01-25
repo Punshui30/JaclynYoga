@@ -21,8 +21,8 @@ export function HeroSection() {
             </div>
 
             {/* 1. Large Centered Logo */}
-            <div className="flex flex-col items-center mb-16 z-10 animate-fade-in flex-grow justify-center">
-                <div className="relative w-64 h-64 md:w-80 md:h-80 mb-12 drop-shadow-2xl animate-float">
+            <div className="flex flex-col items-center mb-16 z-10 flex-grow justify-center">
+                <div className="relative w-64 h-64 md:w-80 md:h-80 mb-12 drop-shadow-2xl animate-zoom-focus">
                     <Image
                         src="/images/logo.png"
                         alt="Jaclyn Muir Hamsa Logo"
