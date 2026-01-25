@@ -65,13 +65,9 @@
   .iridescent-bg {
     background: linear-gradient(135deg,
         rgba(255, 182, 193, 0.08) 0%,
-        /* Soft Pink */
         rgba(255, 255, 224, 0.08) 25%,
-        /* Soft Yellow */
         rgba(176, 224, 230, 0.08) 50%,
-        /* Powder Blue */
         rgba(152, 251, 152, 0.08) 75%,
-        /* Pale Green */
         rgba(255, 182, 193, 0.08) 100%);
     background-size: 400% 400%;
     animation: iridescent 20s ease infinite;
@@ -89,5 +85,23 @@
     100% {
       background-position: 0% 50%;
     }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
 }
