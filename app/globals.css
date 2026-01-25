@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --background: 38 44% 98%;
+  --foreground: 0 0% 18%;
+
+  --card: 38 44% 98%;
+  --card-foreground: 0 0% 18%;
+
+  --popover: 38 44% 98%;
+  --popover-foreground: 0 0% 18%;
+
+  --primary: 0 0% 18%;
+  --primary-foreground: 38 44% 98%;
+
+  --secondary: 0 0% 44%;
+  --secondary-foreground: 38 44% 98%;
+
+  --muted: 38 20% 90%;
+  --muted-foreground: 0 0% 44%;
+
+  --accent: 80 19% 60%;
+  --accent-foreground: 0 0% 18%;
+
+  --gold: 46 65% 52%;
+  --sage: 80 19% 60%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 38 44% 98%;
+
+  --border: 0 0% 88%;
+  --input: 0 0% 88%;
+  --ring: 80 19% 60%;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-medium tracking-tight text-primary;
+  }
+}
+
+@layer utilities {
+  .iridescent-bg {
+    background: linear-gradient(135deg,
+        rgba(163, 177, 138, 0.05) 0%,
+        rgba(212, 175, 55, 0.05) 50%,
+        rgba(163, 177, 138, 0.05) 100%);
+    background-size: 200% 200%;
+    animation: iridescent 15s ease infinite;
+  }
+
+  @keyframes iridescent {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
