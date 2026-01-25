@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 import { MousePointer2, Users, User, Sparkles } from 'lucide-react';
 
 const services = [
@@ -7,24 +8,32 @@ const services = [
         description: 'Mindful movement and breathwork in a supportive group environment. Suitable for all levels, including gentle and chair yoga.',
         icon: Users,
         href: '/services#yoga-classes',
+        color: 'text-pink-400',
+        bg: 'bg-pink-50',
     },
     {
         title: 'Yoga Therapy',
         description: 'A clinical, personalized approach using yoga techniques to address specific physical, emotional, or physiological concerns.',
-        icon: BadgeCheck, // I'll use a better one or just BadgeCheck if I can import it
+        icon: BadgeCheck,
         href: '/services#yoga-therapy',
+        color: 'text-amber-400',
+        bg: 'bg-amber-50',
     },
     {
         title: 'Private Sessions',
         description: 'One-on-one tailored practice focusing on your unique goals, whether it is strength, flexibility, or mental clarity.',
         icon: User,
         href: '/services#private-sessions',
+        color: 'text-blue-400',
+        bg: 'bg-blue-50',
     },
     {
         title: 'Reiki',
         description: 'Gentle energy-based relaxation and nervous system support to restore balance and calm to the body and mind.',
         icon: Sparkles,
         href: '/services#reiki',
+        color: 'text-emerald-400',
+        bg: 'bg-emerald-50',
     },
 ];
 
@@ -58,10 +67,10 @@ export function ServicesGrid() {
                             href={service.href}
                             className="group bg-background p-10 rounded-sm border border-border/40 hover:border-accent/40 shadow-sm hover:shadow-xl transition-all duration-500 h-full flex flex-col"
                         >
-                            <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-background transition-colors duration-500">
-                                <service.icon size={24} />
+                            <div className={cn("w-14 h-14 rounded-full flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110", service.bg, service.color)}>
+                                <service.icon size={28} />
                             </div>
-                            <h4 className="text-2xl font-serif text-primary mb-6 transition-colors duration-500 group-hover:text-accent">
+                            <h4 className="text-2xl font-serif text-primary mb-6 transition-colors duration-500 group-hover:text-amber-500">
                                 {service.title}
                             </h4>
                             <p className="text-secondary leading-relaxed mb-8 flex-grow">
