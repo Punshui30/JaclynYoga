@@ -102,11 +102,14 @@
   }
 
   .iridescent-text {
-    background: linear-gradient(90deg, #ffb6c1, #ffff66, #b0e0e6, #98fb98, #ffb6c1);
+    background: linear-gradient(90deg, #d48c97, #bca21e, #5f9ea0, #55a655, #d48c97);
     background-size: 200% auto;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: iridescentShift 5s linear infinite;
+    font-weight: 600;
+    /* Added slight weight to help with visibility */
   }
 
   .liquid-button {
