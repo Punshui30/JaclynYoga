@@ -32,16 +32,21 @@ export function Navbar() {
                             key={link.href}
                             href={link.href}
                             className={cn(
-                                "text-[10px] uppercase tracking-[0.3em] transition-all duration-300 hover:text-accent hover:tracking-[0.4em]",
+                                "relative text-[10px] uppercase tracking-[0.3em] transition-all duration-300 hover:text-accent pb-1 group",
                                 pathname === link.href ? "text-accent font-semibold" : "text-secondary font-medium"
                             )}
                         >
                             {link.name}
+                            {/* Iridescent Underline */}
+                            <span className={cn(
+                                "absolute bottom-0 left-0 w-full h-[1.5px] bg-gradient-to-r from-pink-200 via-blue-200 to-green-200 transform origin-left transition-transform duration-500",
+                                pathname === link.href ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                            )} />
                         </Link>
                     ))}
                     <Link
                         href="/booking"
-                        className="px-5 py-2 bg-primary text-primary-foreground text-[10px] uppercase tracking-[0.2em] hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-sm"
+                        className="px-5 py-2 bg-primary text-primary-foreground text-[10px] uppercase tracking-[0.2em] hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-sm liquid-button"
                     >
                         Book
                     </Link>

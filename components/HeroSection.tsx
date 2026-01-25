@@ -43,13 +43,13 @@ export function HeroSection() {
                 <div className="flex flex-col sm:flex-row gap-8 justify-center">
                     <Link
                         href="/booking"
-                        className="px-12 py-5 bg-primary text-primary-foreground text-sm uppercase tracking-[0.2em] hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-sm shadow-lg transform hover:-translate-y-1"
+                        className="px-12 py-5 bg-primary text-primary-foreground text-sm uppercase tracking-[0.2em] hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-sm shadow-lg transform hover:-translate-y-1 liquid-button"
                     >
                         Book a Session
                     </Link>
                     <Link
                         href="/services"
-                        className="px-12 py-5 border border-primary text-primary text-sm uppercase tracking-[0.2em] hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-sm hover:-translate-y-1"
+                        className="px-12 py-5 border border-primary text-primary text-sm uppercase tracking-[0.2em] hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-sm hover:-translate-y-1 liquid-button"
                     >
                         Explore Services
                     </Link>

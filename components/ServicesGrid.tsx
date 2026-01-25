@@ -41,14 +41,14 @@ import { BadgeCheck } from 'lucide-react';
 
 export function ServicesGrid() {
     return (
-        <section className="py-24 bg-muted/30 px-6">
+        <section className="py-24 bg-muted/30 px-6 iridescent-border">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
                     <div className="max-w-2xl">
                         <h3 className="text-sm uppercase tracking-[0.3em] text-accent font-medium mb-6">Our Services</h3>
                         <h2 className="text-5xl font-serif text-primary leading-tight">
                             Holistic paths to <br />
-                            <span className="italic text-accent">well-being & resilience</span>
+                            <span className="italic iridescent-text">well-being & resilience</span>
                         </h2>
                     </div>
                     <Link

@@ -4,7 +4,7 @@ import { BadgeCheck } from 'lucide-react';
 
 export function AboutSection() {
     return (
-        <section className="py-24 bg-background px-6 relative overflow-hidden">
+        <section className="py-24 bg-background px-6 relative overflow-hidden iridescent-border">
             {/* Brand Watermark in About section */}
             <div className="absolute left-0 bottom-0 w-80 h-80 opacity-[0.015] -z-10 -translate-x-1/4 translate-y-1/4 rotate-12">
                 <Image
@@ -20,7 +20,7 @@ export function AboutSection() {
                     <div className="bg-muted p-8 md:p-12 lg:p-16 rounded-sm border border-border/40">
                         <h2 className="text-4xl font-serif text-primary mb-8 leading-tight">
                             Creating space for <br />
-                            <span className="italic text-accent">authentic healing & connection</span>
+                            <span className="italic iridescent-text">authentic healing & connection</span>
                         </h2>
                         <div className="space-y-6 text-lg text-secondary leading-relaxed">
                             <p>
