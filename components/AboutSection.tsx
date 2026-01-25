@@ -1,19 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { BadgeCheck } from 'lucide-react';
+import { AbstractMotif } from './AbstractMotif';
 
 export function AboutSection() {
     return (
         <section className="py-24 bg-background px-6 relative overflow-hidden iridescent-border">
-            {/* Brand Watermark in About section */}
-            <div className="absolute left-0 bottom-0 w-80 h-80 opacity-[0.015] -z-10 -translate-x-1/4 translate-y-1/4 rotate-12">
-                <Image
-                    src="/images/logo.png"
-                    alt=""
-                    fill
-                    className="object-contain"
-                />
-            </div>
+            {/* Bespoke Abstract Motif */}
+            <AbstractMotif className="absolute -left-20 top-0 w-[600px] h-[600px] opacity-10 rotate-12" />
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="relative group">
                     <div className="absolute inset-0 bg-accent/5 rounded-sm transform lg:translate-x-4 lg:translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500" />

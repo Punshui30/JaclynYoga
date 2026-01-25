@@ -2,27 +2,21 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { AbstractMotif } from './AbstractMotif';
 
 export function HeroSection() {
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-start pt-12 overflow-hidden">
-            {/* Iridescent background effect - more vibrant now */}
-            <div className="absolute inset-0 iridescent-bg opacity-40 -z-10" />
+        <section className="relative min-h-screen flex flex-col items-center justify-center pt-12 overflow-hidden bg-[#faf9f6]">
+            {/* Iridescent background effect */}
+            <div className="absolute inset-0 iridescent-bg opacity-30 -z-10" />
 
-            {/* Brand Watermark - keeping it but making it more central/subtle */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.02] -z-10 pointer-events-none">
-                <Image
-                    src="/images/logo.png"
-                    alt=""
-                    fill
-                    className="object-contain"
-                    priority
-                />
-            </div>
+            {/* Bespoke Abstract Motif - Offset and organic */}
+            <AbstractMotif className="absolute -right-40 -top-20 w-[800px] h-[800px] blur-[2px]" />
+            <AbstractMotif className="absolute -left-60 -bottom-40 w-[1000px] h-[1000px] opacity-20 blur-[1px] rotate-45" />
 
-            {/* 1. Large Centered Logo */}
-            <div className="flex flex-col items-center mb-16 z-10 flex-grow justify-center">
-                <div className="relative w-64 h-64 md:w-80 md:h-80 mb-12 drop-shadow-2xl animate-zoom-focus">
+            {/* 1. Large Editorial Logo & Brand Title */}
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-24 px-6 max-w-7xl w-full translate-y-[-5%]">
+                <div className="relative w-72 h-72 md:w-96 md:h-96 drop-shadow-[0_20px_50px_rgba(0,0,0,0.05)] animate-zoom-focus">
                     <Image
                         src="/images/logo.png"
                         alt="Jaclyn Muir Hamsa Logo"
@@ -31,35 +25,37 @@ export function HeroSection() {
                         priority
                     />
                 </div>
-                <h1 className="text-5xl md:text-7xl font-serif text-primary tracking-[0.3em] uppercase text-center mb-6">
-                    Jaclyn Muir
-                </h1>
-                <div className="h-[1px] w-32 bg-accent/40 mb-12" />
 
-                <h2 className="text-2xl md:text-3xl font-serif text-secondary italic mb-16 leading-relaxed text-center px-6">
-                    Yoga Therapy • Mindful Movement • Energy Healing
-                </h2>
+                <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                    <h1 className="text-6xl md:text-8xl font-serif text-primary tracking-[0.1em] uppercase mb-4">
+                        Jaclyn <br className="hidden md:block" /> Muir
+                    </h1>
+                    <div className="h-[2px] w-32 bg-accent/30 mb-8" />
 
-                <div className="flex flex-col sm:flex-row gap-8 justify-center">
-                    <Link
-                        href="/booking"
-                        className="px-12 py-5 bg-primary text-primary-foreground text-sm uppercase tracking-[0.2em] hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-sm shadow-lg transform hover:-translate-y-1 liquid-button"
-                    >
-                        Book a Session
-                    </Link>
-                    <Link
-                        href="/services"
-                        className="px-12 py-5 border border-primary text-primary text-sm uppercase tracking-[0.2em] hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-sm hover:-translate-y-1 liquid-button"
-                    >
-                        Explore Services
-                    </Link>
+                    <h2 className="text-xl md:text-2xl font-serif text-secondary italic mb-12 max-w-lg leading-relaxed">
+                        Yoga Therapy • Mindful Movement <br />
+                        Energy Healing • Holistic Awareness
+                    </h2>
+
+                    <div className="flex flex-col sm:flex-row gap-6">
+                        <Link
+                            href="/booking"
+                            className="px-12 py-5 bg-primary text-primary-foreground text-[10px] uppercase tracking-[0.3em] hover:bg-accent hover:text-accent-foreground transition-all duration-500 rounded-sm shadow-xl liquid-button"
+                        >
+                            Book a Session
+                        </Link>
+                        <Link
+                            href="/services"
+                            className="px-12 py-5 border border-primary/20 text-primary text-[10px] uppercase tracking-[0.3em] hover:bg-primary hover:text-primary-foreground transition-all duration-500 rounded-sm liquid-button"
+                        >
+                            The Journey
+                        </Link>
+                    </div>
                 </div>
             </div>
 
-            {/* Hero Image Removed */}
-
             {/* Breathe • Move • Heal Indicator */}
-            <div className="pb-16 flex items-center gap-6 text-[11px] uppercase tracking-[0.6em] text-accent font-medium mt-auto">
+            <div className="absolute bottom-16 flex items-center gap-6 text-[11px] uppercase tracking-[0.6em] text-accent font-medium">
                 <div className="h-[1px] w-16 bg-accent/40" />
                 Breathe • Move • Heal
                 <div className="h-[1px] w-16 bg-accent/40" />

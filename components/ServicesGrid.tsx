@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import { MousePointer2, Users, User, Sparkles } from 'lucide-react';
+import { MousePointer2, Users, User, Sparkles, BadgeCheck } from 'lucide-react';
+import { AbstractMotif } from './AbstractMotif';
 
 const services = [
     {
@@ -37,12 +40,13 @@ const services = [
     },
 ];
 
-import { BadgeCheck } from 'lucide-react';
-
 export function ServicesGrid() {
     return (
-        <section className="py-24 bg-muted/30 px-6 iridescent-border">
-            <div className="max-w-7xl mx-auto">
+        <section className="py-24 bg-muted/30 px-6 iridescent-border relative overflow-hidden">
+            {/* Bespoke Abstract Motif */}
+            <AbstractMotif className="absolute -right-20 -bottom-20 w-[700px] h-[700px] opacity-10" />
+
+            <div className="max-w-7xl mx-auto relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
                     <div className="max-w-2xl">
                         <h3 className="text-sm uppercase tracking-[0.3em] text-accent font-medium mb-6">Our Services</h3>
