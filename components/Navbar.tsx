@@ -11,6 +11,8 @@ const navLinks = [
     { name: 'Booking', href: '/booking' },
 ];
 
+import Image from 'next/image';
+
 export function Navbar() {
     const pathname = usePathname();
 
@@ -19,9 +21,17 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <Link
                     href="/"
-                    className="text-2xl font-serif text-primary hover:text-accent transition-colors duration-300"
+                    className="flex items-center gap-4 text-2xl font-serif text-primary hover:text-accent transition-colors duration-300"
                 >
-                    Jaclyn Muir
+                    <div className="relative w-12 h-12">
+                        <Image
+                            src="/images/logo.png"
+                            alt="Jaclyn Muir Hamsa Logo"
+                            fill
+                            className="object-contain"
+                        />
+                    </div>
+                    <span className="hidden sm:block">Jaclyn Muir</span>
                 </Link>
 
                 <div className="hidden md:flex items-center gap-8">

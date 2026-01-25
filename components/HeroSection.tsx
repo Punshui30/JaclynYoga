@@ -9,6 +9,16 @@ export function HeroSection() {
             {/* Iridescent background effect */}
             <div className="absolute inset-0 iridescent-bg opacity-30 -z-10" />
 
+            {/* Brand Watermark */}
+            <div className="absolute -right-20 -top-20 w-[600px] h-[600px] opacity-[0.03] -z-10 pointer-events-none">
+                <Image
+                    src="/images/logo.png"
+                    alt=""
+                    fill
+                    className="object-contain"
+                />
+            </div>
+
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="z-10 order-2 lg:order-1">
                     <h1 className="text-5xl md:text-7xl font-serif text-primary mb-6 leading-[1.1]">
