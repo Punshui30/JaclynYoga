@@ -47,8 +47,18 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
             video.addEventListener('loadedmetadata', startReversePlayback);
         }
 
+        // Safety timeout in case video loading fails or reverse playback is slow
+        const safetyTimeout = setTimeout(() => {
+            if (isVisible) {
+                console.log('Splash screen safety timeout triggered');
+                setIsVisible(false);
+                onComplete();
+            }
+        }, 5000);
+
         return () => {
             video.removeEventListener('loadedmetadata', startReversePlayback);
+            clearTimeout(safetyTimeout);
         };
     }, [onComplete]);
 
@@ -59,14 +69,14 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: 'easeInOut' }}
-                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-black"
+                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-background"
                 >
                     <video
                         ref={videoRef}
                         src="/assets/yoga-animation.mp4"
                         muted
                         playsInline
-                        className="w-full h-full object-contain max-w-4xl mx-auto"
+                        className="w-full h-full object-contain max-w-4xl mx-auto opacity-90 mix-blend-multiply"
                     />
                 </motion.div>
             )}
