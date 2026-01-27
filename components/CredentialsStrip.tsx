@@ -16,7 +16,7 @@ export function CredentialsStrip() {
                 <div className="flex flex-wrap justify-center md:justify-end gap-x-12 gap-y-6">
                     {credentials.map((cred) => (
                         <div key={cred} className="flex items-center gap-3">
-                            <div className="w-1.5 h-1.5 bg-accent rounded-full" />
+                            <div className="w-1.5 h-1.5 bg-accent rounded-none" />
                             <span className="text-primary-foreground font-serif text-lg tracking-wide italic">
                                 {cred}
                             </span>

@@ -106,7 +106,7 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Reiki */}
-                    <div id="reiki" className="bg-muted p-12 md:p-20 rounded-sm border border-border/40 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div id="reiki" className="bg-muted/30 p-12 md:p-20 border border-border/40 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div>
                             <h3 className="text-sm uppercase tracking-[0.3em] text-accent font-medium mb-8">Energy Healing</h3>
                             <h2 className="text-4xl font-serif text-primary mb-8 leading-tight">Reiki <br /><span className="italic text-accent">Restorative Care</span></h2>
@@ -116,16 +116,16 @@ export default function ServicesPage() {
                             <p className="text-secondary leading-relaxed mb-10 italic">
                                 Sessions provide a safe container for nervous system support, helping to reduce stress and promote a profound sense of inner calm.
                             </p>
-                            <div className="inline-flex items-center gap-3 text-gold">
-                                <div className="w-2 h-2 bg-gold rounded-full" />
+                            <div className="inline-flex items-center gap-3 text-sage">
+                                <div className="w-2 h-2 bg-sage rounded-none" />
                                 <span className="text-xs uppercase tracking-widest font-semibold">Nervous System Support</span>
                             </div>
                         </div>
 
                         <div className="relative">
-                            <div className="aspect-square bg-white shadow-xl rounded-sm p-12 flex flex-col justify-center items-center text-center">
-                                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center text-accent mb-8">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20" /><path d="m4.93 4.93 14.14 14.14" /><path d="M2 12h20" /><path d="m4.93 19.07 14.14-14.14" /></svg>
+                            <div className="aspect-square bg-white shadow-md p-12 flex flex-col justify-center items-center text-center border border-border/40">
+                                <div className="w-16 h-16 bg-accent/10 flex items-center justify-center text-accent mb-8">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="square" strokeLinejoin="miter"><path d="M12 2v20" /><path d="m4.93 4.93 14.14 14.14" /><path d="M2 12h20" /><path d="m4.93 19.07 14.14-14.14" /></svg>
                                 </div>
                                 <h4 className="text-2xl font-serif text-primary mb-4">Reiki Session</h4>
                                 <p className="text-secondary text-sm mb-8 leading-relaxed">
@@ -133,7 +133,7 @@ export default function ServicesPage() {
                                 </p>
                                 <div className="text-accent font-serif text-3xl italic">60 Minutes</div>
                             </div>
-                            <div className="absolute -z-10 -bottom-10 -right-10 w-40 h-40 iridescent-bg rounded-full blur-2xl opacity-40" />
+                            <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full border border-accent/20" />
                         </div>
                     </div>
                 </div>

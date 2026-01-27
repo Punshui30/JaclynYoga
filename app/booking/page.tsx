@@ -16,7 +16,7 @@ export default function BookingPage() {
             <section className="py-24 px-6 bg-background">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-20">
                     <div className="lg:col-span-2">
-                        <div className="bg-white rounded-sm border border-border/40 overflow-hidden shadow-sm h-[800px]">
+                        <div className="bg-white rounded-none border border-border/40 overflow-hidden shadow-sm h-[800px]">
                             <iframe
                                 src="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
                                 className="w-full h-full border-0"
@@ -37,7 +37,7 @@ export default function BookingPage() {
                                     <input
                                         type="text"
                                         id="name"
-                                        className="w-full bg-muted/30 border border-border/40 p-4 rounded-sm focus:outline-none focus:border-accent transition-colors"
+                                        className="w-full bg-muted/30 border border-border/40 p-4 rounded-none focus:outline-none focus:border-accent transition-colors"
                                         placeholder="Your Name"
                                     />
                                 </div>
@@ -46,7 +46,7 @@ export default function BookingPage() {
                                     <input
                                         type="email"
                                         id="email"
-                                        className="w-full bg-muted/30 border border-border/40 p-4 rounded-sm focus:outline-none focus:border-accent transition-colors"
+                                        className="w-full bg-muted/30 border border-border/40 p-4 rounded-none focus:outline-none focus:border-accent transition-colors"
                                         placeholder="hello@example.com"
                                     />
                                 </div>
@@ -55,13 +55,13 @@ export default function BookingPage() {
                                     <textarea
                                         id="message"
                                         rows={6}
-                                        className="w-full bg-muted/30 border border-border/40 p-4 rounded-sm focus:outline-none focus:border-accent transition-colors resize-none"
+                                        className="w-full bg-muted/30 border border-border/40 p-4 rounded-none focus:outline-none focus:border-accent transition-colors resize-none"
                                         placeholder="How can Jaclyn help you?"
                                     />
                                 </div>
                                 <button
                                     type="submit"
-                                    className="w-full py-4 bg-primary text-primary-foreground text-sm uppercase tracking-widest hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-sm"
+                                    className="w-full py-4 bg-primary text-primary-foreground text-sm uppercase tracking-widest hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-none border border-transparent hover:border-accent"
                                 >
                                     Send Inquiry
                                 </button>

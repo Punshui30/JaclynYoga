@@ -15,29 +15,29 @@ export function AbstractMotif({ className }: { className?: string }) {
                 <motion.path
                     d="M100 400C100 234.315 234.315 100 400 100C565.685 100 700 234.315 700 400C700 565.685 565.685 700 400 700"
                     stroke="url(#motif-gradient)"
-                    strokeWidth="0.5"
+                    strokeWidth="0.25"
                     initial={{ pathLength: 0, opacity: 0 }}
                     animate={{ pathLength: 1, opacity: 1 }}
-                    transition={{ duration: 3, ease: "easeInOut" }}
+                    transition={{ duration: 4, ease: "easeInOut" }}
                 />
 
                 <motion.path
                     d="M200 400C200 289.543 289.543 200 400 200C510.457 200 600 289.543 600 400C600 510.457 510.457 600 400 600C289.543 600 200 510.457 200 400Z"
                     stroke="url(#motif-gradient)"
-                    strokeWidth="0.5"
-                    strokeDasharray="4 4"
+                    strokeWidth="0.25"
+                    strokeDasharray="2 6"
                     initial={{ rotate: 0 }}
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
                 />
 
                 <motion.path
                     d="M400 50C100 50 50 400 400 750C750 400 700 50 400 50Z"
                     stroke="url(#motif-gradient-2)"
-                    strokeWidth="0.5"
+                    strokeWidth="0.25"
                     initial={{ pathLength: 0 }}
                     animate={{ pathLength: 1 }}
-                    transition={{ duration: 4, delay: 1, ease: "easeInOut" }}
+                    transition={{ duration: 5, delay: 1, ease: "easeInOut" }}
                 />
 
                 {/* Floating Organic Clusters */}
@@ -46,23 +46,23 @@ export function AbstractMotif({ className }: { className?: string }) {
                         key={i}
                         cx={400 + Math.sin(i) * 200}
                         cy={400 + Math.cos(i) * 200}
-                        r={10 + i * 5}
+                        r={5 + i * 2}
                         fill="url(#motif-gradient)"
                         initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 0.1, scale: 1 }}
+                        animate={{ opacity: 0.05, scale: 1 }}
                         transition={{ delay: 2 + i * 0.5, duration: 2 }}
                     />
                 ))}
 
                 <defs>
                     <linearGradient id="motif-gradient" x1="0" y1="0" x2="800" y2="800" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#ffb6c1" />
-                        <stop offset="0.5" stopColor="#b0e0e6" />
-                        <stop offset="1" stopColor="#98fb98" />
+                        <stop stopColor="hsl(var(--sage))" stopOpacity="0.4" />
+                        <stop offset="0.5" stopColor="hsl(var(--secondary))" stopOpacity="0.2" />
+                        <stop offset="1" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
                     </linearGradient>
                     <linearGradient id="motif-gradient-2" x1="800" y1="0" x2="0" y2="800" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#ffff66" stopOpacity="0.5" />
-                        <stop offset="1" stopColor="#ffb6c1" stopOpacity="0.5" />
+                        <stop stopColor="hsl(var(--accent))" stopOpacity="0.3" />
+                        <stop offset="1" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
                     </linearGradient>
                 </defs>
             </svg>

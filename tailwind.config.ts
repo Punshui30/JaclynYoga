@@ -33,7 +33,7 @@ const config: Config = {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
-        gold: 'hsl(var(--gold))',
+        charcoal: 'hsl(var(--charcoal))',
         sage: 'hsl(var(--sage))',
         card: {
           DEFAULT: 'hsl(var(--card))',

@@ -42,17 +42,14 @@ const services = [
 
 export function ServicesGrid() {
     return (
-        <section className="py-24 bg-muted/30 px-6 iridescent-border relative overflow-hidden">
-            {/* Bespoke Abstract Motif */}
-            <AbstractMotif className="absolute -right-20 -bottom-20 w-[700px] h-[700px] opacity-10" />
-
+        <section className="py-24 bg-muted/40 px-6 relative overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
                     <div className="max-w-2xl">
                         <h3 className="text-sm uppercase tracking-[0.3em] text-accent font-medium mb-6">Our Services</h3>
                         <h2 className="text-5xl font-serif text-primary leading-tight">
                             Holistic paths to <br />
-                            <span className="italic iridescent-text">well-being & resilience</span>
+                            <span className="italic text-accent">well-being & resilience</span>
                         </h2>
                     </div>
                     <Link
@@ -69,15 +66,15 @@ export function ServicesGrid() {
                         <Link
                             key={service.title}
                             href={service.href}
-                            className="group bg-background p-10 rounded-sm border border-border/40 hover:border-accent/40 shadow-sm hover:shadow-xl transition-all duration-500 h-full flex flex-col"
+                            className="group bg-background p-10 border border-border/40 hover:border-accent shadow-sm hover:shadow-md transition-all duration-500 h-full flex flex-col farmhouse-border"
                         >
-                            <div className={cn("w-14 h-14 rounded-full flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110", service.bg, service.color)}>
-                                <service.icon size={28} />
+                            <div className={cn("w-14 h-14 flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-105 bg-muted rounded-none", service.color)}>
+                                <service.icon size={28} className="text-primary opacity-80" />
                             </div>
-                            <h4 className="text-2xl font-serif text-primary mb-6 transition-colors duration-500 group-hover:text-amber-500">
+                            <h4 className="text-2xl font-serif text-primary mb-6 transition-colors duration-500 group-hover:text-accent">
                                 {service.title}
                             </h4>
-                            <p className="text-secondary leading-relaxed mb-8 flex-grow">
+                            <p className="text-secondary leading-relaxed mb-8 flex-grow font-light">
                                 {service.description}
                             </p>
                             <div className="text-xs uppercase tracking-widest text-primary font-medium inline-flex items-center gap-2">
