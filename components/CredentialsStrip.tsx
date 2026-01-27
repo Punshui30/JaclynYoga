@@ -1,3 +1,5 @@
+import { WoodGrain } from './WoodGrain';
+
 export function CredentialsStrip() {
     const credentials = [
         'MS in Yoga Therapy',
@@ -7,7 +9,11 @@ export function CredentialsStrip() {
     ];
 
     return (
-        <section className="py-12 bg-primary px-6 overflow-hidden">
+        <section className="py-12 bg-primary px-6 overflow-hidden relative">
+            {/* Ash Wood Grain Background Texture */}
+            <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
+                <WoodGrain className="w-full h-full text-white" />
+            </div>
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 text-center md:text-left">
                 <h3 className="text-secondary tracking-[0.2em] uppercase text-xs font-semibold">
                     Clinical Excellence & <br className="hidden md:block" /> Certified Training

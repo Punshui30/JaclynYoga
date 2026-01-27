@@ -9,10 +9,17 @@ const footerLinks = [
     { name: 'Terms', href: '/terms' },
 ];
 
+import { WoodGrain } from './WoodGrain';
+
 export function Footer() {
     return (
         <footer className="bg-background py-24 px-6 border-t border-border/60 relative overflow-hidden">
-            {/* Subtle brand watermark in footer - removed opacity/blur for cleaner look */}
+            {/* Ash Wood Grain Background Texture */}
+            <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+                <WoodGrain className="w-full h-full text-secondary/40" />
+            </div>
+
+            {/* Subtle brand watermark in footer */}
             <div className="absolute right-0 bottom-0 w-96 h-96 opacity-[0.03] -z-10 translate-x-1/4 translate-y-1/4 grayscale">
                 <Image
                     src="/images/logo.png"

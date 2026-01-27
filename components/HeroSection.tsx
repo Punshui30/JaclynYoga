@@ -4,14 +4,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AbstractMotif } from './AbstractMotif';
 
+import { WoodGrain } from './WoodGrain';
+
 export function HeroSection() {
     return (
         <section className="relative min-h-[90vh] flex flex-col justify-center bg-background px-6 py-24">
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-0 border border-border/40 min-h-[600px] shadow-sm">
                 {/* Left: Content Side - Architecture & Space */}
-                <div className="flex flex-col items-center justify-between p-12 lg:p-16 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40 overflow-hidden min-h-[650px] lg:min-h-[750px]">
-                    {/* Spacer */}
-                    <div className="hidden lg:block opacity-0 h-4">spacer</div>
+                <div className="flex flex-col items-center justify-between p-12 lg:p-16 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40 overflow-hidden min-h-[650px] lg:min-h-[750px] group">
+                    {/* Ash Wood Grain Background Texture */}
+                    <div className="absolute inset-0 z-0 opacity-40 pointer-events-none overflow-hidden">
+                        <WoodGrain className="w-full h-full text-secondary/30" />
+                    </div>
+
+                    <div className="hidden lg:block opacity-0 h-4 relative z-10">spacer</div>
 
                     {/* Primary Hamsa Logo - Contained & Filling Space */}
                     <div className="relative w-full max-w-md lg:max-w-xl aspect-square z-20 transition-all duration-700">
