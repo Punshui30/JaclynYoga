@@ -10,12 +10,14 @@ export function HeroSection() {
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-0 border border-border/40 min-h-[600px] shadow-sm">
                 {/* Left: Content Side - Architecture & Space */}
                 <div className="flex flex-col justify-center p-12 lg:p-20 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40">
-                    <div className="relative w-24 h-24 mb-12 opacity-90">
+                    {/* Logo - Made bigger and tinted Sage Green via filter */}
+                    <div className="relative w-32 h-32 mb-10 opacity-90">
                         <Image
                             src="/images/logo.png"
                             alt="Jaclyn Muir Hamsa Logo"
                             fill
-                            className="object-contain grayscale"
+                            className="object-contain"
+                            style={{ filter: 'brightness(0) saturate(100%) invert(32%) sepia(18%) saturate(735%) hue-rotate(65deg) brightness(96%) contrast(88%)' }}
                             priority
                         />
                     </div>
