@@ -54,7 +54,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
                 setIsVisible(false);
                 onComplete();
             }
-        }, 5000);
+        }, 3000);
 
         return () => {
             video.removeEventListener('loadedmetadata', startReversePlayback);
@@ -71,12 +71,26 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
                     transition={{ duration: 0.8, ease: 'easeInOut' }}
                     className="fixed inset-0 z-[9999] flex items-center justify-center bg-background"
                 >
+                    {/* Branding Placeholder to prevent "blank white screen" while video loads */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 0.1, scale: 1 }}
+                        transition={{ duration: 1 }}
+                        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                    >
+                        <img
+                            src="/images/logo.png"
+                            alt=""
+                            className="w-64 h-64 object-contain grayscale"
+                        />
+                    </motion.div>
+
                     <video
                         ref={videoRef}
                         src="/assets/yoga-animation.mp4"
                         muted
                         playsInline
-                        className="w-full h-full object-contain max-w-4xl mx-auto opacity-90 mix-blend-multiply"
+                        className="w-full h-full object-contain max-w-4xl mx-auto opacity-90 mix-blend-multiply relative z-10"
                     />
                 </motion.div>
             )}
