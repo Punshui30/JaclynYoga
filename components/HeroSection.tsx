@@ -9,16 +9,21 @@ export function HeroSection() {
         <section className="relative min-h-[90vh] flex flex-col justify-center bg-background px-6 py-24">
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-0 border border-border/40 min-h-[600px] shadow-sm">
                 {/* Left: Content Side - Architecture & Space */}
-                <div className="flex flex-col justify-center p-12 lg:p-20 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40">
-                    {/* Logo - Made bigger and tinted Sage Green via filter */}
-                    <div className="relative w-32 h-32 mb-10 opacity-90">
-                        <Image
-                            src="/images/logo.png"
-                            alt="Jaclyn Muir Hamsa Logo"
-                            fill
-                            className="object-contain"
-                            style={{ filter: 'brightness(0) saturate(100%) invert(32%) sepia(18%) saturate(735%) hue-rotate(65deg) brightness(96%) contrast(88%)' }}
-                            priority
+                <div className="flex flex-col justify-center p-12 lg:p-20 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40 overflow-hidden">
+                    {/* Logo - 4x Bigger with Gradated Sage Fill via CSS Mask */}
+                    <div className="relative w-full max-w-[500px] aspect-square mb-[-60px] -ml-12 opacity-90">
+                        <div
+                            className="absolute inset-0 bg-gradient-to-br from-[hsl(90,20%,45%)] to-[hsl(90,20%,30%)]"
+                            style={{
+                                maskImage: 'url(/images/logo.png)',
+                                maskSize: 'contain',
+                                maskRepeat: 'no-repeat',
+                                maskPosition: 'left center',
+                                WebkitMaskImage: 'url(/images/logo.png)',
+                                WebkitMaskSize: 'contain',
+                                WebkitMaskRepeat: 'no-repeat',
+                                WebkitMaskPosition: 'left center'
+                            }}
                         />
                     </div>
 
