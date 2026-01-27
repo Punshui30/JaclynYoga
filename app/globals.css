@@ -7,29 +7,29 @@
   --background-start-rgb: 242, 240, 235;
   --background-end-rgb: 242, 240, 235;
 
-  /* Modern Farmhouse "Vibe" Palette */
+  /* Modern Farmhouse Palette */
   --background: 40 10% 95%;
   /* Greige/Off-white */
-  --foreground: 0 0% 15%;
-  /* Soft Charcoal */
+  --foreground: 30 15% 20%;
+  /* Dark Brown/Grey Mix */
 
   --card: 40 10% 95%;
-  --card-foreground: 0 0% 15%;
+  --card-foreground: 30 15% 20%;
 
   --popover: 40 10% 95%;
-  --popover-foreground: 0 0% 15%;
+  --popover-foreground: 30 15% 20%;
 
-  --primary: 0 0% 15%;
-  /* Charcoal (Beams/Iron) */
-  --primary-foreground: 40 10% 95%;
+  --primary: 30 25% 25%;
+  /* Dark Wood Grain (Dark Brown) */
+  --primary-foreground: 40 10% 96%;
 
-  --secondary: 0 0% 35%;
-  /* Lighter Charcoal/Slate */
+  --secondary: 0 0% 45%;
+  /* Neutral Gray (Stone/Concrete) */
   --secondary-foreground: 40 10% 95%;
 
-  --muted: 40 15% 85%;
-  /* Darker Greige/Stone */
-  --muted-foreground: 0 0% 40%;
+  --muted: 40 15% 88%;
+  /* Light Greige/Plaster */
+  --muted-foreground: 0 0% 45%;
 
   --accent: 90 20% 40%;
   /* Deep Farmhouse Sage */
@@ -38,13 +38,12 @@
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 40 10% 95%;
 
-  --border: 0 0% 15%;
-  /* High contrast thin borders */
-  --input: 0 0% 80%;
+  --border: 30 20% 30%;
+  /* Dark Wood Border for contrast */
+  --input: 40 10% 85%;
   --ring: 90 20% 40%;
 
   --radius: 0rem;
-  /* Sharp lines */
 }
 
 @layer base {
