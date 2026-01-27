@@ -5,16 +5,16 @@ import { AbstractMotif } from './AbstractMotif';
 
 export function AboutSection() {
     return (
-        <section className="py-24 bg-background px-6 relative overflow-hidden iridescent-border">
+        <section className="py-24 bg-background px-6 relative overflow-hidden border-y border-border/20">
             {/* Bespoke Abstract Motif */}
             <AbstractMotif className="absolute -left-20 top-0 w-[600px] h-[600px] opacity-10 rotate-12" />
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="relative group">
-                    <div className="absolute inset-0 bg-accent/5 rounded-sm transform lg:translate-x-4 lg:translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500" />
-                    <div className="bg-muted p-8 md:p-12 lg:p-16 rounded-sm border border-border/40">
+                    <div className="absolute inset-0 bg-accent/5 rounded-none transform lg:translate-x-4 lg:translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500" />
+                    <div className="bg-muted p-8 md:p-12 lg:p-16 rounded-none border border-border/40">
                         <h2 className="text-4xl font-serif text-primary mb-8 leading-tight">
                             Creating space for <br />
-                            <span className="italic iridescent-text">authentic healing & connection</span>
+                            <span className="italic text-accent">authentic healing & connection</span>
                         </h2>
                         <div className="space-y-6 text-lg text-secondary leading-relaxed">
                             <p>
@@ -41,7 +41,7 @@ export function AboutSection() {
                     <h3 className="text-sm uppercase tracking-[0.3em] text-accent font-medium mb-12">Foundations & Training</h3>
                     <div className="space-y-8">
                         <div className="flex gap-6 items-start">
-                            <div className="mt-1 text-gold">
+                            <div className="mt-1 text-accent">
                                 <BadgeCheck size={28} />
                             </div>
                             <div>
@@ -51,7 +51,7 @@ export function AboutSection() {
                         </div>
 
                         <div className="flex gap-6 items-start">
-                            <div className="mt-1 text-gold">
+                            <div className="mt-1 text-accent">
                                 <BadgeCheck size={28} />
                             </div>
                             <div>
@@ -61,7 +61,7 @@ export function AboutSection() {
                         </div>
 
                         <div className="flex gap-6 items-start">
-                            <div className="mt-1 text-gold">
+                            <div className="mt-1 text-accent">
                                 <BadgeCheck size={28} />
                             </div>
                             <div>
