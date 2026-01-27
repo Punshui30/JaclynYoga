@@ -3,43 +3,48 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 24, 24, 24;
-  --background-start-rgb: 250, 249, 246;
-  --background-end-rgb: 255, 255, 255;
-  --background: 40 20% 98%;
-  --foreground: 0 0% 12%;
+  --foreground-rgb: 40, 40, 40;
+  --background-start-rgb: 242, 240, 235;
+  --background-end-rgb: 242, 240, 235;
 
-  --card: 40 20% 98%;
-  --card-foreground: 0 0% 12%;
+  /* Modern Farmhouse "Vibe" Palette */
+  --background: 40 10% 95%;
+  /* Greige/Off-white */
+  --foreground: 0 0% 15%;
+  /* Soft Charcoal */
 
-  --popover: 40 20% 98%;
-  --popover-foreground: 0 0% 12%;
+  --card: 40 10% 95%;
+  --card-foreground: 0 0% 15%;
+
+  --popover: 40 10% 95%;
+  --popover-foreground: 0 0% 15%;
 
   --primary: 0 0% 15%;
-  --primary-foreground: 40 20% 98%;
+  /* Charcoal (Beams/Iron) */
+  --primary-foreground: 40 10% 95%;
 
-  --secondary: 0 0% 40%;
-  --secondary-foreground: 40 20% 98%;
+  --secondary: 0 0% 35%;
+  /* Lighter Charcoal/Slate */
+  --secondary-foreground: 40 10% 95%;
 
-  --muted: 40 10% 94%;
-  --muted-foreground: 0 0% 45%;
+  --muted: 40 15% 85%;
+  /* Darker Greige/Stone */
+  --muted-foreground: 0 0% 40%;
 
-  --accent: 75 15% 55%;
-  /* Refined Sage Green */
-  --accent-foreground: 0 0% 12%;
-
-  --sage: 75 15% 55%;
-  --charcoal: 0 0% 15%;
+  --accent: 30 30% 45%;
+  /* Cedar/Warm Wood */
+  --accent-foreground: 40 10% 95%;
 
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 40 20% 98%;
+  --destructive-foreground: 40 10% 95%;
 
-  --border: 0 0% 85%;
-  --input: 0 0% 85%;
-  --ring: 75 15% 55%;
+  --border: 0 0% 15%;
+  /* High contrast thin borders */
+  --input: 0 0% 80%;
+  --ring: 30 30% 45%;
 
-  --radius: 0.25rem;
-  /* Sharper corners for a cleaner look */
+  --radius: 0rem;
+  /* Sharp lines */
 }
 
 @layer base {
