@@ -9,17 +9,17 @@ export function HeroSection() {
         <section className="relative min-h-[90vh] flex flex-col justify-center bg-background px-6 py-24">
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-0 border border-border/40 min-h-[600px] shadow-sm">
                 {/* Left: Content Side - Architecture & Space */}
-                <div className="flex flex-col items-center justify-between p-12 lg:p-20 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40 overflow-visible min-h-[800px]">
-                    {/* Spacer to help center the logo vertically */}
-                    <div className="hidden lg:block opacity-0 h-10">spacer</div>
+                <div className="flex flex-col items-center justify-between p-12 lg:p-16 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40 overflow-hidden min-h-[650px] lg:min-h-[750px]">
+                    {/* Spacer */}
+                    <div className="hidden lg:block opacity-0 h-4">spacer</div>
 
-                    {/* Primary Hamsa Logo - Centered & 2.5x Bigger (~750px) */}
-                    <div className="relative w-full max-w-[400px] lg:max-w-none lg:w-[750px] aspect-square z-20 -my-12">
+                    {/* Primary Hamsa Logo - Contained & Filling Space */}
+                    <div className="relative w-full max-w-md lg:max-w-xl aspect-square z-20 transition-all duration-700">
                         <Image
                             src="/images/logo-v3.png"
                             alt="Jaclyn Muir Hamsa Logo"
                             fill
-                            className="object-contain"
+                            className="object-contain p-4"
                             priority
                         />
                     </div>
