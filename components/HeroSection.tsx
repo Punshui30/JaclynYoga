@@ -10,8 +10,8 @@ export function HeroSection() {
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-0 border border-border/40 min-h-[600px] shadow-sm">
                 {/* Left: Content Side - Architecture & Space */}
                 <div className="flex flex-col justify-center p-12 lg:p-20 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40 overflow-hidden">
-                    {/* New Wordmark Logo replacing the text heading */}
-                    <div className="relative w-full max-w-lg aspect-[3/1] mb-8">
+                    {/* Wordmark Logo - Increased size */}
+                    <div className="relative w-full max-w-2xl aspect-[3/1] mb-12 -ml-2">
                         <Image
                             src="/images/logo-wordmark.png"
                             alt="Jaclyn Muir Hamsa Logo"
@@ -21,9 +21,7 @@ export function HeroSection() {
                         />
                     </div>
 
-                    <p className="text-secondary text-lg font-light leading-relaxed max-w-sm mb-12">
-                        Holistic Yoga Therapy, Reiki, and Mindful Movement. Cultivating resilience through grounded practice.
-                    </p>
+                    {/* Removed redundant text description as requested */}
 
                     <div className="flex flex-col sm:flex-row gap-5">
                         <Link
