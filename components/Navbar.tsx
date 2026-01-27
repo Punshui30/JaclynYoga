@@ -8,7 +8,7 @@ const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Booking', href: '/booking' },
+    { name: 'Class Schedule', href: 'https://www.rootsandriveryoga.com/classes', isExternal: true },
 ];
 
 import Image from 'next/image';
@@ -21,16 +21,23 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <Link
                     href="/"
-                    className="text-xl font-serif text-primary tracking-[0.15em] uppercase hover:text-accent transition-colors duration-500"
+                    className="relative w-40 h-8 hover:opacity-80 transition-opacity duration-300"
                 >
-                    Jaclyn Muir
+                    <Image
+                        src="/images/logo-wordmark.png"
+                        alt="Jaclyn Muir Logo"
+                        fill
+                        className="object-contain object-left"
+                    />
                 </Link>
 
-                <div className="hidden md:flex items-center gap-12">
+                <div className="hidden md:flex items-center gap-10">
                     {navLinks.map((link) => (
                         <Link
-                            key={link.href}
+                            key={link.name}
                             href={link.href}
+                            target={link.isExternal ? "_blank" : undefined}
+                            rel={link.isExternal ? "noopener noreferrer" : undefined}
                             className={cn(
                                 "relative text-[10px] uppercase tracking-[0.4em] transition-all duration-300 hover:text-accent pb-1 group",
                                 pathname === link.href ? "text-accent" : "text-primary/60"
