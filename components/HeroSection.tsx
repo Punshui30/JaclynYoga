@@ -10,8 +10,26 @@ export function HeroSection() {
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-0 border border-border/40 min-h-[600px] shadow-sm">
                 {/* Left: Content Side - Architecture & Space */}
                 <div className="flex flex-col justify-center p-12 lg:p-20 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40 overflow-hidden">
+                    {/* Primary Hamsa Logo - Large & Iridescent */}
+                    <div className="relative w-full max-w-[500px] aspect-square mb-[-80px] -ml-16 opacity-70 pointer-events-none">
+                        <div
+                            className="absolute inset-0 animate-slow-pan"
+                            style={{
+                                background: 'linear-gradient(135deg, rgba(160,180,150,0.5) 0%, rgba(220,230,200,0.5) 25%, rgba(140,160,130,0.5) 50%, rgba(180,200,170,0.5) 75%, rgba(160,180,150,0.5) 100%)',
+                                maskImage: 'url(/images/logo.png)',
+                                maskSize: 'contain',
+                                maskRepeat: 'no-repeat',
+                                maskPosition: 'left center',
+                                WebkitMaskImage: 'url(/images/logo.png)',
+                                WebkitMaskSize: 'contain',
+                                WebkitMaskRepeat: 'no-repeat',
+                                WebkitMaskPosition: 'left center'
+                            }}
+                        />
+                    </div>
+
                     {/* Wordmark Logo - Increased size */}
-                    <div className="relative w-full max-w-2xl aspect-[3/1] mb-12 -ml-2">
+                    <div className="relative w-full max-w-2xl aspect-[3/1] mb-16 -ml-2 z-20">
                         <Image
                             src="/images/logo-wordmark.png"
                             alt="Jaclyn Muir Hamsa Logo"
@@ -21,12 +39,10 @@ export function HeroSection() {
                         />
                     </div>
 
-                    {/* Removed redundant text description as requested */}
-
-                    <div className="flex flex-col sm:flex-row gap-5">
+                    <div className="flex flex-col sm:flex-row gap-5 z-20">
                         <Link
                             href="/booking"
-                            className="px-10 py-4 bg-primary text-primary-foreground text-xs uppercase tracking-[0.2em] hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-none text-center"
+                            className="px-10 py-4 bg-primary text-primary-foreground text-xs uppercase tracking-[0.2em] hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-none text-center border border-transparent"
                         >
                             Book Session
                         </Link>
