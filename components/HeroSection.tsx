@@ -14,20 +14,13 @@ export function HeroSection() {
                     <div className="hidden lg:block opacity-0">spacer</div>
 
                     {/* Primary Hamsa Logo - Centered & 3 Inches Tall (~288px) */}
-                    <div className="relative w-72 h-72 lg:w-[300px] lg:h-[300px] opacity-90 z-20">
-                        <div
-                            className="absolute inset-0 animate-slow-pan"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(160,180,150,0.6) 0%, rgba(220,230,200,0.6) 25%, rgba(140,160,130,0.6) 50%, rgba(180,200,170,0.6) 75%, rgba(160,180,150,0.6) 100%)',
-                                maskImage: 'url(/images/logo.png)',
-                                maskSize: 'contain',
-                                maskRepeat: 'no-repeat',
-                                maskPosition: 'center',
-                                WebkitMaskImage: 'url(/images/logo.png)',
-                                WebkitMaskSize: 'contain',
-                                WebkitMaskRepeat: 'no-repeat',
-                                WebkitMaskPosition: 'center'
-                            }}
+                    <div className="relative w-72 h-72 lg:w-[300px] lg:h-[300px] z-20">
+                        <Image
+                            src="/images/logo-gradated.png"
+                            alt="Jaclyn Muir Hamsa Logo"
+                            fill
+                            className="object-contain"
+                            priority
                         />
                     </div>
 
