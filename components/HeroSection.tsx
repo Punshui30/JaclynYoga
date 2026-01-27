@@ -10,26 +10,16 @@ export function HeroSection() {
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-0 border border-border/40 min-h-[600px] shadow-sm">
                 {/* Left: Content Side - Architecture & Space */}
                 <div className="flex flex-col justify-center p-12 lg:p-20 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40 overflow-hidden">
-                    {/* Logo - 4x Bigger with Gradated Sage Fill via CSS Mask */}
-                    <div className="relative w-full max-w-[500px] aspect-square mb-[-60px] -ml-12 opacity-90">
-                        <div
-                            className="absolute inset-0 bg-gradient-to-br from-[hsl(90,20%,45%)] to-[hsl(90,20%,30%)]"
-                            style={{
-                                maskImage: 'url(/images/logo.png)',
-                                maskSize: 'contain',
-                                maskRepeat: 'no-repeat',
-                                maskPosition: 'left center',
-                                WebkitMaskImage: 'url(/images/logo.png)',
-                                WebkitMaskSize: 'contain',
-                                WebkitMaskRepeat: 'no-repeat',
-                                WebkitMaskPosition: 'left center'
-                            }}
+                    {/* New Wordmark Logo replacing the text heading */}
+                    <div className="relative w-full max-w-lg aspect-[3/1] mb-8">
+                        <Image
+                            src="/images/logo-wordmark.png"
+                            alt="Jaclyn Muir Hamsa Logo"
+                            fill
+                            className="object-contain object-left"
+                            priority
                         />
                     </div>
-
-                    <h1 className="text-5xl lg:text-7xl font-serif text-primary tracking-tight mb-8 leading-[0.9]">
-                        Jaclyn <span className="italic block text-accent">Muir</span>
-                    </h1>
 
                     <p className="text-secondary text-lg font-light leading-relaxed max-w-sm mb-12">
                         Holistic Yoga Therapy, Reiki, and Mindful Movement. Cultivating resilience through grounded practice.
