@@ -39,16 +39,16 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="sticky top-32 space-y-12">
-                        {/* Headshot Image */}
-                        <div className="relative aspect-[3/4] w-full bg-muted/20 border border-border/40 grayscale hover:grayscale-0 transition-all duration-700">
+                    <div className="sticky top-24 space-y-12">
+                        {/* Headshot Image - Smaller & Moved Up */}
+                        <div className="relative aspect-[3/4] w-72 mx-auto md:ml-0 bg-muted/20 border border-border/40 grayscale hover:grayscale-0 transition-all duration-700 -mt-12 md:-mt-20 shadow-sm">
                             <Image
                                 src="/images/jaclyn-headshot.webp"
                                 alt="Jaclyn Muir Profile"
                                 fill
                                 className="object-cover object-top"
                             />
-                            <div className="absolute inset-0 border-[0.5px] border-accent/20 m-4 pointer-events-none" />
+                            <div className="absolute inset-0 border-[0.5px] border-accent/20 m-3 pointer-events-none" />
                         </div>
 
                         <div className="bg-muted/10 p-10 rounded-none border border-border/40">
