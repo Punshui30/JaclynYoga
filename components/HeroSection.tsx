@@ -11,27 +11,27 @@ export function HeroSection() {
         <section className="relative min-h-[90vh] flex flex-col justify-center bg-background px-6 py-24">
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-0 border border-border/40 min-h-[600px] shadow-sm">
                 {/* Left: Content Side - Architecture & Space */}
-                <div className="flex flex-col items-center justify-between p-12 lg:p-16 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40 overflow-hidden min-h-[650px] lg:min-h-[750px] group">
+                <div className="flex flex-col p-12 lg:p-20 bg-background relative z-10 border-b lg:border-b-0 lg:border-r border-border/40 overflow-hidden min-h-[650px] lg:min-h-[750px] group">
                     {/* Ash Wood Grain Background Texture */}
                     <div className="absolute inset-0 z-0 opacity-40 pointer-events-none overflow-hidden">
                         <WoodGrain className="w-full h-full text-secondary/30" />
                     </div>
 
-                    <div className="hidden lg:block opacity-0 h-4 relative z-10">spacer</div>
-
-                    {/* Primary Hamsa Logo - Contained & Filling Space */}
-                    <div className="relative w-full max-w-md lg:max-w-xl aspect-square z-20 transition-all duration-700">
-                        <Image
-                            src="/images/logo-v3.png"
-                            alt="Jaclyn Muir Hamsa Logo"
-                            fill
-                            className="object-contain p-4"
-                            priority
-                        />
+                    {/* Logo Container - Flexible space to center logo */}
+                    <div className="flex-1 flex items-center justify-center relative z-20">
+                        <div className="relative w-full max-w-sm lg:max-w-lg aspect-square transition-all duration-700">
+                            <Image
+                                src="/images/logo-v3.png"
+                                alt="Jaclyn Muir Hamsa Logo"
+                                fill
+                                className="object-contain p-6"
+                                priority
+                            />
+                        </div>
                     </div>
 
                     {/* Buttons at the bottom and centered */}
-                    <div className="flex flex-col sm:flex-row gap-5 z-20 w-full justify-center mt-12 mb-4">
+                    <div className="flex flex-col sm:flex-row gap-5 z-20 w-full justify-center mt-8 mb-2">
                         <Link
                             href="/booking"
                             className="px-12 py-4 bg-primary text-primary-foreground text-xs uppercase tracking-[0.2em] hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-none text-center border border-transparent shadow-sm"
