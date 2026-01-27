@@ -22,14 +22,14 @@ export const WoodGrain: React.FC<{ className?: string }> = ({ className }) => {
                     scale="20"
                 />
             </filter>
-            <g filter="url(#woodGrainFilter)" opacity="0.08" stroke="currentColor" strokeWidth="0.5">
-                {[...Array(50)].map((_, i) => (
+            <g filter="url(#woodGrainFilter)" opacity="0.4" stroke="currentColor" strokeWidth="1.2">
+                {[...Array(70)].map((_, i) => (
                     <line
                         key={i}
                         x1="-10%"
-                        y1={`${i * 2}%`}
+                        y1={`${i * 1.5}%`}
                         x2="110%"
-                        y2={`${i * 2}%`}
+                        y2={`${i * 1.5}%`}
                         fill="none"
                     />
                 ))}

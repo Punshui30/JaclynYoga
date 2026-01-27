@@ -54,7 +54,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
                 setIsVisible(false);
                 onComplete();
             }
-        }, 3000);
+        }, 2500);
 
         return () => {
             video.removeEventListener('loadedmetadata', startReversePlayback);
@@ -69,13 +69,14 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: 'easeInOut' }}
-                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-background"
+                    className="fixed inset-0 z-[9999] flex items-center justify-center"
+                    style={{ backgroundColor: '#f8f7f2' }}
                 >
                     {/* Branding Placeholder to prevent "blank white screen" while video loads */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 0.1, scale: 1 }}
-                        transition={{ duration: 1 }}
+                        animate={{ opacity: 0.15, scale: 1 }}
+                        transition={{ duration: 0.8 }}
                         className="absolute inset-0 flex items-center justify-center pointer-events-none"
                     >
                         <img
