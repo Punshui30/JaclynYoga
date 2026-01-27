@@ -40,7 +40,18 @@ export default function AboutPage() {
                     </div>
 
                     <div className="sticky top-32 space-y-12">
-                        <div className="bg-muted p-10 rounded-sm border border-border/40">
+                        {/* Headshot Image */}
+                        <div className="relative aspect-[3/4] w-full bg-muted/20 border border-border/40 grayscale hover:grayscale-0 transition-all duration-700">
+                            <Image
+                                src="/images/jaclyn-headshot.webp"
+                                alt="Jaclyn Muir Profile"
+                                fill
+                                className="object-cover object-top"
+                            />
+                            <div className="absolute inset-0 border-[0.5px] border-accent/20 m-4 pointer-events-none" />
+                        </div>
+
+                        <div className="bg-muted/10 p-10 rounded-none border border-border/40">
                             <h3 className="text-xl font-serif text-primary mb-6 italic">Certifications & Education</h3>
                             <ul className="space-y-6">
                                 <li className="flex gap-4 items-start border-b border-border/20 pb-4">
@@ -74,14 +85,14 @@ export default function AboutPage() {
                             </ul>
                         </div>
 
-                        <div className="border border-accent p-10 rounded-sm">
+                        <div className="border border-accent/40 p-10 rounded-none bg-accent/5">
                             <h3 className="text-xl font-serif text-primary mb-6">Client Focus</h3>
                             <p className="text-secondary leading-relaxed mb-8">
                                 Jaclyn works with individuals of all ages, with a particular expertise in supporting older adults and those navigating chronic pain, stress, or life transitions.
                             </p>
                             <div className="flex flex-wrap gap-3">
                                 {['Stress Management', 'Chronic Pain', 'Mobility', 'Nervous System Support', 'Emotional Resilience'].map((tag) => (
-                                    <span key={tag} className="px-4 py-1.5 bg-accent/10 text-accent text-xs uppercase tracking-widest font-medium rounded-full">
+                                    <span key={tag} className="px-4 py-1.5 bg-background border border-accent/20 text-accent text-xs uppercase tracking-widest font-medium rounded-none">
                                         {tag}
                                     </span>
                                 ))}

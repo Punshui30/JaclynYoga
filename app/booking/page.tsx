@@ -31,12 +31,14 @@ export default function BookingPage() {
                     <div className="space-y-12">
                         <div>
                             <h2 className="text-3xl font-serif text-primary mb-8 leading-tight">Questions? <br /><span className="italic text-accent">Get in Touch</span></h2>
-                            <form className="space-y-6">
+                            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" className="space-y-6">
                                 <div>
                                     <label htmlFor="name" className="block text-xs uppercase tracking-widest font-medium text-secondary mb-2">Name</label>
                                     <input
                                         type="text"
                                         id="name"
+                                        name="name"
+                                        required
                                         className="w-full bg-muted/30 border border-border/40 p-4 rounded-none focus:outline-none focus:border-accent transition-colors"
                                         placeholder="Your Name"
                                     />
@@ -46,6 +48,8 @@ export default function BookingPage() {
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
+                                        required
                                         className="w-full bg-muted/30 border border-border/40 p-4 rounded-none focus:outline-none focus:border-accent transition-colors"
                                         placeholder="hello@example.com"
                                     />
@@ -54,6 +58,8 @@ export default function BookingPage() {
                                     <label htmlFor="message" className="block text-xs uppercase tracking-widest font-medium text-secondary mb-2">Message</label>
                                     <textarea
                                         id="message"
+                                        name="message"
+                                        required
                                         rows={6}
                                         className="w-full bg-muted/30 border border-border/40 p-4 rounded-none focus:outline-none focus:border-accent transition-colors resize-none"
                                         placeholder="How can Jaclyn help you?"
