@@ -16,16 +16,27 @@ export default function BookingPage() {
             <section className="py-24 px-6 bg-background">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-20">
                     <div className="lg:col-span-2">
-                        <div className="bg-white rounded-none border border-border/40 overflow-hidden shadow-sm h-[800px]">
-                            <iframe
-                                src="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
-                                className="w-full h-full border-0"
-                                title="SequenceWiz Booking Form"
-                            />
+                        <div className="lg:col-span-2">
+                            <div className="bg-muted/10 border border-border/40 p-12 text-center h-[500px] flex flex-col items-center justify-center gap-8">
+                                <div className="w-20 h-20 bg-accent/10 flex items-center justify-center rounded-none text-accent">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="square" strokeLinejoin="miter"><rect x="3" y="4" width="18" height="18" rx="0" ry="0" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-serif text-primary mb-4">Schedule Your Session</h3>
+                                    <p className="text-secondary max-w-md mx-auto leading-relaxed">
+                                        Please use our secure booking portal to view availability and schedule your appointment.
+                                    </p>
+                                </div>
+                                <a
+                                    href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-10 py-4 bg-primary text-primary-foreground text-xs uppercase tracking-[0.2em] hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-none inline-block border border-transparent hover:border-accent"
+                                >
+                                    Open Booking Calendar
+                                </a>
+                            </div>
                         </div>
-                        <p className="mt-6 text-sm text-secondary italic">
-                            Trouble viewing the booking form? <a href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1" target="_blank" rel="noopener noreferrer" className="text-accent underline">Click here to open in a new window.</a>
-                        </p>
                     </div>
 
                     <div className="space-y-12">
