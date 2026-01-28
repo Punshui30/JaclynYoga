@@ -14,9 +14,9 @@ const config: Config = {
         serif: ['var(--font-playfair)', 'serif'],
       },
       borderRadius: {
-        lg: '0px',
-        md: '0px',
-        sm: '0px',
+        lg: '8px',
+        md: '4px',
+        sm: '2px',
       },
       colors: {
         background: '#E2DACD',
@@ -68,10 +68,15 @@ const config: Config = {
             height: '0',
           },
         },
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in-up': 'fade-in-up 1s ease-out forwards',
       },
     },
   },
