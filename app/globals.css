@@ -81,7 +81,7 @@
   }
 
   .editorial-framed {
-    @apply relative border border-stone bg-white p-3 shadow-[0_30px_60px_-12px_rgba(0, 0, 0, 0.08)];
+    @apply relative border border-stone bg-white p-3 shadow-[0_30px_60px_-12px_#00000014];
   }
 
   .micro-eyebrow {
