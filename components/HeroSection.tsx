@@ -7,13 +7,30 @@ export function HeroSection() {
     return (
         <section className="relative min-h-[100dvh] bg-background flex flex-col items-center">
             <div className="grid grid-cols-1 md:grid-cols-12 w-full h-full min-h-[100dvh] max-w-[1600px]">
-                {/* LEFT: ARCHITECTURAL BRAND BLOCK (7 COLUMNS) */}
-                <div className="col-span-1 md:col-span-7 flex flex-col justify-end md:justify-center px-8 md:px-20 lg:px-32 py-24 md:py-24 relative z-10">
+                {/* RIGHT: EDITORIAL CROP (Top on mobile, Right on desktop) */}
+                <div className="col-span-1 md:col-span-5 relative h-[60vh] md:h-full overflow-hidden border-b md:border-b-0 border-charcoal/5 order-1 md:order-2">
+                    <div className="absolute inset-0">
+                        <Image
+                            src="/images/hero-new.webp"
+                            alt="Jaclyn Muir Practitioner"
+                            fill
+                            className="object-cover grayscale-[0.2] brightness-[1.02] contrast-[0.98]"
+                            priority
+                        />
+                        {/* ARCHITECTURAL VEIL */}
+                        <div className="absolute inset-0 bg-charcoal/5 mix-blend-multiply" />
+                    </div>
+                    {/* GRID ANCHOR */}
+                    <div className="absolute top-8 left-8 md:top-12 md:left-12 h-16 md:h-24 w-[1px] bg-background/30" />
+                </div>
+
+                {/* LEFT: ARCHITECTURAL BRAND BLOCK (Bottom on mobile, Left on desktop) */}
+                <div className="col-span-1 md:col-span-7 flex flex-col justify-center px-8 md:px-20 lg:px-32 py-20 md:py-24 relative z-10 order-2 md:order-1">
                     <div className="flex flex-col items-start gap-12 md:gap-24">
                         {/* ICONOGRAPHIC SYSTEM */}
                         <div className="space-y-12 md:space-y-16">
                             {/* LOGO SCALE UP + RESTRAINT */}
-                            <div className="relative w-32 h-32 md:w-60 md:h-60 filter saturate-[0.8] opacity-90 transition-opacity duration-1000 hover:opacity-100">
+                            <div className="relative w-28 h-28 md:w-60 md:h-60 filter saturate-[0.8] opacity-90 transition-opacity duration-1000 hover:opacity-100">
                                 <Image
                                     src="/images/logo.png"
                                     alt="Jaclyn Muir Brand Artifact"
@@ -59,23 +76,6 @@ export function HeroSection() {
                             </Link>
                         </div>
                     </div>
-                </div>
-
-                {/* RIGHT: EDITORIAL CROP (5 COLUMNS) */}
-                <div className="col-span-1 md:col-span-5 relative h-[50vh] md:h-full overflow-hidden border-t md:border-t-0 border-charcoal/5">
-                    <div className="absolute inset-0">
-                        <Image
-                            src="/images/hero-new.webp"
-                            alt="Jaclyn Muir Practitioner"
-                            fill
-                            className="object-cover grayscale-[0.2] brightness-[1.02] contrast-[0.98]"
-                            priority
-                        />
-                        {/* ARCHITECTURAL VEIL */}
-                        <div className="absolute inset-0 bg-charcoal/5 mix-blend-multiply" />
-                    </div>
-                    {/* GRID ANCHOR */}
-                    <div className="absolute top-8 left-8 md:top-12 md:left-12 h-16 md:h-24 w-[1px] bg-background/30" />
                 </div>
             </div>
         </section>
