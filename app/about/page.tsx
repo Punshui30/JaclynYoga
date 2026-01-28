@@ -45,7 +45,7 @@ export default function AboutPage() {
                             </div>
                             <div className="space-y-10">
                                 <p>
-                                    Jaclyn believes that healing is an authentic self-connection process. Her role is not to "fix," but to create a safe, compassionate container where individuals can explore their own capacity for balance and resilience.
+                                    Jaclyn believes that healing is an authentic self-connection process. Her role is not to &quot;fix,&quot; but to create a safe, compassionate container where individuals can explore their own capacity for balance and resilience.
                                 </p>
                                 <p>
                                     Her approach is warm, grounded, and professional. She avoids overly mystical language in favor of clear, intelligent communication that empowers her clients to understand their own bodies and minds more deeply.

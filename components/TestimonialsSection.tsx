@@ -39,7 +39,7 @@ export function TestimonialsSection() {
                             className="p-12 md:p-20 hover:bg-bone transition-all duration-1000 group flex flex-col justify-between h-full"
                         >
                             <p className="text-charcoal/60 font-serif text-lg md:text-[22px] italic leading-relaxed mb-24 lowercase tracking-wide">
-                                "{testimonial.quote}"
+                                &quot;{testimonial.quote}&quot;
                             </p>
 
                             <div className="pt-10 space-y-4">
