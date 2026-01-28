@@ -50,7 +50,7 @@ export function ServicesGrid() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 divide-x divide-charcoal/5 border-t border-b border-charcoal/5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y md:divide-y-0 md:divide-x divide-charcoal/5 border-t border-b border-charcoal/5">
                     {services.map((service) => (
                         <Link
                             key={service.title}

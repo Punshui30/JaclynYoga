@@ -32,7 +32,7 @@ export function TestimonialsSection() {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-x divide-charcoal/5 border-t border-b border-charcoal/5">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-charcoal/5 border-t border-b border-charcoal/5">
                     {testimonials.map((testimonial, idx) => (
                         <div
                             key={idx}

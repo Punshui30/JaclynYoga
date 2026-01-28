@@ -59,7 +59,7 @@ export function AboutSection() {
                 </div>
 
                 {/* RIGHT: DECORATIVE ANCHOR (5 COLUMNS) */}
-                <div className="lg:col-span-12 xl:col-span-5 relative h-[60vh] lg:h-[80vh] border border-charcoal/5 order-1 lg:order-2 self-stretch">
+                <div className="lg:col-span-12 xl:col-span-5 relative h-[50dvh] lg:h-[80vh] border border-charcoal/5 order-1 lg:order-2 self-stretch">
                     <div className="absolute inset-0 grayscale-[0.5] contrast-[1.1] brightness-[0.95]">
                         <Image
                             src="/images/jaclyn-headshot.webp"

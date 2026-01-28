@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function BookingCTA() {
     return (
-        <section className="py-60 bg-bone px-8 md:px-20 lg:px-32 border-t border-charcoal/10 relative overflow-hidden">
+        <section className="py-32 md:py-60 bg-bone px-8 md:px-20 lg:px-32 border-t border-charcoal/10 relative overflow-hidden">
             <div className="max-w-4xl mx-auto text-center space-y-16 relative z-10">
                 <div className="space-y-6 flex flex-col items-center">
                     <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">Inquiry</p>
