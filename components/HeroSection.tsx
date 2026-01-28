@@ -53,7 +53,7 @@ export function HeroSection() {
             </div>
 
             {/* 2. CENTERED STACK: LOGO -> SUBJECT -> TEXT */}
-            <div className="relative flex flex-col items-center justify-between h-[88vh] w-full z-20 pointer-events-none pt-4 pb-10">
+            <div className="relative flex flex-col items-center justify-between h-[90vh] w-full z-20 pointer-events-none pt-2 pb-8">
 
                 {/* LOGO (ABOVE HER) - SCALED UP (260px) */}
                 <div className="relative w-[180px] md:w-[260px] h-[180px] md:h-[260px] z-30 pointer-events-auto">
@@ -73,7 +73,7 @@ export function HeroSection() {
                         x: translateX, y: translateY,
                         perspective: 1000
                     }}
-                    className="relative w-full max-w-[50vh] h-[50vh] md:max-w-[60vh] md:h-[60vh] pointer-events-auto"
+                    className="relative w-full max-w-[55vh] h-[55vh] md:max-w-[65vh] md:h-[65vh] pointer-events-auto"
                 >
                     <Image
                         src="/images/hero-final-solid.png"
