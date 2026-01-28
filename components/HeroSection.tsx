@@ -5,80 +5,82 @@ import Link from 'next/link';
 
 export function HeroSection() {
     return (
-        <section className="relative w-full bg-background flex flex-col items-center overflow-hidden">
-            {/* 12-COLUMN ARCHITECTURAL GRID SYSTEM */}
-            <div className="flex flex-col md:grid md:grid-cols-12 w-full min-h-[100dvh] max-w-[1600px] relative">
+        <section className="relative min-h-screen bg-stone luxury-rhythm flex flex-col items-center overflow-hidden py-24 md:py-32">
+            <div className="max-w-[1600px] w-full px-8 md:px-20 lg:px-32 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 items-center">
 
-                {/* 1. EDITORIAL IMAGE ANCHOR (TOP ON MOBILE) */}
-                <div className="relative w-full h-[55vh] md:h-auto md:absolute md:inset-0 md:left-[58.33%] md:w-[41.66%] border-b md:border-b-0 md:border-l border-charcoal/5 z-0">
-                    <div className="absolute inset-0 grayscale-[0.2] brightness-[1.02] contrast-[0.98]">
-                        <Image
-                            src="/images/hero-new.webp"
-                            alt="Jaclyn Muir Practitioner"
-                            fill
-                            className="object-cover"
-                            priority
-                            sizes="(max-width: 768px) 100vw, 40vw"
-                        />
-                        {/* ARCHITECTURAL VEIL */}
-                        <div className="absolute inset-0 bg-charcoal/5 mix-blend-multiply" />
-                    </div>
-                </div>
-
-                {/* 2. BRAND BLOCK (SECONDARY ON MOBILE, PRIMARY ON DESKTOP) */}
-                <div className="w-full md:col-span-7 flex flex-col justify-center px-8 md:px-20 lg:px-32 py-20 md:py-32 relative z-10 bg-background/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
-                    <div className="flex flex-col items-start gap-12 md:gap-24">
-                        {/* ICONOGRAPHIC SYSTEM */}
-                        <div className="space-y-12 md:space-y-16 w-full">
-                            {/* LOGO SCALE UP + RESTRAINT */}
-                            <div className="relative hidden md:block md:w-60 md:h-60 filter saturate-[0.8] opacity-90">
-                                <Image
-                                    src="/images/logo.png"
-                                    alt="Jaclyn Muir Brand Artifact"
-                                    fill
-                                    className="object-contain object-left"
-                                    priority
-                                />
-                            </div>
-
-                            <div className="space-y-8 md:space-y-10">
-                                <div className="space-y-4">
-                                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif tracking-[0.08em] leading-tight md:leading-none text-charcoal uppercase text-balance">
-                                        Jaclyn Muir
-                                    </h1>
-                                    <p className="text-[9px] md:text-[11px] uppercase tracking-[0.45em] md:tracking-[0.6em] font-sans font-bold text-sage-dark">
-                                        Yoga Therapy · Clinical Recovery · Reiki
-                                    </p>
-                                </div>
-
-                                <div className="space-y-8 max-w-md">
-                                    <p className="text-base md:text-xl font-serif italic text-charcoal/60 leading-relaxed tracking-wide lowercase border-l border-charcoal/10 pl-6 md:pl-8">
-                                        a private clinical wellness practice <br className="hidden md:block" />
-                                        specializing in the architecture of <br className="hidden md:block" />
-                                        nervous system restoration.
-                                    </p>
-                                </div>
-                            </div>
+                {/* LEFT: ARCHITECTURAL IDENTITY (7 COLUMNS) */}
+                <div className="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left space-y-16">
+                    {/* LOGO AS CREST */}
+                    <div className="relative flex flex-col items-center md:items-start gap-12 group">
+                        <div className="relative w-48 h-48 md:w-64 md:h-64 filter saturate-[0.85] opacity-90 transition-all duration-1000 group-hover:opacity-100 group-hover:scale-[1.02]">
+                            <Image
+                                src="/images/logo.png"
+                                alt="Jaclyn Muir Crest"
+                                fill
+                                className="object-contain drop-shadow-[0_8px_24px_rgba(139,155,138,0.12)]"
+                                priority
+                            />
                         </div>
 
-                        {/* UI ELEMENTS: SILENT LUXURY */}
-                        <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-1">
+                        <div className="space-y-6">
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif tracking-[0.1em] leading-none text-charcoal">
+                                Jaclyn Muir
+                            </h1>
+                            <p className="micro-eyebrow text-sage tracking-[0.6em] !text-charcoal/60">
+                                Yoga · Yoga Therapy · Reiki
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* MANIFESTO & ACTIONS */}
+                    <div className="space-y-12 max-w-md">
+                        <p className="text-base md:text-lg font-serif italic text-charcoal/50 leading-relaxed tracking-wide lowercase border-l border-charcoal/10 pl-8">
+                            a private clinical wellness practice <br />
+                            specializing in the architecture of <br />
+                            nervous system restoration.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-2 pt-4">
                             <Link
                                 href="/booking"
-                                className="px-14 py-6 bg-charcoal text-sage font-sans text-[10px] uppercase tracking-[0.5em] font-bold transition-all hover:bg-sage hover:text-charcoal text-center"
+                                className="px-16 py-6 bg-charcoal text-stone font-sans text-[10px] uppercase tracking-[0.5em] font-bold transition-all hover:bg-sage hover:text-charcoal text-center"
                             >
                                 Book Session
                             </Link>
                             <Link
                                 href="/services"
-                                className="px-14 py-6 border border-charcoal/10 text-charcoal/60 font-sans text-[10px] uppercase tracking-[0.5em] font-bold transition-all hover:bg-charcoal/5 hover:text-charcoal text-center"
+                                className="px-16 py-6 border border-charcoal/10 text-charcoal/60 font-sans text-[10px] uppercase tracking-[0.5em] font-bold transition-all hover:bg-charcoal/5 hover:text-charcoal text-center"
                             >
                                 Portfolio
                             </Link>
                         </div>
                     </div>
                 </div>
+
+                {/* RIGHT: ART-DIRECTED MUSEUM FRAME (5 COLUMNS) */}
+                <div className="md:col-span-5 relative flex justify-center md:justify-end">
+                    <div className="relative group editorial-framed max-w-sm md:max-w-none transform transition-all duration-1000 hover:scale-[1.01]">
+                        <div className="relative h-[60vh] md:h-[75vh] w-full aspect-[4/5] overflow-hidden">
+                            <Image
+                                src="/images/hero-new.webp"
+                                alt="Jaclyn Muir Practitioner"
+                                fill
+                                className="object-cover grayscale-[0.1] contrast-[1.05] mix-blend-multiply opacity-90 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100"
+                                priority
+                            />
+                            {/* PHOTOGRAPHIC VEIL */}
+                            <div className="absolute inset-0 bg-stone/20 mix-blend-overlay pointer-events-none" />
+                        </div>
+                        {/* MUSEUM LABEL EFFECT */}
+                        <div className="absolute -bottom-6 -right-6 bg-background border border-charcoal/5 px-6 py-4 hidden lg:block shadow-sm">
+                            <p className="text-[8px] uppercase tracking-[0.4em] font-bold text-charcoal/20">clinical series no. 01</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            {/* BACKGROUND VERTICAL MOTIF */}
+            <div className="absolute top-0 right-[41.66%] w-[1px] h-full bg-charcoal/5 hidden md:block" />
         </section>
     );
 }

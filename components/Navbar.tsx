@@ -19,25 +19,28 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-[100] bg-background/95 backdrop-blur-md">
-            <div className="max-w-[1600px] mx-auto px-6 md:px-20 lg:px-32 h-20 md:h-24 flex items-center justify-between border-b border-charcoal/5 relative z-[110]">
+        <nav className="fixed top-0 left-0 right-0 z-[100] bg-background/90 backdrop-blur-sm">
+            <div className="max-w-[1600px] mx-auto px-8 md:px-20 lg:px-32 h-24 md:h-28 flex items-center justify-between border-b border-charcoal/5 relative z-[110]">
                 <Link
                     href="/"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center gap-4 md:gap-6 hover:opacity-80 transition-all group"
+                    className="flex items-center gap-6 hover:opacity-80 transition-all group"
                 >
-                    <div className="relative w-16 h-16 md:w-10 md:h-10 filter saturate-[0.8] opacity-90">
+                    <div className="relative w-12 h-12 md:w-16 md:h-16 filter saturate-[0.8] opacity-100">
                         <Image
                             src="/images/logo.png"
-                            alt="Jaclyn Muir Brand Artifact"
+                            alt="Jaclyn Muir Logo"
                             fill
                             className="object-contain"
                         />
                     </div>
+                    <span className="text-[14px] font-serif text-charcoal tracking-[0.4em] uppercase hidden sm:block">
+                        Jaclyn Muir
+                    </span>
                 </Link>
 
                 {/* DESKTOP NAV */}
-                <div className="hidden md:flex items-center gap-12">
+                <div className="hidden md:flex items-center gap-16">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -45,16 +48,20 @@ export function Navbar() {
                             target={link.isExternal ? "_blank" : undefined}
                             rel={link.isExternal ? "noopener noreferrer" : undefined}
                             className={cn(
-                                "text-[9px] uppercase tracking-[0.45em] font-sans font-bold transition-all py-2",
-                                pathname === link.href ? "text-charcoal" : "text-charcoal/30 hover:text-charcoal"
+                                "text-[10px] uppercase tracking-[0.6em] font-sans font-bold transition-all relative py-2 group",
+                                pathname === link.href ? "text-charcoal" : "text-charcoal/30 hover:text-charcoal/80"
                             )}
                         >
                             {link.name}
+                            <span className={cn(
+                                "absolute bottom-0 left-0 w-0 h-[1px] bg-secondary transition-all duration-500 group-hover:w-full",
+                                pathname === link.href ? "w-full" : ""
+                            )} />
                         </Link>
                     ))}
                     <Link
                         href="/booking"
-                        className="px-10 py-4 bg-charcoal text-sage font-sans text-[9px] uppercase tracking-[0.45em] font-bold hover:bg-sage hover:text-charcoal transition-all"
+                        className="px-12 py-5 bg-charcoal text-stone font-sans text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-sage hover:text-charcoal transition-all shadow-sm"
                     >
                         Book Now
                     </Link>
@@ -63,18 +70,18 @@ export function Navbar() {
                 {/* MOBILE TRIGGER */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden text-[11px] uppercase tracking-[0.4em] font-bold text-charcoal/60 flex items-center gap-3"
+                    className="md:hidden text-[11px] uppercase tracking-[0.4em] font-bold text-charcoal/60 flex items-center gap-4 py-2"
                 >
                     {isOpen ? 'Close' : 'Menu'}
-                    <div className="w-5 h-5 flex items-center justify-center">
-                        {isOpen ? <X size={18} strokeWidth={1.5} /> : <Menu size={18} strokeWidth={1.5} />}
+                    <div className="w-6 h-6 flex items-center justify-center">
+                        {isOpen ? <X size={20} strokeWidth={1} /> : <Menu size={20} strokeWidth={1} />}
                     </div>
                 </button>
             </div>
 
             {/* MOBILE OVERLAY: ARCHITECTURAL VAULT */}
             <div className={cn(
-                "fixed inset-0 bg-background z-[105] md:hidden transition-all duration-700 cubic-bezier(0.4, 0, 0.2, 1) flex flex-col justify-center px-12",
+                "fixed inset-0 bg-stone z-[105] md:hidden transition-all duration-1000 cubic-bezier(0.19, 1, 0.22, 1) flex flex-col justify-center px-12",
                 isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
             )}>
                 <div className="flex flex-col gap-12 items-center text-center">
@@ -86,31 +93,31 @@ export function Navbar() {
                             target={link.isExternal ? "_blank" : undefined}
                             rel={link.isExternal ? "noopener noreferrer" : undefined}
                             className={cn(
-                                "text-4xl font-serif tracking-[0.08em] transition-all duration-500",
-                                pathname === link.href ? "text-charcoal" : "text-charcoal/30"
+                                "text-4xl font-serif tracking-[0.1em] transition-all duration-700",
+                                pathname === link.href ? "text-charcoal" : "text-charcoal/30 hover:text-charcoal"
                             )}
                         >
                             {link.name}
                         </Link>
                     ))}
 
-                    <div className="w-12 h-[1px] bg-charcoal/10 my-8" />
+                    <div className="w-16 h-[1px] bg-charcoal/10 my-12" />
 
                     <Link
                         href="/booking"
                         onClick={() => setIsOpen(false)}
-                        className="text-[12px] uppercase tracking-[0.5em] font-bold text-charcoal bg-white border border-charcoal/10 px-16 py-6"
+                        className="text-[12px] uppercase tracking-[0.6em] font-bold text-charcoal bg-white border border-charcoal/10 px-16 py-7 transition-all hover:bg-charcoal hover:text-stone"
                     >
                         Book Session
                     </Link>
                 </div>
 
                 {/* FOOTER OF MENU */}
-                <div className="absolute bottom-20 left-0 right-0 px-12 flex flex-col items-center gap-6 text-center">
-                    <p className="text-[9px] uppercase tracking-[0.5em] font-bold text-charcoal/20">Private Clinical Practice</p>
-                    <div className="space-y-2">
-                        <p className="text-charcoal/40 text-[10px] uppercase tracking-[0.2em] font-bold italic">Frederick, MD</p>
-                        <p className="text-charcoal/40 text-[10px] uppercase tracking-[0.2em] font-bold italic">Online Worldwide</p>
+                <div className="absolute bottom-24 left-0 right-0 px-12 flex flex-col items-center gap-8 text-center">
+                    <p className="text-[10px] uppercase tracking-[0.6em] font-bold text-charcoal/20">Private Clinical Practice</p>
+                    <div className="space-y-3">
+                        <p className="text-charcoal/40 text-[11px] uppercase tracking-[0.3em] font-bold italic">Frederick, MD</p>
+                        <p className="text-charcoal/40 text-[11px] uppercase tracking-[0.3em] font-bold italic">Online Worldwide</p>
                     </div>
                 </div>
             </div>

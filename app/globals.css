@@ -3,26 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background: #F6F2EA;
+  --background: #E2DACD;
   --foreground: #1E1E1E;
-  --primary: #9DAF9C;
-  --secondary: #6F8A74;
+  --primary: #1E1E1E;
+  --secondary: #8B9B8A;
   --charcoal: #1E1E1E;
-  --graphite: #6F6A63;
-  --bone: #EFE8DD;
+  --stone: #E2DACD;
+  --clay: #DED4C7;
+  --bone: #F6F2EA;
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-charcoal/10;
   }
 
   body {
-    @apply bg-background text-charcoal font-sans selection:bg-primary/20;
+    @apply bg-background text-charcoal font-sans selection:bg-secondary/20;
     font-size: 15px;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
   }
 
   h1,
@@ -32,25 +33,30 @@
   h5,
   h6 {
     @apply font-serif font-normal text-charcoal;
-    line-height: 1.1;
-    letter-spacing: 0.03em;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply text-2xl md:text-3xl lg:text-4xl;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl;
+    @apply text-xl md:text-2xl;
   }
 
   h3 {
-    @apply text-xl md:text-2xl;
+    @apply text-lg md:text-xl;
   }
 }
 
 @layer utilities {
+  .luxury-rhythm {
+    background-image: linear-gradient(to right, rgba(30, 30, 30, 0.03) 1px, transparent 1px);
+    background-size: calc(100% / 12) 100%;
+  }
+
   .hairline {
     @apply h-[1px] w-full bg-charcoal/10;
   }
@@ -60,17 +66,16 @@
   }
 
   .editorial-framed {
-    @apply relative border border-charcoal/20 bg-white p-0;
-    /* Removed padding and shadows for architectural crop */
+    @apply relative border border-charcoal/10 bg-white/50 backdrop-blur-sm p-4;
   }
 
   .micro-eyebrow {
-    @apply text-[9px] uppercase tracking-[0.45em] text-charcoal/50 font-sans font-bold;
+    @apply text-[9px] uppercase tracking-[0.5em] text-charcoal/40 font-sans font-bold;
   }
 
   .grid-luxury {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
   }
 }
