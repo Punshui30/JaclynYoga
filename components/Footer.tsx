@@ -78,7 +78,9 @@ export function Footer() {
                         </div>
 
                         <Link
-                            href="/booking"
+                            href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-block bg-charcoal text-stone px-14 py-6 text-[10px] uppercase tracking-[0.6em] font-sans font-bold hover:bg-sage hover:text-charcoal transition-all shadow-sm"
                         >
                             Secure Session

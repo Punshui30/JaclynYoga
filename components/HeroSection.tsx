@@ -48,7 +48,14 @@ export function HeroSection() {
                 <nav className="flex flex-col gap-10 md:gap-14 text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto text-right">
                     <Link href="/contact" className="hover:text-charcoal transition-colors">Contact</Link>
                     <Link href="/schedule" className="hover:text-charcoal transition-colors">Schedule</Link>
-                    <Link href="/book" className="font-bold border-b-2 border-[#3a3a3a] hover:opacity-60 transition-opacity">Book</Link>
+                    <Link
+                        href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold border-b-2 border-[#3a3a3a] hover:opacity-60 transition-opacity"
+                    >
+                        Book
+                    </Link>
                 </nav>
             </div>
 

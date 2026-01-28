@@ -19,18 +19,20 @@ export function BookingCTA() {
                     Availability is restricted to maintain the absolute integrity of clinical oversight. Professional and clinical inquiries only.
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 pt-16">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 pt-16 font-sans">
                     <Link
-                        href="/booking"
-                        className="px-16 py-7 bg-charcoal text-stone font-sans text-[10px] uppercase tracking-[0.6em] font-bold transition-all hover:bg-sage hover:text-charcoal shadow-sm"
+                        href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-16 py-7 bg-charcoal text-stone text-[10px] uppercase tracking-[0.6em] font-bold transition-all hover:bg-sage hover:text-charcoal shadow-sm"
                     >
                         Schedule Private
                     </Link>
                     <Link
-                        href="/booking#contact"
-                        className="px-16 py-7 border border-charcoal/20 text-charcoal/60 font-sans text-[10px] uppercase tracking-[0.6em] font-bold transition-all hover:bg-charcoal/5 hover:text-charcoal"
+                        href="/services"
+                        className="px-16 py-7 border border-charcoal/20 text-charcoal/60 text-[10px] uppercase tracking-[0.6em] font-bold transition-all hover:bg-charcoal/5 hover:text-charcoal"
                     >
-                        Direct Inquiry
+                        View Services
                     </Link>
                 </div>
             </div>
