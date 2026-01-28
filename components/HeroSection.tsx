@@ -31,7 +31,7 @@ export function HeroSection() {
                         {/* ICONOGRAPHIC SYSTEM */}
                         <div className="space-y-12 md:space-y-16 w-full">
                             {/* LOGO SCALE UP + RESTRAINT */}
-                            <div className="relative w-32 h-32 md:w-60 md:h-60 filter saturate-[0.8] opacity-90">
+                            <div className="relative hidden md:block md:w-60 md:h-60 filter saturate-[0.8] opacity-90">
                                 <Image
                                     src="/images/logo.png"
                                     alt="Jaclyn Muir Brand Artifact"
