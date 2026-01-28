@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { SplashScreen } from '@/components/SplashScreen';
@@ -17,15 +18,17 @@ export const ClientLayout: React.FC<ClientLayoutProps> = ({
     playfairVariable
 }) => {
     const [showSplash, setShowSplash] = useState(true);
+    const pathname = usePathname();
+    const isHome = pathname === '/';
 
     return (
         <body className={`${interVariable} ${playfairVariable} font-sans min-h-screen flex flex-col`}>
             {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
-            <Navbar />
-            <main className="flex-grow pt-20">
+            {!isHome && <Navbar />}
+            <main className={`flex-grow ${isHome ? '' : 'pt-20'}`}>
                 {children}
             </main>
-            <Footer />
+            {!isHome && <Footer />}
         </body>
     );
 };
