@@ -28,7 +28,7 @@ export function HeroSection() {
     return (
         <section
             onMouseMove={handleMouseMove}
-            className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4ede4]"
+            className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[linear-gradient(to_bottom,#f4ede4_0%,#efe3d6_40%,#e6d6c6_100%)]"
         >
 
             {/* 1. MID-SCREEN NAVIGATION (Sun Yoga Style) */}
@@ -66,24 +66,24 @@ export function HeroSection() {
                     />
                 </div>
 
-                {/* SUBJECT (CENTER) - BAREFOOT & LARGER SCALE */}
+                {/* SUBJECT (CENTER) - BAREFOOT & ORIGINAL FACE & PURE BLEND */}
                 <motion.div
                     style={{
                         rotateX, rotateY,
                         x: translateX, y: translateY,
                         perspective: 1200
                     }}
-                    className="relative w-full max-w-[45vh] h-[45vh] md:max-w-[55vh] md:h-[55vh] pointer-events-auto"
+                    className="relative w-full max-w-[48vh] h-[48vh] md:max-w-[58vh] md:h-[58vh] pointer-events-auto"
                 >
                     <Image
-                        src="/images/hero-pure-white-final.png"
+                        src="/images/hero-final-v29.png"
                         alt="Jaclyn Muir Meditation"
                         fill
                         className="object-contain object-center mix-blend-multiply"
                         style={{
-                            // Final safety mask to feather out the edges of the white box
-                            maskImage: 'radial-gradient(circle at center, black 60%, transparent 98%)',
-                            WebkitMaskImage: 'radial-gradient(circle at center, black 60%, transparent 98%)'
+                            // Stronger radial mask to handle any white-bleed at the edges
+                            maskImage: 'radial-gradient(circle at center, black 50%, transparent 95%)',
+                            WebkitMaskImage: 'radial-gradient(circle at center, black 50%, transparent 95%)'
                         }}
                         priority
                     />
