@@ -26,10 +26,13 @@ const config: Config = {
         linen: '#E7DFD4',
         bone: '#F6F2EA',
         charcoal: {
-          DEFAULT: '#2A2A2A',
+          DEFAULT: '#2B2B2B',
           soft: '#3A3A3A',
           graphite: '#6F6A63',
         },
+        luxuryIvory: '#F3EDE4',
+        luxuryBeige: '#E6D8C8',
+        sageGray: '#7A8A7A',
         warmGray: '#706C68',
         sage: {
           DEFAULT: '#8B9B8A',
