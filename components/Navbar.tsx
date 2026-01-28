@@ -20,7 +20,7 @@ export function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-[100] bg-background/95 backdrop-blur-md">
-            <div className="max-w-[1600px] mx-auto px-6 md:px-20 lg:px-32 h-20 md:h-24 flex items-center justify-between border-b border-charcoal/5">
+            <div className="max-w-[1600px] mx-auto px-6 md:px-20 lg:px-32 h-20 md:h-24 flex items-center justify-between border-b border-charcoal/5 relative z-[110]">
                 <Link
                     href="/"
                     onClick={() => setIsOpen(false)}
@@ -34,9 +34,6 @@ export function Navbar() {
                             className="object-contain"
                         />
                     </div>
-                    <span className="text-[11px] md:text-[13px] font-serif text-charcoal tracking-[0.3em] uppercase">
-                        Jaclyn Muir
-                    </span>
                 </Link>
 
                 {/* DESKTOP NAV */}
@@ -66,19 +63,21 @@ export function Navbar() {
                 {/* MOBILE TRIGGER */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden text-[10px] uppercase tracking-[0.4em] font-bold text-charcoal/60 flex items-center gap-3"
+                    className="md:hidden text-[11px] uppercase tracking-[0.4em] font-bold text-charcoal/60 flex items-center gap-3"
                 >
                     {isOpen ? 'Close' : 'Menu'}
-                    {isOpen ? <X size={14} strokeWidth={1.5} /> : <Menu size={14} strokeWidth={1.5} />}
+                    <div className="w-5 h-5 flex items-center justify-center">
+                        {isOpen ? <X size={18} strokeWidth={1.5} /> : <Menu size={18} strokeWidth={1.5} />}
+                    </div>
                 </button>
             </div>
 
-            {/* MOBILE OVERLAY */}
+            {/* MOBILE OVERLAY: ARCHITECTURAL VAULT */}
             <div className={cn(
-                "fixed inset-0 top-20 bg-background z-[90] md:hidden transition-all duration-700 ease-in-out px-8 py-20 flex flex-col items-start gap-12",
+                "fixed inset-0 bg-background z-[105] md:hidden transition-all duration-700 cubic-bezier(0.4, 0, 0.2, 1) flex flex-col justify-center px-12",
                 isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
             )}>
-                <div className="flex flex-col gap-10 w-full">
+                <div className="flex flex-col gap-12 items-center text-center">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -87,28 +86,32 @@ export function Navbar() {
                             target={link.isExternal ? "_blank" : undefined}
                             rel={link.isExternal ? "noopener noreferrer" : undefined}
                             className={cn(
-                                "text-2xl font-serif tracking-[0.05em] transition-all",
+                                "text-4xl font-serif tracking-[0.08em] transition-all duration-500",
                                 pathname === link.href ? "text-charcoal" : "text-charcoal/30"
                             )}
                         >
                             {link.name}
                         </Link>
                     ))}
-                </div>
 
-                <div className="w-full pt-12 border-t border-charcoal/5">
+                    <div className="w-12 h-[1px] bg-charcoal/10 my-8" />
+
                     <Link
                         href="/booking"
                         onClick={() => setIsOpen(false)}
-                        className="w-full block px-12 py-6 bg-charcoal text-sage font-sans text-[11px] uppercase tracking-[0.5em] font-bold text-center"
+                        className="text-[12px] uppercase tracking-[0.5em] font-bold text-charcoal bg-white border border-charcoal/10 px-16 py-6"
                     >
                         Book Session
                     </Link>
                 </div>
 
-                <div className="mt-auto space-y-6">
-                    <p className="text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/20">Private Clinical Practice</p>
-                    <p className="text-charcoal/40 text-[10px] uppercase tracking-[0.2em] font-bold">Frederick, MD · Online Worldwide</p>
+                {/* FOOTER OF MENU */}
+                <div className="absolute bottom-20 left-0 right-0 px-12 flex flex-col items-center gap-6 text-center">
+                    <p className="text-[9px] uppercase tracking-[0.5em] font-bold text-charcoal/20">Private Clinical Practice</p>
+                    <div className="space-y-2">
+                        <p className="text-charcoal/40 text-[10px] uppercase tracking-[0.2em] font-bold italic">Frederick, MD</p>
+                        <p className="text-charcoal/40 text-[10px] uppercase tracking-[0.2em] font-bold italic">Online Worldwide</p>
+                    </div>
                 </div>
             </div>
         </nav>
