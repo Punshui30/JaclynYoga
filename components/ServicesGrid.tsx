@@ -33,19 +33,22 @@ const services = [
 
 export function ServicesGrid() {
     return (
-        <section className="py-24 bg-background px-6 relative overflow-hidden">
+        <section className="py-32 bg-white px-6 relative overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-                    <div className="max-w-2xl">
-                        <h3 className="text-[10px] uppercase tracking-[0.3em] text-[#9FAF9A] font-sans font-semibold mb-6">Our Services</h3>
-                        <h2 className="text-4xl lg:text-5xl font-serif text-foreground leading-tight">
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-10">
+                    <div className="max-w-2xl space-y-8">
+                        <div className="space-y-6">
+                            <h3 className="text-[10px] uppercase tracking-[0.35em] text-primary font-sans font-bold">Curated Offerings</h3>
+                            <div className="hairline w-12" />
+                        </div>
+                        <h2 className="text-4xl lg:text-5xl font-serif text-charcoal leading-tight">
                             Holistic paths to <br />
-                            <span className="italic text-[#C6A38B]">well-being & resilience</span>
+                            <span className="italic text-secondary">well-being & balance</span>
                         </h2>
                     </div>
                     <Link
                         href="/services"
-                        className="text-[#9FAF9A] font-sans text-sm tracking-widest uppercase border-b border-[#9FAF9A] hover:text-[#C6A38B] hover:border-[#C6A38B] transition-all pb-1 mb-2 group inline-flex items-center gap-2"
+                        className="text-primary font-bold font-sans text-[11px] tracking-widest uppercase border-b border-primary/30 hover:text-secondary hover:border-secondary transition-all pb-2 mb-2 group inline-flex items-center gap-3"
                     >
                         See all offerings
                         <span className="transform group-hover:translate-x-1 transition-transform">→</span>
@@ -57,18 +60,18 @@ export function ServicesGrid() {
                         <Link
                             key={service.title}
                             href={service.href}
-                            className="group bg-white p-10 border border-foreground/5 hover:border-[#9FAF9A]/50 shadow-sm hover:shadow-md transition-all duration-700 h-full flex flex-col rounded-[1rem]"
+                            className="group bg-background p-10 border border-warm-gray-light hover:border-primary/50 shadow-none hover:shadow-[0_15px_40px_-20px_rgba(43,43,43,0.1)] transition-all duration-700 h-full flex flex-col rounded-2xl"
                         >
-                            <div className="w-14 h-14 flex items-center justify-center mb-10 transition-all duration-700 bg-[#F6F2EA] rounded-lg">
-                                <service.icon size={26} className="text-[#C6A38B]" />
+                            <div className="w-16 h-16 flex items-center justify-center mb-12 transition-all duration-700 bg-white rounded-xl shadow-sm border border-warm-gray-light group-hover:scale-110">
+                                <service.icon size={28} strokeWidth={1.5} className="text-secondary" />
                             </div>
-                            <h4 className="text-2xl font-serif text-foreground mb-4 transition-colors duration-500 group-hover:text-[#9FAF9A]">
+                            <h4 className="text-2xl font-serif text-charcoal mb-6 transition-colors duration-500 group-hover:text-primary">
                                 {service.title}
                             </h4>
-                            <p className="text-foreground/70 leading-relaxed mb-8 flex-grow font-sans text-sm">
+                            <p className="text-charcoal-soft leading-relaxed mb-10 flex-grow font-sans text-sm">
                                 {service.description}
                             </p>
-                            <div className="text-[10px] uppercase tracking-widest text-[#9FAF9A] font-sans font-bold inline-flex items-center gap-2">
+                            <div className="text-[10px] uppercase tracking-widest text-primary font-bold inline-flex items-center gap-2">
                                 Discover more
                                 <span className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-2 transition-all duration-700">→</span>
                             </div>
@@ -76,6 +79,9 @@ export function ServicesGrid() {
                     ))}
                 </div>
             </div>
+
+            {/* Branding Hairline */}
+            <div className="absolute top-0 left-0 right-0 hairline opacity-20" />
         </section>
     );
 }

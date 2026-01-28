@@ -19,41 +19,31 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        background: '#F6F2EA',
+        foreground: '#2B2B2B',
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: '#9FAF9A', // Sage Green
+          foreground: '#F6F2EA',
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          DEFAULT: '#C6A38B', // Muted Clay
+          foreground: '#2B2B2B',
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          DEFAULT: '#9FAF9A',
+          foreground: '#F6F2EA',
         },
-        charcoal: 'hsl(var(--charcoal))',
-        sage: 'hsl(var(--sage))',
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+        charcoal: {
+          DEFAULT: '#2B2B2B',
+          soft: '#444444',
         },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
+        'warm-gray': {
+          DEFAULT: '#B8B4AD',
+          light: '#D6D2CB',
         },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
+        border: 'rgba(43, 43, 43, 0.1)',
+        input: 'rgba(43, 43, 43, 0.1)',
+        ring: '#9FAF9A',
       },
       keyframes: {
         'accordion-down': {
