@@ -2,54 +2,51 @@
 
 const testimonials = [
     {
-        quote: "Jaclyn's approach to yoga therapy is tanto compassionate and deeply intelligent. She helped me find a sense of resilience I didn't know I had.",
+        quote: "Jaclyn's approach is tanto compassionate and deeply intelligent. She helped me find a sense of resilience I didn't know I had.",
         author: "Elena R.",
-        role: "Private Yoga Client"
+        role: "Private Practice"
     },
     {
-        quote: "The reiki sessions have been a cornerstone of my nervous system support. I leave every encounter feeling grounded and remarkably clear.",
+        quote: "The reiki sessions have been a cornerstone of my support system. I leave every encounter feeling grounded and remarkably clear.",
         author: "David M.",
-        role: "Reiki & Wellness Client"
+        role: "Restorative Practice"
     },
     {
-        quote: "As someone who struggled with movement as I aged, Jaclyn's gentle and chair yoga classes have given me back my confidence and mobility.",
+        quote: "As someone navigating complex recovery, Jaclyn's clinical insight has given me back my confidence and physiological mobility.",
         author: "Margaret S.",
-        role: "Gentle Yoga Student"
+        role: "Clinical Practice"
     }
 ];
 
 export function TestimonialsSection() {
     return (
-        <section className="py-40 bg-linen px-6 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-28 space-y-10">
-                    <div className="space-y-6 flex flex-col items-center">
-                        <p className="micro-eyebrow text-primary">Community Voice</p>
-                        <div className="hairline w-8 opacity-40" />
-                    </div>
-                    <h2 className="text-4xl lg:text-5xl font-serif text-charcoal leading-none">
-                        Kind words from <br />
-                        <span className="italic text-secondary/90 text-3xl lg:text-4xl">the community</span>
+        <section className="py-48 bg-white px-8 md:px-20 lg:px-32 border-b border-charcoal/5">
+            <div className="max-w-[1600px] mx-auto">
+                <div className="mb-32 space-y-12">
+                    <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">
+                        Client Voices
+                    </p>
+                    <h2 className="text-3xl md:text-5xl font-serif text-charcoal tracking-[0.05em] leading-[1.1]">
+                        RESTORATION THROUGH <br />
+                        VOICES OF THE PRACTICE
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-x divide-charcoal/5 border-t border-b border-charcoal/5">
                     {testimonials.map((testimonial, idx) => (
                         <div
                             key={idx}
-                            className="bg-white p-14 rounded-[2rem] shadow-[0_30px_60px_-12px_rgba(0,0,0,0.06)] border border-stone/20 hover:border-primary/40 transition-all duration-1000 group flex flex-col"
+                            className="p-12 md:p-20 hover:bg-bone transition-all duration-1000 group flex flex-col justify-between h-full"
                         >
-                            <div className="text-stone mb-12 opacity-40 text-6xl font-serif leading-none h-8 overflow-hidden transition-colors group-hover:text-primary/40">
-                                “
-                            </div>
-                            <p className="text-charcoal-soft font-serif text-xl italic leading-relaxed mb-16 flex-grow opacity-90 tracking-wide">
-                                {testimonial.quote}
+                            <p className="text-charcoal/60 font-serif text-lg md:text-[22px] italic leading-relaxed mb-24 lowercase tracking-wide">
+                                "{testimonial.quote}"
                             </p>
-                            <div className="pt-10 hairline mt-auto opacity-30">
-                                <p className="micro-eyebrow text-charcoal/80">
+
+                            <div className="pt-10 space-y-4">
+                                <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal">
                                     {testimonial.author}
                                 </p>
-                                <p className="text-[10px] uppercase tracking-widest text-secondary/60 font-sans mt-3">
+                                <p className="text-[9px] uppercase tracking-[0.4em] text-charcoal/30 font-sans italic lowercase">
                                     {testimonial.role}
                                 </p>
                             </div>
@@ -57,10 +54,6 @@ export function TestimonialsSection() {
                     ))}
                 </div>
             </div>
-
-            {/* Architecture branding echo */}
-            <div className="absolute top-0 left-0 right-0 hairline opacity-30" />
-            <div className="absolute -bottom-64 left-1/2 -translate-x-1/2 w-[120%] aspect-square border border-stone/5 rounded-full -z-10" />
         </section>
     );
 }

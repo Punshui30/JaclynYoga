@@ -1,86 +1,76 @@
 import Link from 'next/link';
-import { BadgeCheck } from 'lucide-react';
+import Image from 'next/image';
 
 export function AboutSection() {
     return (
-        <section className="py-40 bg-background px-6 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-                <div className="relative group lg:order-2">
-                    <div className="absolute -inset-6 bg-linen rounded-[3rem] -z-10 transition-transform duration-1000" />
-                    <div className="bg-white p-12 md:p-16 lg:p-24 rounded-3xl shadow-[0_40px_80px_-20px_rgba(0,0,0,0.06)] border border-stone/30">
-                        <div className="space-y-4 mb-12">
-                            <p className="micro-eyebrow opacity-60">The Mission</p>
-                            <h2 className="text-3xl lg:text-4xl font-serif text-charcoal leading-none">
-                                Creating space for <br />
-                                <span className="italic text-secondary/90">authentic healing</span>
-                            </h2>
-                        </div>
-                        <div className="space-y-10 text-base lg:text-lg text-charcoal-soft font-sans leading-relaxed tracking-wide">
+        <section className="py-48 bg-bone px-8 md:px-20 lg:px-32 relative overflow-hidden">
+            <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
+
+                {/* LEFT: MISSION & COPY (7 COLUMNS) */}
+                <div className="lg:col-span-7 space-y-24 order-2 lg:order-1">
+                    <div className="space-y-12">
+                        <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">
+                            The Practice
+                        </p>
+                        <h2 className="text-3xl md:text-5xl font-serif text-charcoal tracking-[0.05em] leading-[1.1]">
+                            BRIDGING CLINICAL RIGOR <br />
+                            WITH SPIRITUAL REFINEMENT
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
+                        <div className="space-y-12 text-charcoal/60 text-sm md:text-base font-sans leading-relaxed lowercase italic tracking-wide">
                             <p>
-                                Jaclyn Muir is a certified yoga therapist specializing in the intersection of clinical wisdom and ancestral healing. Her practice is a curated sanctuary for those seeking to reconnect with their innate capacity for balance.
+                                Jaclyn Muir is a certified yoga therapist specializing in the architectural restoration of the nervous system. Her private practice is a curated sanctuary for those seeking to reconnect with their innate capacity for balance.
                             </p>
                             <p>
-                                By bridging the latest research in nervous system regulation with time-honored restorative practices, she offers a profound clinical approach to holistic wellness.
+                                By bridging the latest research in clinical regulation with time-honored restorative practices, she offers a profound, evidence-led approach to holistic wellness.
                             </p>
+                            <div className="pt-8">
+                                <Link
+                                    href="/about"
+                                    className="px-14 py-6 bg-charcoal text-white font-sans text-[10px] uppercase tracking-[0.5em] font-bold transition-all hover:bg-sage hover:text-charcoal inline-block"
+                                >
+                                    The Biography
+                                </Link>
+                            </div>
                         </div>
 
-                        <div className="mt-16 pt-10 hairline opacity-30">
-                            <Link
-                                href="/about"
-                                className="inline-flex items-center gap-4 text-charcoal/80 font-bold uppercase tracking-[0.25em] text-[10px] hover:text-primary transition-all group"
-                            >
-                                <span className="relative">
-                                    The Full Biography
-                                    <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
-                                </span>
-                                <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-                            </Link>
+                        <div className="space-y-16 py-4 md:py-0 border-t md:border-t-0 md:border-l border-charcoal/10 md:pl-16">
+                            <div className="space-y-10">
+                                <p className="text-[11px] font-sans font-bold text-charcoal uppercase tracking-[0.3em]">Credentials</p>
+                                <ul className="space-y-10">
+                                    <li className="space-y-3">
+                                        <p className="text-charcoal/30 text-[9px] uppercase tracking-[0.4em] font-bold">Clinical</p>
+                                        <p className="text-charcoal text-base font-serif italic tracking-wide">MS in Yoga Therapy</p>
+                                    </li>
+                                    <li className="space-y-3">
+                                        <p className="text-charcoal/30 text-[9px] uppercase tracking-[0.4em] font-bold">Standard</p>
+                                        <p className="text-charcoal text-base font-serif italic tracking-wide">C-IAYT Board Certified</p>
+                                    </li>
+                                    <li className="space-y-3">
+                                        <p className="text-charcoal/30 text-[9px] uppercase tracking-[0.4em] font-bold">Holistic</p>
+                                        <p className="text-charcoal text-base font-serif italic tracking-wide">Reiki II Practitioner</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="lg:order-1 space-y-20">
-                    <div className="space-y-6">
-                        <h3 className="micro-eyebrow text-primary">Foundations & Training</h3>
-                        <div className="hairline w-8 opacity-40 ml-0" />
+                {/* RIGHT: DECORATIVE ANCHOR (5 COLUMNS) */}
+                <div className="lg:col-span-12 xl:col-span-5 relative h-[60vh] lg:h-[80vh] border border-charcoal/5 order-1 lg:order-2 self-stretch">
+                    <div className="absolute inset-0 grayscale-[0.5] contrast-[1.1] brightness-[0.95]">
+                        <Image
+                            src="/images/jaclyn-headshot.webp"
+                            alt="Jaclyn Muir Profile"
+                            fill
+                            className="object-cover"
+                        />
                     </div>
-
-                    <div className="space-y-16 max-w-lg">
-                        <div className="flex gap-10 items-start group">
-                            <div className="mt-1 text-stone group-hover:text-primary transition-colors duration-500">
-                                <BadgeCheck size={26} strokeWidth={1} />
-                            </div>
-                            <div className="space-y-3">
-                                <h4 className="text-xl font-serif text-charcoal opacity-90">Clinical MS in Yoga Therapy</h4>
-                                <p className="text-charcoal-soft leading-relaxed font-sans text-sm lg:text-base opacity-80">Rigorous clinical scholarship in the physiological application of yoga.</p>
-                            </div>
-                        </div>
-
-                        <div className="flex gap-10 items-start group">
-                            <div className="mt-1 text-stone group-hover:text-primary transition-colors duration-500">
-                                <BadgeCheck size={26} strokeWidth={1} />
-                            </div>
-                            <div className="space-y-3">
-                                <h4 className="text-xl font-serif text-charcoal opacity-90">C-IAYT Board Certification</h4>
-                                <p className="text-charcoal-soft leading-relaxed font-sans text-sm lg:text-base opacity-80">The global benchmark for professional yoga therapy standards.</p>
-                            </div>
-                        </div>
-
-                        <div className="flex gap-10 items-start group">
-                            <div className="mt-1 text-stone group-hover:text-primary transition-colors duration-500">
-                                <BadgeCheck size={26} strokeWidth={1} />
-                            </div>
-                            <div className="space-y-3">
-                                <h4 className="text-xl font-serif text-charcoal opacity-90">Reiki II & Holistic Energy</h4>
-                                <p className="text-charcoal-soft leading-relaxed font-sans text-sm lg:text-base opacity-80">Subtle work for nervous system recalibration and energy balance.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <div className="absolute inset-0 bg-charcoal/10 mix-blend-multiply pointer-events-none" />
                 </div>
             </div>
-
-            {/* Architecture branding echo */}
-            <div className="absolute top-1/2 left-0 w-[600px] h-[600px] border border-stone/10 rounded-full -translate-x-1/2 -translate-y-1/2 -z-20 pointer-events-none" />
         </section>
     );
 }

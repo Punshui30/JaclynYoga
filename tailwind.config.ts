@@ -14,38 +14,39 @@ const config: Config = {
         serif: ['var(--font-playfair)', 'serif'],
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        lg: '0px',
+        md: '0px',
+        sm: '0px',
       },
       colors: {
         background: '#F6F2EA',
-        foreground: '#2C2C2C', // Updated to Charcoal
-        linen: '#F3EFE9',
-        stone: '#CFC8BE',
+        foreground: '#1E1E1E',
+        linen: '#F6F2EA',
+        bone: '#EFE8DD',
+        charcoal: {
+          DEFAULT: '#1E1E1E',
+          soft: '#6F6A63',
+          graphite: '#6F6A63',
+        },
+        sage: {
+          DEFAULT: '#9DAF9C',
+          dark: '#6F8A74',
+        },
         primary: {
-          DEFAULT: '#9FAF9A', // Sage Green
-          foreground: '#F6F2EA',
+          DEFAULT: '#9DAF9C',
+          foreground: '#1E1E1E',
         },
         secondary: {
-          DEFAULT: '#C6A38B', // Muted Clay
-          foreground: '#2C2C2C',
-        },
-        accent: {
-          DEFAULT: '#9FAF9A',
+          DEFAULT: '#6F8A74',
           foreground: '#F6F2EA',
         },
-        charcoal: {
-          DEFAULT: '#2C2C2C',
-          soft: '#4A4A4A',
+        accent: {
+          DEFAULT: '#9DAF9C',
+          foreground: '#F6F2EA',
         },
-        'warm-gray': {
-          DEFAULT: '#B8B4AD',
-          light: '#D6D2CB',
-        },
-        border: 'rgba(44, 44, 44, 0.1)',
-        input: 'rgba(44, 44, 44, 0.1)',
-        ring: '#9FAF9A',
+        border: 'rgba(30, 30, 30, 0.1)',
+        input: 'rgba(30, 30, 30, 0.1)',
+        ring: '#9DAF9C',
       },
       keyframes: {
         'accordion-down': {

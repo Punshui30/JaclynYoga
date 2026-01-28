@@ -7,29 +7,25 @@ export function CredentialsStrip() {
     ];
 
     return (
-        <section className="py-20 bg-linen px-6 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 text-center md:text-left">
-                <div className="space-y-4 max-w-xs">
-                    <h3 className="micro-eyebrow text-charcoal/40">
-                        Professional Clinical Standard
-                    </h3>
-                    <div className="hairline w-8 mx-auto md:ml-0 opacity-40" />
+        <section className="py-24 bg-bone border-b border-charcoal/5 px-8 md:px-20 lg:px-32">
+            <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+                <div className="md:col-span-4 lg:col-span-3">
+                    <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">
+                        Professional standard
+                    </p>
                 </div>
 
-                <div className="flex flex-wrap justify-center md:justify-end gap-x-16 gap-y-10">
+                <div className="md:col-span-8 lg:col-span-9 flex flex-wrap gap-x-16 gap-y-10">
                     {credentials.map((cred) => (
-                        <div key={cred} className="flex flex-col items-center md:items-start gap-4 group">
-                            <span className="text-charcoal font-serif text-[13px] tracking-[0.2em] uppercase opacity-80 group-hover:opacity-100 transition-opacity">
+                        <div key={cred} className="group cursor-default">
+                            <span className="text-[11px] font-sans font-bold text-charcoal uppercase tracking-[0.3em] opacity-40 group-hover:opacity-100 transition-opacity">
                                 {cred}
                             </span>
-                            <div className="w-8 h-[1px] bg-stone opacity-40 group-hover:w-full transition-all duration-700" />
+                            <div className="w-4 h-[1px] bg-charcoal/20 group-hover:w-full transition-all duration-1000 mt-2" />
                         </div>
                     ))}
                 </div>
             </div>
-
-            <div className="absolute top-0 left-0 right-0 hairline opacity-40" />
-            <div className="absolute bottom-0 left-0 right-0 hairline opacity-40" />
         </section>
     );
 }

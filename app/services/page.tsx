@@ -1,144 +1,114 @@
+'use client';
+
+import { Sparkles } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
 export default function ServicesPage() {
     return (
         <div className="flex flex-col w-full bg-background font-sans">
-            <section className="pt-40 pb-24 px-6 bg-[#F6F2EA]">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h3 className="text-[10px] uppercase tracking-[0.3em] text-[#9FAF1A] font-sans font-bold mb-8">Offerings</h3>
-                    <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-10 leading-tight">
-                        Comprehensive <span className="italic text-[#C6A38B]">Wellness Services</span>
+            <section className="pt-60 pb-40 px-8 md:px-20 lg:px-32 bg-background relative border-b border-charcoal/5">
+                <div className="max-w-[1600px] mx-auto text-left space-y-12">
+                    <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">Offerings</p>
+                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-charcoal leading-none tracking-[0.05em]">
+                        CLINICAL <span className="italic text-charcoal/60 lowercase">wellness portfolio</span>
                     </h1>
-                    <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl mx-auto">
-                        Supporting your journey towards physical mobility, emotional balance, and energetic clarity through evidence-based yoga therapy and holistic healing.
+                    <p className="text-lg md:text-xl text-charcoal/50 leading-relaxed max-w-2xl font-sans lowercase italic">
+                        Supporting your journey towards physiological mobility and energetic clarity through evidence-based yoga therapy and refined clinical healing.
                     </p>
                 </div>
             </section>
 
-            <section className="py-24 px-6 bg-white">
-                <div className="max-w-7xl mx-auto space-y-40">
+            <section className="py-48 px-8 md:px-20 lg:px-32 bg-white">
+                <div className="max-w-[1600px] mx-auto space-y-60">
+
                     {/* Yoga Classes */}
-                    <div id="yoga-classes" className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-24">
-                        <div className="lg:col-span-1">
-                            <h2 className="text-3xl lg:text-4xl font-serif text-foreground mb-8 leading-tight">Yoga <br /><span className="italic text-[#C6A38B]">Classes</span></h2>
-                            <p className="text-foreground/70 leading-relaxed mb-8 text-sm lg:text-base">
+                    <div id="yoga-classes" className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
+                        <div className="lg:col-span-4 space-y-12">
+                            <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">01</p>
+                            <h2 className="text-3xl lg:text-4xl font-serif text-charcoal leading-tight uppercase tracking-widest">Yoga <br /><span className="italic text-charcoal/60">Practice</span></h2>
+                            <p className="text-charcoal/60 leading-relaxed text-sm lg:text-base lowercase italic tracking-wide">
                                 Group classes designed for mindfulness and functional movement. Emphasis is placed on accessibility, making these suitable for practitioners of all ages and abilities.
                             </p>
-                            <div className="h-[2px] w-12 bg-[#9FAF9A]/30 rounded-full" />
                         </div>
 
-                        <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-                            <div className="space-y-4">
-                                <h3 className="text-xl font-serif text-foreground">Chair Yoga</h3>
-                                <p className="text-foreground/60 text-sm leading-relaxed">
-                                    A gentle form of yoga practiced sitting on a chair or standing using a chair for support. Ideal for those with limited mobility or balancing concerns.
-                                </p>
-                            </div>
-                            <div className="space-y-4">
-                                <h3 className="text-xl font-serif text-foreground">Yin Yoga</h3>
-                                <p className="text-foreground/60 text-sm leading-relaxed">
-                                    A slow-paced style of yoga incorporating principles of traditional Chinese medicine, with postures that are held for longer periods of time to target deep connective tissues.
-                                </p>
-                            </div>
-                            <div className="space-y-4">
-                                <h3 className="text-xl font-serif text-foreground">Gentle Yoga</h3>
-                                <p className="text-foreground/60 text-sm leading-relaxed">
-                                    Focuses on basic yoga poses and stretches to increase flexibility and range of motion without the intensity of a standard flow.
-                                </p>
-                            </div>
-                            <div className="space-y-4">
-                                <h3 className="text-xl font-serif text-foreground">Slow Flow Yoga</h3>
-                                <p className="text-foreground/60 text-sm leading-relaxed">
-                                    Mindful transitions between poses at a pace that allows for deeper awareness of breath and alignment.
-                                </p>
-                            </div>
+                        <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-charcoal/10">
+                            {[
+                                { title: 'Chair Yoga', desc: 'A gentle form of yoga practiced sitting or standing with support. Ideal for those with limited mobility.' },
+                                { title: 'Yin Yoga', desc: 'A slow-paced style incorporating traditional principles to target deep connective tissues.' },
+                                { title: 'Gentle Yoga', desc: 'Focuses on basic poses and stretches to increase flexibility without standard intensity.' },
+                                { title: 'Slow Flow', desc: 'Mindful transitions between poses at a pace that allows for deeper awareness of breath.' },
+                            ].map((item, idx) => (
+                                <div key={item.title} className={cn("p-12 md:p-16 border-b border-charcoal/10", idx % 2 === 0 ? "md:border-r" : "")}>
+                                    <h3 className="text-[13px] font-sans font-bold text-charcoal uppercase tracking-[0.3em] mb-6">{item.title}</h3>
+                                    <p className="text-charcoal/50 text-sm leading-relaxed lowercase italic">{item.desc}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
                     {/* Private Sessions */}
-                    <div id="private-sessions" className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-24">
-                        <div className="lg:col-span-1">
-                            <h2 className="text-3xl lg:text-4xl font-serif text-foreground mb-8 leading-tight">Private <br /><span className="italic text-[#C6A38B]">Sessions</span></h2>
-                            <p className="text-foreground/70 leading-relaxed mb-8 text-sm lg:text-base">
+                    <div id="private-sessions" className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
+                        <div className="lg:col-span-4 space-y-12">
+                            <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">02</p>
+                            <h2 className="text-3xl lg:text-4xl font-serif text-charcoal leading-tight uppercase tracking-widest">Private <br /><span className="italic text-charcoal/60">Instruction</span></h2>
+                            <p className="text-charcoal/60 leading-relaxed text-sm lg:text-base lowercase italic tracking-wide">
                                 Individually tailored support focusing on your unique goals and health considerations. Sessions can be conducted online or in-person.
                             </p>
-                            <div className="h-[2px] w-12 bg-[#9FAF9A]/30 rounded-full" />
                         </div>
 
-                        <div className="lg:col-span-2 space-y-12">
-                            <div className="flex flex-col md:flex-row justify-between items-start gap-6 border-b border-foreground/5 pb-10">
-                                <div className="md:max-w-md">
-                                    <h3 className="text-xl font-serif text-foreground mb-3 font-semibold">Yoga Therapy Intake</h3>
-                                    <p className="text-foreground/60 text-sm leading-relaxed">
-                                        A comprehensive 90-minute initial consultation where we discuss your health history, current concerns, and goals to develop a personalized therapy plan.
-                                    </p>
+                        <div className="lg:col-span-8 space-y-0 border-t border-charcoal/10">
+                            {[
+                                { title: 'Yoga Therapy Intake', desc: 'Comprehensive 90-minute initial consultation and therapy plan development.', time: '90 Min', label: 'Assessment' },
+                                { title: 'Therapy Follow-Up', desc: '60-minute sessions dedicated to implementing and refining your practice.', time: '60 Min', label: 'Support' },
+                                { title: 'Private Yoga Session', desc: '60-minute one-on-one sessions focusing on personalized movement and breathwork.', time: '60 Min', label: 'Practice' },
+                            ].map((item) => (
+                                <div key={item.title} className="flex flex-col md:flex-row justify-between items-start gap-12 p-12 md:p-16 border-b border-charcoal/10 group hover:bg-bone transition-all duration-700">
+                                    <div className="md:max-w-md space-y-4">
+                                        <h3 className="text-xl font-serif text-charcoal italic tracking-wide">{item.title}</h3>
+                                        <p className="text-charcoal/50 text-sm leading-relaxed lowercase italic">{item.desc}</p>
+                                    </div>
+                                    <div className="md:text-right space-y-2">
+                                        <span className="text-charcoal font-serif text-2xl tracking-[0.1em]">{item.time}</span>
+                                        <p className="text-[9px] uppercase tracking-[0.4em] text-charcoal/30 font-sans font-bold">{item.label}</p>
+                                    </div>
                                 </div>
-                                <div className="md:text-right">
-                                    <span className="text-[#9FAF9A] font-serif text-2xl font-bold">90 Min</span>
-                                    <p className="text-[10px] uppercase tracking-widest text-foreground/40 mt-2 font-bold font-sans">Comprehensive Assessment</p>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-col md:flex-row justify-between items-start gap-6 border-b border-foreground/5 pb-10">
-                                <div className="md:max-w-md">
-                                    <h3 className="text-xl font-serif text-foreground mb-3 font-semibold">Yoga Therapy Follow-Up</h3>
-                                    <p className="text-foreground/60 text-sm leading-relaxed">
-                                        60-minute sessions dedicated to implementing and refining your personalized yoga therapy practices.
-                                    </p>
-                                </div>
-                                <div className="md:text-right">
-                                    <span className="text-[#9FAF9A] font-serif text-2xl font-bold">60 Min</span>
-                                    <p className="text-[10px] uppercase tracking-widest text-foreground/40 mt-2 font-bold font-sans">Personalized Support</p>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-col md:flex-row justify-between items-start gap-6 border-b border-foreground/5 pb-10">
-                                <div className="md:max-w-md">
-                                    <h3 className="text-xl font-serif text-foreground mb-3 font-semibold">Private Yoga Practice</h3>
-                                    <p className="text-foreground/60 text-sm leading-relaxed">
-                                        60-minute one-on-on sessions focusing on movement, breathwork, and meditation tailored to your level and interest.
-                                    </p>
-                                </div>
-                                <div className="md:text-right">
-                                    <span className="text-[#9FAF9A] font-serif text-2xl font-bold">60 Min</span>
-                                    <p className="text-[10px] uppercase tracking-widest text-foreground/40 mt-2 font-bold font-sans">Focused Practice</p>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
 
                     {/* Reiki */}
-                    <div id="reiki" className="bg-[#D8E4DA]/20 p-12 md:p-24 rounded-[3rem] border border-[#9FAF9A]/10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                        <div>
-                            <h3 className="text-[10px] uppercase tracking-[0.3em] text-[#9FAF9A] font-sans font-bold mb-8">Energy Healing</h3>
-                            <h2 className="text-3xl lg:text-4xl font-serif text-foreground mb-8 leading-tight">Reiki <br /><span className="italic text-[#C6A38B]">Restorative Care</span></h2>
-                            <p className="text-foreground/75 leading-relaxed text-base lg:text-lg mb-10 font-sans">
-                                Reiki is a gentle, non-invasive energy-based practice that supports deep relaxation and the body's natural healing processes.
-                            </p>
-                            <p className="text-foreground/75 leading-relaxed mb-10 italic font-serif text-base">
-                                Sessions provide a safe container for nervous system support, helping to reduce stress and promote a profound sense of inner calm.
-                            </p>
-                            <div className="inline-flex items-center gap-3">
-                                <div className="w-2 h-2 bg-[#9FAF9A] rounded-full" />
-                                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#9FAF9A] font-sans">Nervous System Support</span>
+                    <div id="reiki" className="bg-bone p-16 md:p-32 border border-charcoal/5 grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+                        <div className="lg:col-span-7 space-y-16">
+                            <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">03</p>
+                            <div className="space-y-8">
+                                <h2 className="text-3xl lg:text-5xl font-serif text-charcoal leading-none uppercase tracking-widest text-wrap">Reiki <br /><span className="italic text-charcoal/60">Restorative Care</span></h2>
+                                <p className="text-charcoal/60 leading-relaxed text-base md:text-lg lowercase italic tracking-wide max-w-xl">
+                                    Reiki is a gentle, energy-based practice that supports deep relaxation and the architecture of natural physiological healing.
+                                </p>
+                            </div>
+                            <div className="flex items-center gap-6 text-[10px] uppercase tracking-[0.4em] font-bold text-charcoal/40 font-sans">
+                                <div className="h-[1px] w-12 bg-charcoal/20" />
+                                <span>NERVOUS SYSTEM SUPPORT</span>
                             </div>
                         </div>
 
-                        <div className="relative">
-                            <div className="aspect-square bg-white shadow-sm p-12 flex flex-col justify-center items-center text-center border border-foreground/5 rounded-[2.5rem]">
-                                <div className="w-16 h-16 bg-[#F6F2EA] flex items-center justify-center text-[#C6A38B] mb-8 rounded-full">
-                                    <Sparkles size={32} />
+                        <div className="lg:col-span-5">
+                            <div className="bg-white p-16 md:p-24 border border-charcoal/10 flex flex-col justify-center items-center text-center space-y-12">
+                                <div className="space-y-4">
+                                    <h4 className="text-2xl font-serif text-charcoal italic tracking-wide">The Session</h4>
+                                    <p className="text-charcoal/50 text-sm leading-relaxed lowercase italic max-w-xs mx-auto">
+                                        Available as a standalone treatment or integrated into your yoga therapy practice.
+                                    </p>
                                 </div>
-                                <h4 className="text-2xl font-serif text-foreground mb-4 font-semibold">Reiki Session</h4>
-                                <p className="text-foreground/60 text-sm mb-8 leading-relaxed font-sans">
-                                    Available as a standalone session or integrated into your yoga therapy practice.
-                                </p>
-                                <div className="text-[#9FAF9A] font-serif text-3xl font-bold italic tracking-wide">60 Minutes</div>
+                                <div className="text-charcoal font-serif text-4xl tracking-widest border-t border-b border-charcoal/10 py-6 px-12">
+                                    60 MIN
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
         </div>
     );
 }
-
-import { Sparkles } from 'lucide-react';

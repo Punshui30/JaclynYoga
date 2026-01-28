@@ -2,39 +2,35 @@ import Link from 'next/link';
 
 export function BookingCTA() {
     return (
-        <section className="py-32 px-6 bg-white relative overflow-hidden">
-            <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
+        <section className="py-60 bg-bone px-8 md:px-20 lg:px-32 border-t border-charcoal/10 relative overflow-hidden">
+            <div className="max-w-4xl mx-auto text-center space-y-16 relative z-10">
                 <div className="space-y-6 flex flex-col items-center">
-                    <h3 className="text-[10px] uppercase tracking-[0.4em] text-primary font-sans font-bold">Start Your Journey</h3>
-                    <div className="hairline w-12" />
+                    <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">Inquiry</p>
                 </div>
 
-                <h2 className="text-4xl lg:text-5xl font-serif text-charcoal leading-tight">
-                    Ready to reclaim <br />
-                    <span className="italic text-secondary">your innate balance?</span>
+                <h2 className="text-3xl md:text-5xl lg:text-5xl font-serif text-charcoal leading-none tracking-[0.05em]">
+                    SECURE YOUR PRIVATE <br />
+                    RESTORATION SESSION
                 </h2>
-                <p className="text-lg text-charcoal-soft font-sans leading-relaxed max-w-2xl mx-auto">
-                    Limited private sessions are available. Weave clinical wisdom and mindful movement into your daily life.
+                <p className="text-base text-charcoal/50 font-sans leading-relaxed max-w-lg mx-auto lowercase italic">
+                    Availability is restricted to maintain the integrity of clinical oversight. professional inquiries only.
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-1 pt-8">
                     <Link
                         href="/booking"
-                        className="px-10 py-4 bg-primary text-white text-[11px] uppercase tracking-[0.2em] font-sans font-bold hover:bg-primary/90 transition-all rounded-md shadow-sm"
+                        className="px-14 py-6 bg-charcoal text-sage font-sans text-[10px] uppercase tracking-[0.5em] font-bold transition-all hover:bg-sage hover:text-charcoal"
                     >
-                        Book a Session
+                        Schedule Private
                     </Link>
                     <Link
                         href="/booking#contact"
-                        className="px-10 py-4 border border-primary text-primary text-[11px] uppercase tracking-[0.2em] font-sans font-bold hover:bg-primary/5 transition-all rounded-md"
+                        className="px-14 py-6 border border-charcoal/10 text-charcoal/50 font-sans text-[10px] uppercase tracking-[0.5em] font-bold transition-all hover:bg-charcoal/5 hover:text-charcoal"
                     >
-                        Ask a Question
+                        Portfolio Inquiries
                     </Link>
                 </div>
             </div>
-
-            {/* Branding Detail: Echo of Logo Arc */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] border-b border-warm-gray/10 rounded-b-full -z-0 pointer-events-none" />
         </section>
     );
 }
