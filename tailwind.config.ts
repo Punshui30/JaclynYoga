@@ -20,29 +20,31 @@ const config: Config = {
       },
       colors: {
         background: '#F6F2EA',
-        foreground: '#2B2B2B',
+        foreground: '#2C2C2C', // Updated to Charcoal
+        linen: '#F3EFE9',
+        stone: '#CFC8BE',
         primary: {
           DEFAULT: '#9FAF9A', // Sage Green
           foreground: '#F6F2EA',
         },
         secondary: {
           DEFAULT: '#C6A38B', // Muted Clay
-          foreground: '#2B2B2B',
+          foreground: '#2C2C2C',
         },
         accent: {
           DEFAULT: '#9FAF9A',
           foreground: '#F6F2EA',
         },
         charcoal: {
-          DEFAULT: '#2B2B2B',
-          soft: '#444444',
+          DEFAULT: '#2C2C2C',
+          soft: '#4A4A4A',
         },
         'warm-gray': {
           DEFAULT: '#B8B4AD',
           light: '#D6D2CB',
         },
-        border: 'rgba(43, 43, 43, 0.1)',
-        input: 'rgba(43, 43, 43, 0.1)',
+        border: 'rgba(44, 44, 44, 0.1)',
+        input: 'rgba(44, 44, 44, 0.1)',
         ring: '#9FAF9A',
       },
       keyframes: {

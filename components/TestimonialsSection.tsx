@@ -20,36 +20,36 @@ const testimonials = [
 
 export function TestimonialsSection() {
     return (
-        <section className="py-32 bg-background px-6 relative overflow-hidden">
+        <section className="py-40 bg-linen px-6 relative overflow-hidden">
             <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-24 space-y-8">
+                <div className="text-center mb-28 space-y-10">
                     <div className="space-y-6 flex flex-col items-center">
-                        <h3 className="text-[10px] uppercase tracking-[0.4em] text-primary font-sans font-bold">Community Voice</h3>
-                        <div className="hairline w-12" />
+                        <p className="micro-eyebrow text-primary">Community Voice</p>
+                        <div className="hairline w-8 opacity-40" />
                     </div>
-                    <h2 className="text-4xl lg:text-5xl font-serif text-charcoal leading-tight">
+                    <h2 className="text-4xl lg:text-5xl font-serif text-charcoal leading-none">
                         Kind words from <br />
-                        <span className="italic text-secondary">the community</span>
+                        <span className="italic text-secondary/90 text-3xl lg:text-4xl">the community</span>
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {testimonials.map((testimonial, idx) => (
                         <div
                             key={idx}
-                            className="bg-white p-12 rounded-2xl shadow-[0_15px_40px_-20px_rgba(43,43,43,0.05)] border border-warm-gray-light hover:border-primary/30 transition-all duration-700 group flex flex-col"
+                            className="bg-white p-14 rounded-[2rem] shadow-[0_30px_60px_-12px_rgba(0,0,0,0.06)] border border-stone/20 hover:border-primary/40 transition-all duration-1000 group flex flex-col"
                         >
-                            <div className="text-secondary mb-10 opacity-30 text-5xl font-serif">
+                            <div className="text-stone mb-12 opacity-40 text-6xl font-serif leading-none h-8 overflow-hidden transition-colors group-hover:text-primary/40">
                                 “
                             </div>
-                            <p className="text-charcoal-soft font-serif text-xl italic leading-relaxed mb-12 flex-grow">
+                            <p className="text-charcoal-soft font-serif text-xl italic leading-relaxed mb-16 flex-grow opacity-90 tracking-wide">
                                 {testimonial.quote}
                             </p>
-                            <div className="pt-8 hairline mt-auto">
-                                <p className="font-sans font-bold text-[11px] uppercase tracking-[0.25em] text-primary">
+                            <div className="pt-10 hairline mt-auto opacity-30">
+                                <p className="micro-eyebrow text-charcoal/80">
                                     {testimonial.author}
                                 </p>
-                                <p className="text-[9px] uppercase tracking-widest text-charcoal/40 font-sans mt-2">
+                                <p className="text-[10px] uppercase tracking-widest text-secondary/60 font-sans mt-3">
                                     {testimonial.role}
                                 </p>
                             </div>
@@ -58,8 +58,9 @@ export function TestimonialsSection() {
                 </div>
             </div>
 
-            {/* Logo geometry repetition: Subtle arc */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] border-t border-warm-gray/10 rounded-[100%] -z-10" />
+            {/* Architecture branding echo */}
+            <div className="absolute top-0 left-0 right-0 hairline opacity-30" />
+            <div className="absolute -bottom-64 left-1/2 -translate-x-1/2 w-[120%] aspect-square border border-stone/5 rounded-full -z-10" />
         </section>
     );
 }

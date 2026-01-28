@@ -16,13 +16,13 @@ export function Navbar() {
     const pathname = usePathname();
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md transition-all duration-300">
-            <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between relative">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl transition-all duration-300">
+            <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between relative">
                 <Link
                     href="/"
-                    className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+                    className="flex items-center gap-5 hover:opacity-70 transition-all group"
                 >
-                    <div className="relative w-12 h-12">
+                    <div className="relative w-14 h-14 transition-transform duration-700 group-hover:scale-105">
                         <Image
                             src="/images/logo.png"
                             alt="Jaclyn Muir Brand Artifact"
@@ -30,12 +30,12 @@ export function Navbar() {
                             className="object-contain"
                         />
                     </div>
-                    <span className="text-xl font-serif text-charcoal tracking-wide hidden sm:block">
+                    <span className="text-xl font-serif text-charcoal opacity-90 tracking-widest hidden sm:block uppercase">
                         Jaclyn Muir
                     </span>
                 </Link>
 
-                <div className="hidden md:flex items-center gap-10">
+                <div className="hidden md:flex items-center gap-12">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -43,23 +43,27 @@ export function Navbar() {
                             target={link.isExternal ? "_blank" : undefined}
                             rel={link.isExternal ? "noopener noreferrer" : undefined}
                             className={cn(
-                                "text-[11px] uppercase tracking-[0.25em] font-sans font-bold transition-all duration-300 py-2",
-                                pathname === link.href ? "text-primary px-1" : "text-charcoal/50 hover:text-charcoal"
+                                "micro-eyebrow transition-all duration-500 py-2 relative group",
+                                pathname === link.href ? "text-primary" : "text-charcoal/40 hover:text-charcoal"
                             )}
                         >
                             {link.name}
+                            <span className={cn(
+                                "absolute -bottom-1 left-0 w-full h-[1px] bg-primary transition-transform origin-left duration-500",
+                                pathname === link.href ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                            )} />
                         </Link>
                     ))}
                     <Link
                         href="/booking"
-                        className="px-8 py-3 bg-primary text-white text-[11px] uppercase tracking-[0.2em] font-sans font-bold hover:bg-primary/90 transition-all rounded-md shadow-sm ml-4"
+                        className="px-8 py-3 bg-primary text-white text-[9px] uppercase tracking-[0.3em] font-sans font-bold hover:bg-primary/90 transition-all rounded shadow-sm ml-6"
                     >
                         Book Now
                     </Link>
                 </div>
 
-                {/* Hairline Divider at the bottom of the Navbar */}
-                <div className="absolute bottom-0 left-6 right-6 hairline opacity-50" />
+                {/* Boutique Hairline */}
+                <div className="absolute bottom-0 left-6 right-6 hairline opacity-30" />
             </div>
         </nav>
     );

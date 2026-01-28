@@ -48,35 +48,44 @@
   h4,
   h5,
   h6 {
-    @apply font-serif font-medium text-charcoal;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
+    @apply font-serif font-normal text-charcoal;
+    /* Reduced weight */
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    /* Increased letter spacing slightly */
   }
 
   h1 {
-    @apply text-4xl md:text-5xl;
+    @apply text-3xl md:text-4xl lg:text-5xl;
+    /* Reduced size */
   }
 
   h2 {
-    @apply text-3xl md:text-4xl;
+    @apply text-2xl md:text-3xl;
+    /* Reduced size */
   }
 
   h3 {
-    @apply text-2xl md:text-3xl;
+    @apply text-xl md:text-2xl;
+    /* Reduced size */
   }
 }
 
 @layer utilities {
   .hairline {
-    @apply h-[1px] w-full bg-warm-gray/20;
+    @apply h-[1px] w-full bg-stone;
   }
 
   .hairline-vertical {
-    @apply w-[1px] h-full bg-warm-gray/20;
+    @apply w-[1px] h-full bg-stone;
   }
 
   .editorial-framed {
-    @apply relative border border-warm-gray-light bg-white p-2 shadow-[0_4px_20px_-4px_#0000000d];
+    @apply relative border border-stone bg-white p-3 shadow-[0_30px_60px_-12px_rgba(0, 0, 0, 0.08)];
+  }
+
+  .micro-eyebrow {
+    @apply text-[9px] uppercase tracking-[0.4em] text-charcoal/60 font-sans font-bold;
   }
 
   .micro-spacing {
