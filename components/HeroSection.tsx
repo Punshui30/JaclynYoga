@@ -1,5 +1,5 @@
 'use client';
-// Build Marker: 2026-01-28T01:38:00
+// Build Marker: 2026-01-28T01:42:00 FINAL CLEANUP
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -43,16 +43,20 @@ export function HeroSection() {
             </div>
 
             {/* CUTOUT SUBJECT — FLOATING LIKE SUN YOGA */}
-            {/* Directly as a child, no extra container as requested */}
-            <Image
-                src="/images/hero-cutout.png"
-                alt="Jaclyn Muir"
-                width={1000}
-                height={1000}
-                className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 h-[70vh] max-h-[820px] w-auto z-10 pointer-events-none filter brightness-[1.08] contrast-[1.05] saturate-[1.05]"
-                style={{ background: 'transparent' }}
-                priority
-            />
+            <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 h-[75vh] max-h-[850px] w-[100vw] z-10 pointer-events-none">
+                <Image
+                    src="/images/hero-studio.png"
+                    alt="Jaclyn Muir"
+                    fill
+                    className="object-contain object-bottom filter brightness-[1.1] contrast-[1.08] saturate-[1.05]"
+                    style={{
+                        background: 'transparent',
+                        maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 75%)',
+                        WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 75%)'
+                    }}
+                    priority
+                />
+            </div>
 
         </section>
     );
