@@ -36,7 +36,14 @@ export function HeroSection() {
                 <nav className="flex flex-col gap-10 md:gap-12 text-[12px] md:text-[13px] tracking-[0.2em] text-[#3a3a3a] uppercase pointer-events-auto">
                     <Link href="/about" className="hover:opacity-60 transition-opacity">About</Link>
                     <Link href="/services" className="hover:opacity-60 transition-opacity">Services</Link>
-                    <Link href="/classes" className="hover:opacity-60 transition-opacity">Classes</Link>
+                    <Link
+                        href="https://www.rootsandriveryoga.com/classes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:opacity-60 transition-opacity"
+                    >
+                        Classes
+                    </Link>
                 </nav>
                 <nav className="flex flex-col gap-10 md:gap-12 text-[12px] md:text-[13px] tracking-[0.2em] text-[#3a3a3a] uppercase pointer-events-auto text-right">
                     <Link href="/contact" className="hover:text-charcoal transition-colors">Contact</Link>
