@@ -28,11 +28,11 @@ export function HeroSection() {
     return (
         <section
             onMouseMove={handleMouseMove}
-            className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[linear-gradient(to_bottom,#f4ede4_0%,#efe3d6_40%,#e6d6c6_100%)]"
+            className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4ede4]"
         >
 
             {/* 1. MID-SCREEN NAVIGATION (Sun Yoga Style) */}
-            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-50 flex justify-between items-center px-10 md:px-24 lg:px-32 pointer-events-none">
+            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-50 flex justify-between items-center px-8 md:px-20 lg:px-32 pointer-events-none">
                 <nav className="flex flex-col gap-10 md:gap-14 text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto">
                     <Link href="/about" className="hover:opacity-60 transition-opacity">About</Link>
                     <Link href="/services" className="hover:opacity-60 transition-opacity">Services</Link>
@@ -46,17 +46,17 @@ export function HeroSection() {
                     </Link>
                 </nav>
                 <nav className="flex flex-col gap-10 md:gap-14 text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto text-right">
-                    <Link href="/contact" className="hover:opacity-60 transition-opacity">Contact</Link>
-                    <Link href="/schedule" className="hover:opacity-60 transition-opacity">Schedule</Link>
+                    <Link href="/contact" className="hover:text-charcoal transition-colors">Contact</Link>
+                    <Link href="/schedule" className="hover:text-charcoal transition-colors">Schedule</Link>
                     <Link href="/book" className="font-bold border-b-2 border-[#3a3a3a] hover:opacity-60 transition-opacity">Book</Link>
                 </nav>
             </div>
 
             {/* 2. CENTERED STACK: LOGO -> SUBJECT -> TEXT */}
-            <div className="relative flex flex-col items-center justify-between h-[85vh] w-full z-20 pointer-events-none pt-4 pb-8">
+            <div className="relative flex flex-col items-center justify-between h-[88vh] w-full z-20 pointer-events-none pt-4 pb-10">
 
-                {/* LOGO (ABOVE HER) - SCALED UP (240px) */}
-                <div className="relative w-[180px] md:w-[240px] h-[180px] md:h-[240px] z-30 pointer-events-auto">
+                {/* LOGO (ABOVE HER) - SCALED UP (260px) */}
+                <div className="relative w-[180px] md:w-[260px] h-[180px] md:h-[260px] z-30 pointer-events-auto">
                     <Image
                         src="/images/logo.png"
                         alt="Jaclyn Muir Logo"
@@ -66,31 +66,34 @@ export function HeroSection() {
                     />
                 </div>
 
-                {/* SUBJECT (CENTER) - BAREFOOT & ORIGINAL FACE & PURE BLEND */}
+                {/* SUBJECT (CENTER) - BAREFOOT & LARGER SCALE & FEATHERED BLEND */}
                 <motion.div
                     style={{
                         rotateX, rotateY,
                         x: translateX, y: translateY,
-                        perspective: 1200
+                        perspective: 1000
                     }}
-                    className="relative w-full max-w-[48vh] h-[48vh] md:max-w-[58vh] md:h-[58vh] pointer-events-auto"
+                    className="relative w-full max-w-[50vh] h-[50vh] md:max-w-[60vh] md:h-[60vh] pointer-events-auto"
                 >
                     <Image
-                        src="/images/hero-final-v29.png"
+                        src="/images/hero-final-solid.png"
                         alt="Jaclyn Muir Meditation"
                         fill
-                        className="object-contain object-center mix-blend-multiply"
+                        className="object-contain object-center"
                         style={{
-                            // Stronger radial mask to handle any white-bleed at the edges
-                            maskImage: 'radial-gradient(circle at center, black 50%, transparent 95%)',
-                            WebkitMaskImage: 'radial-gradient(circle at center, black 50%, transparent 95%)'
+                            // ARCHITECTURAL FEATHERING:
+                            // We use a radial mask to fade the image edges. 
+                            // Since the image background is #f4ede4 and the site background is #f4ede4,
+                            // this feathering makes the transition mathematically invisible.
+                            maskImage: 'radial-gradient(circle at center, black 40%, transparent 85%)',
+                            WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 85%)'
                         }}
                         priority
                     />
                 </motion.div>
 
                 {/* TEXT (UNDERNEATH HER) */}
-                <div className="text-center z-30 pointer-events-auto space-y-5">
+                <div className="text-center z-30 pointer-events-auto space-y-4">
                     <div className="animate-fade-in [animation-delay:600ms] forwards">
                         <h1 className="font-serif text-[48px] md:text-[64px] lg:text-[76px] tracking-[0.2em] text-[#1f1f1f] m-0 leading-tight uppercase font-light">
                             JACLYN MUIR
