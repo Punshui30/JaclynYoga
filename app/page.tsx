@@ -7,9 +7,13 @@ import { BookingCTA } from '@/components/BookingCTA';
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-screen overflow-hidden">
+    <main className="flex flex-col w-full bg-background min-h-screen">
       <HeroSection />
       <CredentialsStrip />
-    </div>
+      <ServicesGrid />
+      <AboutSection />
+      <TestimonialsSection />
+      <BookingCTA />
+    </main>
   );
 }

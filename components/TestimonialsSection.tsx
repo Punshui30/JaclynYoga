@@ -20,25 +20,25 @@ const testimonials = [
 
 export function TestimonialsSection() {
     return (
-        <section className="py-24 bg-background px-6">
+        <section className="py-24 bg-[#F6F2EA]/50 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h3 className="text-sm uppercase tracking-[0.3em] text-accent font-medium mb-6">Testimonials</h3>
-                    <h2 className="text-4xl font-serif text-primary">Voices from the Community</h2>
+                    <h3 className="text-[10px] uppercase tracking-[0.3em] text-[#9FAF9A] font-sans font-semibold mb-6">Testimonials</h3>
+                    <h2 className="text-4xl font-serif text-foreground">Voices from the Community</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {testimonials.map((t, i) => (
-                        <div key={i} className="flex flex-col h-full bg-muted/20 p-10 rounded-none border border-border/20">
-                            <div className="text-accent mb-8 text-4xl font-serif opacity-40">"</div>
-                            <p className="text-xl font-serif text-primary italic leading-relaxed mb-10 flex-grow">
+                        <div key={i} className="flex flex-col h-full bg-white p-10 rounded-[1.5rem] border border-foreground/5 shadow-sm">
+                            <div className="text-[#C6A38B] mb-8 text-5xl font-serif opacity-40">“</div>
+                            <p className="text-lg lg:text-xl font-serif text-foreground italic leading-relaxed mb-10 flex-grow">
                                 {t.quote}
                             </p>
                             <div>
-                                <cite className="not-italic block text-primary font-medium tracking-wide">
+                                <cite className="not-italic block text-foreground font-serif font-semibold tracking-wide">
                                     — {t.author}
                                 </cite>
-                                <span className="text-xs uppercase tracking-widest text-secondary mt-1 block">
+                                <span className="text-[10px] uppercase tracking-widest text-foreground/50 font-sans mt-2 block">
                                     {t.role}
                                 </span>
                             </div>

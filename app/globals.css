@@ -3,51 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 20, 20, 20;
-  --background-start-rgb: 248, 247, 242;
-  --background-end-rgb: 248, 247, 242;
+  --foreground-rgb: 47, 47, 47;
+  --background-start-rgb: 246, 242, 234;
+  --background-end-rgb: 246, 242, 234;
 
-  /* Refined Rustic Palette */
-  --background: 40 15% 98%;
-  /* Creamy Off-White */
-  --foreground: 0 0% 12%;
-  /* Deep Charcoal/Black */
+  /* Farmhouse Chic Palette */
+  --background: 38 38% 94%;
+  /* #F6F2EA - Warm Cream */
+  --foreground: 0 0% 18%;
+  /* #2F2F2F - Soft Charcoal */
 
-  --card: 40 15% 98%;
-  --card-foreground: 0 0% 12%;
+  --card: 38 38% 94%;
+  --card-foreground: 0 0% 18%;
 
-  --popover: 40 15% 98%;
-  --popover-foreground: 0 0% 12%;
+  --popover: 38 38% 94%;
+  --popover-foreground: 0 0% 18%;
 
-  --primary: 0 0% 15%;
-  /* Charcoal */
-  --primary-foreground: 40 15% 98%;
+  --primary: 105 10% 65%;
+  /* #9FAF9A - Sage Green */
+  --primary-foreground: 38 38% 94%;
 
-  --secondary: 0 0% 45%;
-  /* Neutral Gray */
-  --secondary-foreground: 40 15% 98%;
+  --secondary: 25 35% 66%;
+  /* #C6A38B - Muted Clay */
+  --secondary-foreground: 0 0% 18%;
 
-  --muted: 40 10% 92%;
-  /* Soft Greige */
+  --muted: 133 19% 87%;
+  /* #D8E4DA - Pale Eucalyptus */
   --muted-foreground: 0 0% 40%;
 
-  --accent: 90 15% 45%;
-  /* Muted Sage Green */
-  --accent-foreground: 40 15% 98%;
-
-  --wood: 30 15% 40%;
-  /* Weathered Wood Grain */
+  --accent: 105 10% 65%;
+  --accent-foreground: 38 38% 94%;
 
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 40 15% 98%;
+  --destructive-foreground: 38 38% 94%;
 
-  --border: 0 0% 15%;
-  /* Sharp Charcoal Lines */
-  --input: 0 0% 85%;
-  --ring: 90 15% 45%;
+  --border: 0 0% 18% / 0.1;
+  --input: 0 0% 18% / 0.1;
+  --ring: 105 10% 65%;
 
-  --radius: 0rem;
-  /* Sharp Farmhouse Aesthetic */
+  --radius: 0.5rem;
+  /* Soft rounded corners */
 }
 
 @layer base {
@@ -57,11 +52,9 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
-    background-attachment: fixed;
   }
 
   h1,
@@ -70,8 +63,8 @@
   h4,
   h5,
   h6 {
-    @apply font-serif font-medium tracking-tight text-primary;
-    line-height: 1.2;
+    @apply font-serif font-medium tracking-normal text-foreground;
+    line-height: 1.3;
   }
 
   ::selection {
