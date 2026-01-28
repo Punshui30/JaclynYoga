@@ -55,25 +55,24 @@ export function HeroSection() {
                 {/* RIGHT: Image Side - Option 1: Framed Editorial Crop */}
                 <div className="col-span-12 lg:col-span-6 relative">
                     <div className="relative z-10 w-full aspect-[4/5] lg:aspect-[3/4] overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(43,43,43,0.1)] border border-warm-gray-light bg-white p-3">
-                        <div className="relative w-full h-full overflow-hidden rounded-xl">
-                            <Image
-                                src="/images/hero-new.webp"
-                                alt="Jaclyn Muir Practitioner"
-                                fill
-                                className="object-cover transition-transform duration-[3000ms] hover:scale-105"
-                                priority
-                            />
-                            {/* Intentional editorial overlay */}
-                            <div className="absolute inset-0 bg-charcoal/5 mix-blend-multiply opacity-30" />
-                        </div>
+                        <Image
+                            src="/images/hero-new.webp"
+                            alt="Jaclyn Muir Practitioner"
+                            fill
+                            className="object-cover transition-transform hover:scale-105"
+                            style={{ transitionDuration: '3000ms' }}
+                            priority
+                        />
+                        {/* Intentional editorial overlay */}
+                        <div className="absolute inset-0 bg-charcoal/5 mix-blend-multiply opacity-30" />
                     </div>
-
-                    {/* Subtle offset framing shape */}
-                    <div className="absolute -top-12 -right-12 -bottom-12 -left-12 border border-warm-gray/10 rounded-[3rem] -z-10 hidden lg:block" />
-
-                    {/* Brand Geometry Repetition: Subtlest echo of logo geometry */}
-                    <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl -z-10" />
                 </div>
+
+                {/* Subtle offset framing shape */}
+                <div className="absolute -top-12 -right-12 -bottom-12 -left-12 border border-warm-gray/10 rounded-[3rem] -z-10 hidden lg:block" />
+
+                {/* Brand Geometry Repetition: Subtlest echo of logo geometry */}
+                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl -z-10" />
             </div>
         </section>
     );
