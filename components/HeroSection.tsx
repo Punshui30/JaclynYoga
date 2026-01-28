@@ -32,8 +32,8 @@ export function HeroSection() {
         >
 
             {/* 1. MID-SCREEN NAVIGATION (Sun Yoga Style) */}
-            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-50 flex justify-between items-center px-8 md:px-20 lg:px-32 pointer-events-none">
-                <nav className="flex flex-col gap-10 md:gap-12 text-[12px] md:text-[13px] tracking-[0.2em] text-[#3a3a3a] uppercase pointer-events-auto">
+            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-50 flex justify-between items-center px-10 md:px-24 lg:px-32 pointer-events-none">
+                <nav className="flex flex-col gap-10 md:gap-14 text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto">
                     <Link href="/about" className="hover:opacity-60 transition-opacity">About</Link>
                     <Link href="/services" className="hover:opacity-60 transition-opacity">Services</Link>
                     <Link
@@ -45,18 +45,18 @@ export function HeroSection() {
                         Classes
                     </Link>
                 </nav>
-                <nav className="flex flex-col gap-10 md:gap-12 text-[12px] md:text-[13px] tracking-[0.2em] text-[#3a3a3a] uppercase pointer-events-auto text-right">
-                    <Link href="/contact" className="hover:text-charcoal transition-colors">Contact</Link>
-                    <Link href="/schedule" className="hover:text-charcoal transition-colors">Schedule</Link>
+                <nav className="flex flex-col gap-10 md:gap-14 text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto text-right">
+                    <Link href="/contact" className="hover:opacity-60 transition-opacity">Contact</Link>
+                    <Link href="/schedule" className="hover:opacity-60 transition-opacity">Schedule</Link>
                     <Link href="/book" className="font-bold border-b-2 border-[#3a3a3a] hover:opacity-60 transition-opacity">Book</Link>
                 </nav>
             </div>
 
             {/* 2. CENTERED STACK: LOGO -> SUBJECT -> TEXT */}
-            <div className="relative flex flex-col items-center justify-between h-[82vh] w-full z-20 pointer-events-none pt-4 pb-6">
+            <div className="relative flex flex-col items-center justify-between h-[85vh] w-full z-20 pointer-events-none pt-4 pb-8">
 
-                {/* LOGO (ABOVE HER) */}
-                <div className="relative w-[120px] md:w-[140px] h-[120px] md:h-[140px] z-30 pointer-events-auto">
+                {/* LOGO (ABOVE HER) - SCALED UP (240px) */}
+                <div className="relative w-[180px] md:w-[240px] h-[180px] md:h-[240px] z-30 pointer-events-auto">
                     <Image
                         src="/images/logo.png"
                         alt="Jaclyn Muir Logo"
@@ -66,32 +66,36 @@ export function HeroSection() {
                     />
                 </div>
 
-                {/* SUBJECT (CENTER) - BAREFOOT & ORIGINAL FACE */}
-                {/* Size tuned to find middle ground after feedback */}
+                {/* SUBJECT (CENTER) - BAREFOOT & LARGER SCALE */}
                 <motion.div
                     style={{
                         rotateX, rotateY,
                         x: translateX, y: translateY,
-                        perspective: 1000
+                        perspective: 1200
                     }}
-                    className="relative w-full max-w-[40vh] h-[40vh] md:max-w-[46vh] md:h-[46vh] pointer-events-auto"
+                    className="relative w-full max-w-[45vh] h-[45vh] md:max-w-[55vh] md:h-[55vh] pointer-events-auto"
                 >
                     <Image
-                        src="/images/hero-barefoot-v27.png"
+                        src="/images/hero-pure-white-final.png"
                         alt="Jaclyn Muir Meditation"
                         fill
-                        className="object-contain object-center"
+                        className="object-contain object-center mix-blend-multiply"
+                        style={{
+                            // Final safety mask to feather out the edges of the white box
+                            maskImage: 'radial-gradient(circle at center, black 60%, transparent 98%)',
+                            WebkitMaskImage: 'radial-gradient(circle at center, black 60%, transparent 98%)'
+                        }}
                         priority
                     />
                 </motion.div>
 
                 {/* TEXT (UNDERNEATH HER) */}
-                <div className="text-center z-30 pointer-events-auto space-y-4">
+                <div className="text-center z-30 pointer-events-auto space-y-5">
                     <div className="animate-fade-in [animation-delay:600ms] forwards">
-                        <h1 className="font-serif text-[42px] md:text-[60px] lg:text-[68px] tracking-[0.18em] text-[#1f1f1f] m-0 leading-tight uppercase font-light">
+                        <h1 className="font-serif text-[48px] md:text-[64px] lg:text-[76px] tracking-[0.2em] text-[#1f1f1f] m-0 leading-tight uppercase font-light">
                             JACLYN MUIR
                         </h1>
-                        <p className="font-sans text-[11px] md:text-[13px] tracking-[0.4em] text-[#7a8a7a] uppercase font-bold">
+                        <p className="font-sans text-[11px] md:text-[13px] tracking-[0.45em] text-[#7a8a7a] uppercase font-bold">
                             Yoga · Yoga Therapy · Reiki
                         </p>
                     </div>
