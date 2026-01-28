@@ -25,32 +25,35 @@ export function HeroSection() {
             </div>
 
             {/* 3. LAYER: NAVIGATION (Behind Subject) */}
-            {/* Centered vertically/horizontally, but behind the subject's head/body */}
-            <div className="absolute top-[45%] left-0 right-0 z-10 flex justify-center items-center">
-                <nav className="flex items-center gap-8 md:gap-16 lg:gap-24 opacity-0 animate-fade-in-up [animation-delay:200ms] forwards">
-                    {['Home', 'About', 'Services'].map((item) => (
-                        <span key={item} className="text-charcoal/80 font-sans text-[11px] md:text-[13px] uppercase tracking-[0.25em] font-medium hover:text-charcoal cursor-pointer transition-colors">
-                            {item}
-                        </span>
-                    ))}
-                    {/* Spacing for Subject Head if needed, or visual gap */}
-                    <span className="w-24 md:w-48 lg:w-64" /> {/* Gap for subject */}
-                    {['Classes', 'Contact', 'Book'].map((item) => (
-                        <span key={item} className="text-charcoal/80 font-sans text-[11px] md:text-[13px] uppercase tracking-[0.25em] font-medium hover:text-charcoal cursor-pointer transition-colors">
-                            {item}
-                        </span>
-                    ))}
+            <div className="absolute top-[52%] left-0 right-0 z-10 flex justify-center items-center">
+                <nav className="flex items-center gap-12 md:gap-24 lg:gap-32 w-full justify-center px-4 opacity-0 animate-fade-in-up [animation-delay:200ms] forwards">
+                    <div className="flex gap-8 md:gap-12">
+                        {['Home', 'About', 'Services'].map((item) => (
+                            <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-charcoal/70 font-sans text-[10px] md:text-[12px] lg:text-[13px] uppercase tracking-[0.3em] font-medium hover:text-charcoal cursor-pointer transition-colors relative group">
+                                {item}
+                            </Link>
+                        ))}
+                    </div>
+
+                    <div className="w-32 md:w-64 lg:w-80 shrink-0" />
+
+                    <div className="flex gap-8 md:gap-12">
+                        {['Classes', 'Contact', 'Book'].map((item) => (
+                            <Link key={item} href={`/${item.toLowerCase()}`} className="text-charcoal/70 font-sans text-[10px] md:text-[12px] lg:text-[13px] uppercase tracking-[0.3em] font-medium hover:text-charcoal cursor-pointer transition-colors relative group">
+                                {item}
+                            </Link>
+                        ))}
+                    </div>
                 </nav>
             </div>
 
             {/* 4. LAYER: SUBJECT (Foreground) */}
-            {/* Anchored bottom, centered. Overlaps the Nav slightly if screen is small, or fits in the gap. */}
-            <div className="absolute bottom-0 left-0 right-0 z-20 flex justify-center items-end h-[60vh] md:h-[70vh]">
+            <div className="absolute bottom-0 left-0 right-0 z-20 flex justify-center items-end h-[50vh] md:h-[55vh]">
 
-                {/* CSS Grounding Shadow (Extra realism on the white floor) */}
-                <div className="absolute bottom-[5%] w-[40%] h-[20px] bg-charcoal/20 blur-[30px] rounded-[100%]" />
+                {/* CSS Grounding Shadow */}
+                <div className="absolute bottom-[2%] w-[25%] h-[15px] bg-charcoal/30 blur-[25px] rounded-[100%]" />
 
-                <div className="relative w-full max-w-[80vh] h-full">
+                <div className="relative w-full max-w-[60vh] h-full transition-transform duration-1000 hover:scale-[1.01]">
                     <Image
                         src="/images/hero-cutout.png"
                         alt="Jaclyn Muir Meditation"
@@ -64,4 +67,3 @@ export function HeroSection() {
         </section>
     );
 }
-
