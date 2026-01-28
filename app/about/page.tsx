@@ -69,7 +69,8 @@ export default function AboutPage() {
                                         src="/images/jaclyn-headshot.webp"
                                         alt="Jaclyn Muir Profile"
                                         fill
-                                        className="object-cover object-top transition-all duration-[3000ms] group-hover:scale-105 filter sepia-[0.1] saturate-[0.8]"
+                                        className="object-cover object-top transition-all group-hover:scale-105 filter sepia-[0.1] saturate-[0.8]"
+                                        style={{ transitionDuration: '3000ms' }}
                                         priority
                                     />
                                     <div className="absolute inset-0 bg-[#E8D5C4]/10 mix-blend-multiply pointer-events-none" />

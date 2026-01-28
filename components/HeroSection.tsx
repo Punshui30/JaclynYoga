@@ -76,7 +76,8 @@ export function HeroSection() {
                                 src="/images/hero-new.webp"
                                 alt="Jaclyn Muir Practitioner"
                                 fill
-                                className="object-cover transition-transform duration-[4000ms] hover:scale-105 sepia-[0.1] saturate-[0.8] brightness-[1.02]"
+                                className="object-cover transition-transform hover:scale-105 sepia-[0.1] saturate-[0.8] brightness-[1.02]"
+                                style={{ transitionDuration: '4000ms' }}
                                 priority
                             />
                             {/* editorial warmth overlay */}
