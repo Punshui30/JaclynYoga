@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #E2DACD;
+  --background: #F2E8DE;
   --foreground: #1E1E1E;
   --primary: #1E1E1E;
   --secondary: #8B9B8A;
   --charcoal: #1E1E1E;
-  --stone: #E2DACD;
+  --stone: #F2E8DE;
   --clay: #DED4C7;
   --bone: #F6F2EA;
 }

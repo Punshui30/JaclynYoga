@@ -39,32 +39,9 @@ export function Navbar() {
                     </span>
                 </Link>
 
-                {/* DESKTOP NAV */}
-                <div className="hidden md:flex items-center gap-16">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            target={link.isExternal ? "_blank" : undefined}
-                            rel={link.isExternal ? "noopener noreferrer" : undefined}
-                            className={cn(
-                                "text-[10px] uppercase tracking-[0.6em] font-sans font-bold transition-all relative py-2 group",
-                                pathname === link.href ? "text-charcoal" : "text-charcoal/30 hover:text-charcoal/80"
-                            )}
-                        >
-                            {link.name}
-                            <span className={cn(
-                                "absolute bottom-0 left-0 w-0 h-[1px] bg-secondary transition-all duration-500 group-hover:w-full",
-                                pathname === link.href ? "w-full" : ""
-                            )} />
-                        </Link>
-                    ))}
-                    <Link
-                        href="/booking"
-                        className="px-12 py-5 bg-charcoal text-stone font-sans text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-sage hover:text-charcoal transition-all shadow-sm"
-                    >
-                        Book Now
-                    </Link>
+                {/* DESKTOP NAV - HIDDEN (Moved to Hero) */}
+                <div className="hidden items-center gap-16">
+                    {/* Links moved to HeroSection for perspective layout */}
                 </div>
 
                 {/* MOBILE TRIGGER */}
