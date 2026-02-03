@@ -68,10 +68,10 @@ export function HeroSection() {
             {/* 2. CENTERED STACK: LOGO -> SUBJECT -> TEXT */}
             <div className="relative flex flex-col items-center justify-between h-[90vh] w-full z-20 pointer-events-none pt-2 pb-8">
 
-                {/* LOGO (ABOVE HER) - MASSIVE ON MOBILE */}
-                <div className="relative flex flex-col items-center justify-center gap-1 z-30 pointer-events-auto mt-[-24vh]">
+                {/* LOGO (ABOVE HER) - RESTORED TO FRAME */}
+                <div className="relative flex flex-col items-center justify-center gap-1 z-30 pointer-events-auto mt-[-8vh] md:mt-0">
                     {/* HAMSA ICON (Cropped) */}
-                    <div className="relative w-[360px] md:w-[420px] h-[360px] md:h-[420px] mb-[-10vh]">
+                    <div className="relative w-[320px] md:w-[380px] h-[320px] md:h-[380px] mb-[-4vh]">
                         <Image
                             src="/images/logo-icon.png"
                             alt="Jaclyn Muir Hamsa"
