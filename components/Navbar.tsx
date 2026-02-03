@@ -28,7 +28,7 @@ export function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className="flex items-center gap-6 hover:opacity-80 transition-all group"
                 >
-                    <div className="relative w-12 h-12 md:w-16 md:h-16 filter saturate-[0.8] opacity-100">
+                    <div className="relative w-20 h-20 md:w-32 md:h-32 filter saturate-[0.8] opacity-100">
                         <Image
                             src="/images/logo.png"
                             alt="Jaclyn Muir Logo"

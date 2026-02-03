@@ -83,10 +83,10 @@ export function HeroSection() {
                     className="relative w-full max-w-[55vh] h-[55vh] md:max-w-[65vh] md:h-[65vh] pointer-events-auto"
                 >
                     <div
-                        className="absolute inset-0 rounded-full blur-3xl opacity-30"
+                        className="absolute inset-0 rounded-full blur-3xl opacity-60"
                         style={{
-                            background: 'radial-gradient(circle, rgba(255,200,150,0.4) 0%, rgba(255,180,120,0.2) 50%, transparent 70%)',
-                            transform: 'scale(1.2)',
+                            background: 'radial-gradient(circle, rgba(255,180,100,0.6) 0%, rgba(255,140,80,0.3) 50%, transparent 70%)',
+                            transform: 'scale(1.4)',
                             zIndex: -1
                         }}
                     />

@@ -3,17 +3,30 @@ import Image from 'next/image';
 export default function AboutPage() {
     return (
         <div className="flex flex-col w-full bg-background font-sans">
-            <section className="pt-60 pb-40 px-8 md:px-20 lg:px-32 bg-background relative border-b border-charcoal/5">
-                <div className="max-w-[1600px] mx-auto text-left space-y-12 relative z-10">
-                    <div className="space-y-6">
-                        <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">The practitioner</p>
+            <section className="pt-60 pb-20 px-8 md:px-20 lg:px-32 bg-background relative border-b border-charcoal/5">
+                <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-32 items-center relative z-10">
+                    <div className="lg:col-span-7 space-y-12 text-left">
+                        <div className="space-y-6">
+                            <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">The practitioner</p>
+                        </div>
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-charcoal leading-none tracking-[0.05em]">
+                            ABOUT <span className="italic text-charcoal/60 lowercase">jaclyn muir</span>
+                        </h1>
+                        <p className="text-lg md:text-xl text-charcoal/50 leading-relaxed max-w-2xl font-sans lowercase italic">
+                            Certified Yoga Therapist, Clinical Practitioner, and dedicated guide on the path to nervous system restoration.
+                        </p>
                     </div>
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-charcoal leading-none tracking-[0.05em]">
-                        ABOUT <span className="italic text-charcoal/60 lowercase">jaclyn muir</span>
-                    </h1>
-                    <p className="text-lg md:text-xl text-charcoal/50 leading-relaxed max-w-2xl font-sans lowercase italic">
-                        Certified Yoga Therapist, Clinical Practitioner, and dedicated guide on the path to nervous system restoration.
-                    </p>
+
+                    <div className="lg:col-span-5 relative h-[50vh] lg:h-[60vh] border border-charcoal/10">
+                        <Image
+                            src="/images/jaclyn-headshot.webp"
+                            alt="Jaclyn Muir Profile"
+                            fill
+                            className="object-cover grayscale-[0.4] contrast-[1.1] brightness-[0.98]"
+                            priority
+                        />
+                        <div className="absolute inset-0 bg-charcoal/5 mix-blend-multiply pointer-events-none" />
+                    </div>
                 </div>
             </section>
 
@@ -55,18 +68,6 @@ export default function AboutPage() {
                     </div>
 
                     <div className="lg:col-span-5 space-y-32">
-                        {/* Headshot Image - Art Directed Editorial */}
-                        <div className="relative border border-charcoal/10 h-[60vh] lg:h-[80vh]">
-                            <Image
-                                src="/images/jaclyn-headshot.webp"
-                                alt="Jaclyn Muir Profile"
-                                fill
-                                className="object-cover grayscale-[0.4] contrast-[1.1] brightness-[0.98]"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-charcoal/5 mix-blend-multiply pointer-events-none" />
-                        </div>
-
                         <div className="bg-white p-16 md:p-20 border border-charcoal/5">
                             <h3 className="text-[11px] font-sans font-bold text-charcoal uppercase tracking-[0.3em] mb-16">Certifications</h3>
                             <ul className="space-y-16">
