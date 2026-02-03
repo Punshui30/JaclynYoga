@@ -28,7 +28,14 @@ export function HeroSection() {
     return (
         <section
             onMouseMove={handleMouseMove}
-            className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center bg-[#f4ede4]"
+            className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center"
+            style={{
+                // TWO-TONE STUDIO BACKGROUND
+                // Wall: #f4ede4 (Original luxury cream)
+                // Floor: #ebe3da (Slightly deeper/warmer for grounding)
+                // Split: 65% down (below hips) with soft gradient blend
+                background: 'linear-gradient(to bottom, #f4ede4 0%, #f4ede4 60%, #ebe3da 100%)'
+            }}
         >
 
             {/* 1. MID-SCREEN NAVIGATION (Sun Yoga Style) */}
@@ -73,35 +80,44 @@ export function HeroSection() {
                     />
                 </div>
 
-                {/* SUBJECT (CENTER) - BAREFOOT & LARGER SCALE & FEATHERED BLEND */}
+                {/* SUBJECT (CENTER) - BAREFOOT & GROUNDED */}
                 <motion.div
                     style={{
                         rotateX, rotateY,
                         x: translateX, y: translateY,
                         perspective: 1000
                     }}
-                    className="relative w-full max-w-[55vh] h-[55vh] md:max-w-[65vh] md:h-[65vh] pointer-events-auto"
+                    className="relative w-full max-w-[55vh] h-[55vh] md:max-w-[65vh] md:h-[65vh] pointer-events-auto flex justify-center items-end"
                 >
+                    {/* WARM GLOW (Backlight) - Subtle/Premium */}
                     <div
-                        className="absolute inset-0 rounded-full blur-3xl opacity-60"
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full blur-3xl opacity-40 pointer-events-none"
                         style={{
-                            background: 'radial-gradient(circle, rgba(255,180,100,0.6) 0%, rgba(255,140,80,0.3) 50%, transparent 70%)',
-                            transform: 'scale(1.4)',
+                            background: 'radial-gradient(circle, rgba(255,250,235,0.8) 0%, rgba(245,235,220,0.4) 40%, transparent 70%)',
+                            zIndex: -2
+                        }}
+                    />
+
+                    {/* CONTACT SHADOW (Grounding) */}
+                    <div
+                        className="absolute bottom-[-2%] left-1/2 -translate-x-1/2 w-[70%] h-[10%] rounded-[100%] blur-xl opacity-20 pointer-events-none"
+                        style={{
+                            background: '#3a3a3a',
                             zIndex: -1
                         }}
                     />
+
                     <Image
                         src="/images/hero-final-solid.png"
                         alt="Jaclyn Muir Meditation"
                         fill
-                        className="object-contain object-center"
+                        className="object-contain object-bottom"
                         style={{
-                            // ARCHITECTURAL FEATHERING:
-                            // We use a radial mask to fade the image edges. 
-                            // Since the image background is #f4ede4 and the site background is #f4ede4,
-                            // this feathering makes the transition mathematically invisible.
-                            maskImage: 'radial-gradient(circle at center, black 40%, transparent 85%)',
-                            WebkitMaskImage: 'radial-gradient(circle at center, black 40%, transparent 85%)'
+                            // ARCHITECTURAL FEATHERING REFINED:
+                            // We use a radial mask to fade the image edges but keep the bottom grounded.
+                            maskImage: 'linear-gradient(to bottom, black 80%, black 100%)',
+                            WebkitMaskImage: 'linear-gradient(to bottom, black 80%, black 100%)'
+                            // Note: Removed radial feathering at bottom to ensure she sits on the "floor"
                         }}
                         priority
                     />
