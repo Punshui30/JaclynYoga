@@ -107,7 +107,7 @@ export function HeroSection() {
                     />
 
                     <Image
-                        src="/images/hero-transparent.png"
+                        src="/images/hero-true-cutout.png"
                         alt="Jaclyn Muir Meditation"
                         fill
                         className="object-contain object-bottom"
