@@ -10,7 +10,7 @@ export default function ServicesPage() {
                 <div className="max-w-[1600px] mx-auto text-left space-y-12">
                     <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">Offerings</p>
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-charcoal leading-none tracking-[0.05em]">
-                        OFFERINGS <span className="italic text-charcoal/60 lowercase">& services</span>
+                        OFFERINGS <span className="italic text-charcoal lowercase">& services</span>
                     </h1>
                     <p className="text-lg md:text-xl text-charcoal/50 leading-relaxed max-w-2xl font-sans lowercase italic">
                         Supporting your journey towards physiological mobility and energetic clarity through evidence-based yoga therapy and refined clinical healing.
@@ -25,8 +25,8 @@ export default function ServicesPage() {
                     <div id="yoga-classes" className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
                         <div className="lg:col-span-4 space-y-12">
                             <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">01</p>
-                            <h2 className="text-3xl lg:text-4xl font-serif text-charcoal leading-tight uppercase tracking-widest">Yoga <br /><span className="italic text-charcoal/60">Practice</span></h2>
-                            <p className="text-charcoal/60 leading-relaxed text-sm lg:text-base lowercase italic tracking-wide">
+                            <h2 className="text-3xl lg:text-4xl font-serif text-charcoal leading-tight uppercase tracking-widest">Yoga <br /><span className="italic IGNORED_BY_TOOL_BUT_REQUIRED_ARG">Practice</span></h2>
+                            <p className="IGNORED_BY_TOOL_BUT_REQUIRED_ARG leading-relaxed text-sm lg:text-base lowercase italic tracking-wide">
                                 Group classes designed for mindfulness and functional movement. Emphasis is placed on accessibility, making these suitable for practitioners of all ages and abilities.
                             </p>
                         </div>
@@ -50,8 +50,8 @@ export default function ServicesPage() {
                     <div id="private-sessions" className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
                         <div className="lg:col-span-4 space-y-12">
                             <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">02</p>
-                            <h2 className="text-3xl lg:text-4xl font-serif text-charcoal leading-tight uppercase tracking-widest">Private <br /><span className="italic text-charcoal/60">Instruction</span></h2>
-                            <p className="text-charcoal/60 leading-relaxed text-sm lg:text-base lowercase italic tracking-wide">
+                            <h2 className="text-3xl lg:text-4xl font-serif text-charcoal leading-tight uppercase tracking-widest">Private <br /><span className="italic IGNORED_BY_TOOL_BUT_REQUIRED_ARG">Instruction</span></h2>
+                            <p className="IGNORED_BY_TOOL_BUT_REQUIRED_ARG leading-relaxed text-sm lg:text-base lowercase italic tracking-wide">
                                 Individually tailored support focusing on your unique goals and health considerations. Sessions can be conducted online or in-person.
                             </p>
                         </div>
@@ -81,8 +81,8 @@ export default function ServicesPage() {
                         <div className="lg:col-span-7 space-y-16">
                             <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">03</p>
                             <div className="space-y-8">
-                                <h2 className="text-3xl lg:text-5xl font-serif text-charcoal leading-none uppercase tracking-widest text-wrap">Reiki <br /><span className="italic text-charcoal/60">Restorative Care</span></h2>
-                                <p className="text-charcoal/60 leading-relaxed text-base md:text-lg lowercase italic tracking-wide max-w-xl">
+                                <h2 className="text-3xl lg:text-5xl font-serif text-charcoal leading-none uppercase tracking-widest text-wrap">Reiki <br /><span className="italic IGNORED_BY_TOOL_BUT_REQUIRED_ARG">Restorative Care</span></h2>
+                                <p className="IGNORED_BY_TOOL_BUT_REQUIRED_ARG leading-relaxed text-base md:text-lg lowercase italic tracking-wide max-w-xl">
                                     Reiki is a gentle, energy-based practice that supports deep relaxation and the architecture of natural physiological healing.
                                 </p>
                             </div>
