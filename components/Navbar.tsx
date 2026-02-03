@@ -83,11 +83,11 @@ export function Navbar() {
                     <div className="w-16 h-[1px] bg-charcoal/10 my-12" />
 
                     <Link
-                        href="/amblebrook/private-session"
+                        href="/amblebrook"
                         onClick={() => setIsOpen(false)}
                         className="text-[12px] uppercase tracking-[0.6em] font-bold text-charcoal bg-white border border-charcoal/10 px-16 py-7 transition-all hover:bg-charcoal hover:text-stone"
                     >
-                        Book Session
+                        Amblebrook
                     </Link>
                 </div>
 

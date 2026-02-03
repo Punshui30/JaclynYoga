@@ -7,7 +7,7 @@ import { Mail, Instagram } from 'lucide-react';
 const footerLinks = [
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Booking', href: '/booking' },
+    { name: 'Private Session', href: '/amblebrook/private-session' },
     { name: 'Class Schedule', href: 'https://www.rootsandriveryoga.com/classes', isExternal: true },
 ];
 
@@ -77,14 +77,7 @@ export function Footer() {
                             <p className="text-[10px] uppercase tracking-[0.4em] text-charcoal/20 font-bold">Frederick, MD · Online Worldwide</p>
                         </div>
 
-                        <Link
-                            href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block bg-charcoal text-stone px-14 py-6 text-[10px] uppercase tracking-[0.6em] font-sans font-bold hover:bg-sage hover:text-charcoal transition-all shadow-sm"
-                        >
-                            Secure Session
-                        </Link>
+
                     </div>
                 </div>
             </div>

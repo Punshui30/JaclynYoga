@@ -30,10 +30,10 @@ export function HeroSection() {
             onMouseMove={handleMouseMove}
             className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center"
             style={{
-                // TWO-TONE STUDIO BACKGROUND
-                // Wall: #ebe0d5 (Extracted from reference)
-                // Floor: #f2eadf (Extracted from reference)
-                background: 'linear-gradient(to bottom, #ebe0d5 0%, #ebe0d5 65%, #f2eadf 65%, #f2eadf 100%)'
+                // TWO-TONE STUDIO BACKGROUND (Gradation)
+                // Wall: #ebe0d5 (Top Half)
+                // Floor: #ffffff (Bottom Half - Pure White)
+                background: 'linear-gradient(to bottom, #ebe0d5 0%, #ebe0d5 50%, #ffffff 100%)'
             }}
         >
 
@@ -55,10 +55,10 @@ export function HeroSection() {
                     <Link href="/contact" className="hover:text-charcoal transition-colors">Contact</Link>
                     <Link href="/schedule" className="hover:text-charcoal transition-colors">Schedule</Link>
                     <Link
-                        href="/amblebrook/private-session"
+                        href="/amblebrook"
                         className="font-bold hover:opacity-60 transition-opacity max-w-[120px] md:max-w-none ml-auto"
                     >
-                        Book <span className="hidden md:inline">a Private Session</span><span className="md:hidden">Session</span>
+                        Amblebrook
                     </Link>
                 </nav>
             </div>
