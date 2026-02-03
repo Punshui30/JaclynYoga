@@ -31,10 +31,9 @@ export function HeroSection() {
             className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center"
             style={{
                 // TWO-TONE STUDIO BACKGROUND
-                // Wall: #f4ede4 (Original luxury cream)
-                // Floor: #ebe3da (Slightly deeper/warmer for grounding)
-                // Split: 65% down (below hips) with soft gradient blend
-                background: 'linear-gradient(to bottom, #f4ede4 0%, #f4ede4 60%, #ebe3da 100%)'
+                // Reference Analysis: Wall #ebe0d5 (Beige/Sun Yoga Brand)
+                // Floor: #e1d6cc (Slightly darker/grounded per verbal request)
+                background: 'linear-gradient(to bottom, #ebe0d5 0%, #ebe0d5 60%, #e1d6cc 100%)'
             }}
         >
 
