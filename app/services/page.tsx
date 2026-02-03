@@ -10,7 +10,7 @@ export default function ServicesPage() {
                 <div className="max-w-[1600px] mx-auto text-left space-y-12">
                     <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">Offerings</p>
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-charcoal leading-none tracking-[0.05em]">
-                        CLINICAL <span className="italic text-charcoal/60 lowercase">wellness portfolio</span>
+                        OFFERINGS <span className="italic text-charcoal/60 lowercase">& services</span>
                     </h1>
                     <p className="text-lg md:text-xl text-charcoal/50 leading-relaxed max-w-2xl font-sans lowercase italic">
                         Supporting your journey towards physiological mobility and energetic clarity through evidence-based yoga therapy and refined clinical healing.

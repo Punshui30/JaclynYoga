@@ -9,7 +9,7 @@ export default function BookingPage() {
                 <div className="max-w-[1600px] mx-auto text-left space-y-12 relative z-10">
                     <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">concierge</p>
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-charcoal leading-none tracking-[0.05em]">
-                        SCHEDULE <span className="italic text-charcoal/60 lowercase">clinical practice</span>
+                        BOOK A PRIVATE <span className="italic text-charcoal/60 lowercase">session</span>
                     </h1>
                     <p className="text-lg md:text-xl text-charcoal/50 leading-relaxed max-w-2xl font-sans lowercase italic">
                         Select a session type below to view refined availability and secure your appointment within our private clinical portal.

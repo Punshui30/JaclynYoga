@@ -35,14 +35,14 @@ export function HeroSection() {
             <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-50 flex justify-between items-center px-8 md:px-20 lg:px-32 pointer-events-none">
                 <nav className="flex flex-col gap-10 md:gap-14 text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto">
                     <Link href="/about" className="hover:opacity-60 transition-opacity">About</Link>
-                    <Link href="/services" className="hover:opacity-60 transition-opacity">Services</Link>
+                    <Link href="/services" className="hover:opacity-60 transition-opacity">Offerings</Link>
                     <Link
                         href="https://www.rootsandriveryoga.com/classes"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:opacity-60 transition-opacity"
                     >
-                        Classes
+                        Brunswick
                     </Link>
                 </nav>
                 <nav className="flex flex-col gap-10 md:gap-14 text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto text-right">
@@ -54,7 +54,7 @@ export function HeroSection() {
                         rel="noopener noreferrer"
                         className="font-bold border-b-2 border-[#3a3a3a] hover:opacity-60 transition-opacity"
                     >
-                        Book
+                        Book a Private Session
                     </Link>
                 </nav>
             </div>
@@ -62,8 +62,8 @@ export function HeroSection() {
             {/* 2. CENTERED STACK: LOGO -> SUBJECT -> TEXT */}
             <div className="relative flex flex-col items-center justify-between h-[90vh] w-full z-20 pointer-events-none pt-2 pb-8">
 
-                {/* LOGO (ABOVE HER) - SCALED UP (260px) */}
-                <div className="relative w-[180px] md:w-[260px] h-[180px] md:h-[260px] z-30 pointer-events-auto">
+                {/* LOGO (ABOVE HER) - SCALED UP FOR MOBILE */}
+                <div className="relative w-[240px] md:w-[320px] h-[240px] md:h-[320px] z-30 pointer-events-auto">
                     <Image
                         src="/images/logo.png"
                         alt="Jaclyn Muir Logo"
@@ -82,6 +82,14 @@ export function HeroSection() {
                     }}
                     className="relative w-full max-w-[55vh] h-[55vh] md:max-w-[65vh] md:h-[65vh] pointer-events-auto"
                 >
+                    <div
+                        className="absolute inset-0 rounded-full blur-3xl opacity-30"
+                        style={{
+                            background: 'radial-gradient(circle, rgba(255,200,150,0.4) 0%, rgba(255,180,120,0.2) 50%, transparent 70%)',
+                            transform: 'scale(1.2)',
+                            zIndex: -1
+                        }}
+                    />
                     <Image
                         src="/images/hero-final-solid.png"
                         alt="Jaclyn Muir Meditation"
@@ -105,7 +113,10 @@ export function HeroSection() {
                         <h1 className="font-serif text-[48px] md:text-[64px] lg:text-[76px] tracking-[0.2em] text-[#1f1f1f] m-0 leading-tight uppercase font-light">
                             JACLYN MUIR
                         </h1>
-                        <p className="font-sans text-[11px] md:text-[13px] tracking-[0.45em] text-[#7a8a7a] uppercase font-bold">
+                        <p className="font-sans text-[9px] md:text-[11px] tracking-[0.3em] text-[#7a8a7a]/80 uppercase font-semibold mt-2">
+                            MS, E-RYT 200, RYT 500, C-IAYT
+                        </p>
+                        <p className="font-sans text-[11px] md:text-[13px] tracking-[0.45em] text-[#7a8a7a] uppercase font-bold mt-4">
                             Yoga · Yoga Therapy · Reiki
                         </p>
                     </div>
