@@ -31,9 +31,9 @@ export function HeroSection() {
             className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center"
             style={{
                 // TWO-TONE STUDIO BACKGROUND
-                // Wall: #ebe0d5 (Exact Beige from Ref)
-                // Floor: #ffffff (White floor from Ref - "Sun Yoga" style)
-                background: 'linear-gradient(to bottom, #ebe0d5 0%, #ebe0d5 55%, #ffffff 100%)'
+                // Wall: #fdfbf9 (Brightened High-Key Cream)
+                // Floor: #ffffff (Pure White)
+                background: 'linear-gradient(to bottom, #fdfbf9 0%, #fdfbf9 55%, #ffffff 100%)'
             }}
         >
 
@@ -69,7 +69,7 @@ export function HeroSection() {
             <div className="relative flex flex-col items-center justify-between h-[90vh] w-full z-20 pointer-events-none pt-2 pb-8">
 
                 {/* LOGO (ABOVE HER) - MASSIVE ON MOBILE */}
-                <div className="relative flex flex-col items-center justify-center gap-2 z-30 pointer-events-auto mt-[-20vh]">
+                <div className="relative flex flex-col items-center justify-center gap-1 z-30 pointer-events-auto mt-[-24vh]">
                     {/* HAMSA ICON (Cropped) */}
                     <div className="relative w-[360px] md:w-[420px] h-[360px] md:h-[420px] mb-[-10vh]">
                         <Image
