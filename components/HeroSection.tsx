@@ -108,16 +108,15 @@ export function HeroSection() {
                     />
 
                     <Image
-                        src="/images/hero-final-solid.png"
+                        src="/images/hero-transparent.png"
                         alt="Jaclyn Muir Meditation"
                         fill
                         className="object-contain object-bottom"
                         style={{
-                            // ARCHITECTURAL FEATHERING REFINED:
-                            // We use a radial mask to fade the image edges but keep the bottom grounded.
-                            maskImage: 'linear-gradient(to bottom, black 80%, black 100%)',
-                            WebkitMaskImage: 'linear-gradient(to bottom, black 80%, black 100%)'
-                            // Note: Removed radial feathering at bottom to ensure she sits on the "floor"
+                            // NATURAL FEATHERING:
+                            // Slight feather at the very bottom to blend feet/legs into floor naturally
+                            maskImage: 'linear-gradient(to bottom, black 95%, transparent 100%)',
+                            WebkitMaskImage: 'linear-gradient(to bottom, black 95%, transparent 100%)'
                         }}
                         priority
                     />
