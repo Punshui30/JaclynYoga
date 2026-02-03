@@ -8,6 +8,10 @@ export function BookingWidget() {
     const [mounted, setMounted] = useState(false);
 
     // Unified View: Styled Button / Card (No Iframe to prevent blocking)
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     if (!mounted) return null;
 
     return (
