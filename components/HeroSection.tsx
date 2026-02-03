@@ -38,8 +38,8 @@ export function HeroSection() {
         >
 
             {/* 1. MID-SCREEN NAVIGATION (Sun Yoga Style) */}
-            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-50 flex justify-between items-center px-8 md:px-20 lg:px-32 pointer-events-none">
-                <nav className="flex flex-col gap-10 md:gap-14 text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto">
+            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-50 flex justify-between items-center px-4 md:px-20 lg:px-32 pointer-events-none">
+                <nav className="flex flex-col gap-10 md:gap-14 text-[10px] md:text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto">
                     <Link href="/about" className="hover:opacity-60 transition-opacity">About</Link>
                     <Link href="/services" className="hover:opacity-60 transition-opacity">Offerings</Link>
                     <Link
@@ -58,9 +58,9 @@ export function HeroSection() {
                         href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-bold border-b-2 border-[#3a3a3a] hover:opacity-60 transition-opacity"
+                        className="font-bold border-b-2 border-[#3a3a3a] hover:opacity-60 transition-opacity max-w-[120px] md:max-w-none ml-auto"
                     >
-                        Book a Private Session
+                        Book <span className="hidden md:inline">a Private Session</span><span className="md:hidden">Session</span>
                     </Link>
                 </nav>
             </div>
@@ -71,7 +71,7 @@ export function HeroSection() {
                 {/* LOGO (ABOVE HER) - SCALED UP FOR MOBILE */}
                 <div className="relative flex flex-col items-center justify-center gap-6 z-30 pointer-events-auto mt-[-5vh]">
                     {/* HAMSA ICON (Cropped) */}
-                    <div className="relative w-[180px] md:w-[240px] h-[180px] md:h-[240px]">
+                    <div className="relative w-[220px] md:w-[260px] h-[220px] md:h-[260px]">
                         <Image
                             src="/images/logo-icon.png"
                             alt="Jaclyn Muir Hamsa"
@@ -84,7 +84,7 @@ export function HeroSection() {
                     {/* RAINBOW TEXT (HTML - Replaces Text in Logo) */}
                     <div className="text-center space-y-2">
                         <p className="font-sans font-bold text-[10px] md:text-[12px] tracking-[0.2em] uppercase bg-gradient-to-r from-[#ff8a8a] via-[#f7d969] to-[#8ab4ff] text-transparent bg-clip-text leading-relaxed">
-                            YOGA <span className="text-charcoal/30 px-1">·</span> YOGA THERAPY <span className="text-charcoal/30 px-1">·</span> REIKI
+                            YOGA <span className="text-charcoal/60 px-1">·</span> YOGA THERAPY <span className="text-charcoal/60 px-1">·</span> REIKI
                         </p>
                         <p className="font-serif text-[18px] md:text-[24px] text-charcoal/80 italic tracking-wide">
                             Jaclyn Muir
@@ -135,9 +135,9 @@ export function HeroSection() {
                 </motion.div>
 
                 {/* TEXT (UNDERNEATH HER) */}
-                <div className="text-center z-30 pointer-events-auto space-y-4">
+                <div className="text-center z-30 pointer-events-auto space-y-4 px-4 w-full">
                     <div className="animate-fade-in [animation-delay:600ms] forwards">
-                        <h1 className="font-serif text-[48px] md:text-[64px] lg:text-[76px] tracking-[0.2em] text-[#1f1f1f] m-0 leading-tight uppercase font-light">
+                        <h1 className="font-serif text-[42px] md:text-[64px] lg:text-[76px] tracking-[0.2em] text-[#1f1f1f] m-0 leading-tight uppercase font-light">
                             JACLYN MUIR
                         </h1>
                         <p className="font-sans text-[9px] md:text-[11px] tracking-[0.3em] text-[#7a8a7a]/80 uppercase font-semibold mt-2">
