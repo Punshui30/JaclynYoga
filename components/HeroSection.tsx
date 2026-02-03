@@ -31,9 +31,9 @@ export function HeroSection() {
             className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center"
             style={{
                 // TWO-TONE STUDIO BACKGROUND
-                // Wall: #fdfbf9 (Brightened High-Key Cream)
+                // Wall: #edeae3 (Architectural Greige - More visible definition)
                 // Floor: #ffffff (Pure White)
-                background: 'linear-gradient(to bottom, #fdfbf9 0%, #fdfbf9 55%, #ffffff 100%)'
+                background: 'linear-gradient(to bottom, #edeae3 0%, #edeae3 50%, #ffffff 100%)'
             }}
         >
 
@@ -68,8 +68,8 @@ export function HeroSection() {
             {/* 2. CENTERED STACK: LOGO -> SUBJECT -> TEXT */}
             <div className="relative flex flex-col items-center justify-between h-[90vh] w-full z-20 pointer-events-none pt-2 pb-8">
 
-                {/* LOGO (ABOVE HER) - RESTORED TO FRAME */}
-                <div className="relative flex flex-col items-center justify-center gap-1 z-30 pointer-events-auto mt-[-8vh] md:mt-0">
+                {/* LOGO (ABOVE HER) - LIFTED FOR HEAD CLEARANCE */}
+                <div className="relative flex flex-col items-center justify-center gap-0.5 z-30 pointer-events-auto mt-[-14vh] md:mt-[-5vh]">
                     {/* HAMSA ICON (Cropped) */}
                     <div className="relative w-[320px] md:w-[380px] h-[320px] md:h-[380px] mb-[-4vh]">
                         <Image
