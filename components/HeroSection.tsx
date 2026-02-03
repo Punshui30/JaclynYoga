@@ -38,8 +38,8 @@ export function HeroSection() {
         >
 
             {/* 1. MID-SCREEN NAVIGATION (Sun Yoga Style) */}
-            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-50 flex justify-between items-center px-4 md:px-20 lg:px-32 pointer-events-none">
-                <nav className="flex flex-col gap-10 md:gap-14 text-[10px] md:text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto">
+            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-50 flex justify-between items-center px-2 md:px-20 lg:px-32 pointer-events-none">
+                <nav className="flex flex-col gap-10 md:gap-14 text-[9px] md:text-[13px] tracking-[0.15em] md:tracking-[0.25em] text-[#3a3a3a] uppercase font-medium pointer-events-auto">
                     <Link href="/about" className="hover:opacity-60 transition-opacity">About</Link>
                     <Link href="/services" className="hover:opacity-60 transition-opacity">Offerings</Link>
                     <Link
@@ -51,7 +51,7 @@ export function HeroSection() {
                         Brunswick
                     </Link>
                 </nav>
-                <nav className="flex flex-col gap-10 md:gap-14 text-[10px] md:text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase font-medium pointer-events-auto text-right">
+                <nav className="flex flex-col gap-10 md:gap-14 text-[9px] md:text-[13px] tracking-[0.15em] md:tracking-[0.25em] text-[#3a3a3a] uppercase font-medium pointer-events-auto text-right">
                     <Link href="/contact" className="hover:text-charcoal transition-colors">Contact</Link>
                     <Link href="/schedule" className="hover:text-charcoal transition-colors">Schedule</Link>
                     <Link
@@ -96,7 +96,7 @@ export function HeroSection() {
                         x: translateX, y: translateY,
                         perspective: 1000
                     }}
-                    className="relative w-full max-w-[55vh] h-[55vh] md:max-w-[65vh] md:h-[65vh] pointer-events-auto flex justify-center items-end"
+                    className="relative w-full max-w-[42vh] h-[42vh] md:max-w-[65vh] md:h-[65vh] pointer-events-auto flex justify-center items-end"
                 >
                     {/* WARM GLOW (Backlight) - Subtle/Premium */}
                     <div
