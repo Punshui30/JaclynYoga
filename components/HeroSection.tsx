@@ -58,7 +58,7 @@ export function HeroSection() {
                         href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-bold border-b-2 border-[#3a3a3a] hover:opacity-60 transition-opacity max-w-[120px] md:max-w-none ml-auto"
+                        className="font-bold hover:opacity-60 transition-opacity max-w-[120px] md:max-w-none ml-auto"
                     >
                         Book <span className="hidden md:inline">a Private Session</span><span className="md:hidden">Session</span>
                     </Link>
@@ -69,9 +69,10 @@ export function HeroSection() {
             <div className="relative flex flex-col items-center justify-between h-[90vh] w-full z-20 pointer-events-none pt-2 pb-8">
 
                 {/* LOGO (ABOVE HER) - SCALED UP FOR MOBILE */}
+                {/* LOGO (ABOVE HER) - SCALED UP FOR MOBILE */}
                 <div className="relative flex flex-col items-center justify-center gap-6 z-30 pointer-events-auto mt-[-5vh]">
                     {/* HAMSA ICON (Cropped) */}
-                    <div className="relative w-[220px] md:w-[260px] h-[220px] md:h-[260px]">
+                    <div className="relative w-[280px] md:w-[320px] h-[280px] md:h-[320px]">
                         <Image
                             src="/images/logo-icon.png"
                             alt="Jaclyn Muir Hamsa"
@@ -81,13 +82,10 @@ export function HeroSection() {
                         />
                     </div>
 
-                    {/* RAINBOW TEXT (HTML - Replaces Text in Logo) */}
+                    {/* ACCESSIBLE TEXT (High Contrast) */}
                     <div className="text-center space-y-2">
-                        <p className="font-sans font-bold text-[10px] md:text-[12px] tracking-[0.2em] uppercase bg-gradient-to-r from-[#ff8a8a] via-[#f7d969] to-[#8ab4ff] text-transparent bg-clip-text leading-relaxed">
-                            YOGA <span className="text-charcoal/60 px-1">·</span> YOGA THERAPY <span className="text-charcoal/60 px-1">·</span> REIKI
-                        </p>
-                        <p className="font-serif text-[18px] md:text-[24px] text-charcoal/80 italic tracking-wide">
-                            Jaclyn Muir
+                        <p className="font-sans font-bold text-[11px] md:text-[13px] tracking-[0.2em] uppercase text-charcoal leading-relaxed">
+                            YOGA <span className="text-charcoal px-1">·</span> YOGA THERAPY <span className="text-charcoal px-1">·</span> REIKI
                         </p>
                     </div>
                 </div>
