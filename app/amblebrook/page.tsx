@@ -28,12 +28,14 @@ export default function AmblebrookPage() {
                             </p>
                         </div>
                         <div className="pt-16">
-                            <Link
-                                href="/amblebrook/private-session"
+                            <a
+                                href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-block px-12 py-5 bg-charcoal text-white text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-sage hover:text-charcoal transition-all"
                             >
                                 Book Session
-                            </Link>
+                            </a>
                         </div>
                     </div>
 
