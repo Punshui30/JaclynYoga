@@ -30,10 +30,11 @@ export function HeroSection() {
             onMouseMove={handleMouseMove}
             className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center"
             style={{
-                // TWO-TONE STUDIO BACKGROUND (Gradation)
-                // Wall: #ebe0d5 (Top Half)
-                // Floor: #ffffff (Bottom Half - Pure White)
-                background: 'linear-gradient(to bottom, #ebe0d5 0%, #ebe0d5 50%, #ffffff 100%)'
+                // TWO-TONE STUDIO BACKGROUND (Distinct Gradation Separation)
+                // Wall: #ebe0d5 (Top -> 55%)
+                // Transition: 55% -> 65% (Soft Horizon)
+                // Floor: #ffffff (65% -> Bottom - PURE WHITE)
+                background: 'linear-gradient(to bottom, #ebe0d5 0%, #ebe0d5 55%, #ffffff 65%, #ffffff 100%)'
             }}
         >
 
