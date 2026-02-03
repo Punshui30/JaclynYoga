@@ -31,9 +31,9 @@ export function HeroSection() {
             className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center"
             style={{
                 // TWO-TONE STUDIO BACKGROUND
-                // Wall: #edeae3 (Architectural Greige - More visible definition)
-                // Floor: #ffffff (Pure White)
-                background: 'linear-gradient(to bottom, #edeae3 0%, #edeae3 50%, #ffffff 100%)'
+                // Wall: #ebe0d5 (Extracted from reference)
+                // Floor: #f2eadf (Extracted from reference)
+                background: 'linear-gradient(to bottom, #ebe0d5 0%, #ebe0d5 65%, #f2eadf 65%, #f2eadf 100%)'
             }}
         >
 
@@ -55,9 +55,7 @@ export function HeroSection() {
                     <Link href="/contact" className="hover:text-charcoal transition-colors">Contact</Link>
                     <Link href="/schedule" className="hover:text-charcoal transition-colors">Schedule</Link>
                     <Link
-                        href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/amblebrook/private-session"
                         className="font-bold hover:opacity-60 transition-opacity max-w-[120px] md:max-w-none ml-auto"
                     >
                         Book <span className="hidden md:inline">a Private Session</span><span className="md:hidden">Session</span>

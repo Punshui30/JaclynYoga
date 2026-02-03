@@ -76,36 +76,7 @@ export default function ServicesPage() {
                         </div>
                     </div>
 
-                    {/* Reiki */}
-                    <div id="reiki" className="bg-bone p-16 md:p-32 border border-charcoal/5 grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
-                        <div className="lg:col-span-7 space-y-16">
-                            <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">03</p>
-                            <div className="space-y-8">
-                                <h2 className="text-3xl lg:text-5xl font-serif text-charcoal leading-none uppercase tracking-widest text-wrap">Reiki <br /><span className="italic IGNORED_BY_TOOL_BUT_REQUIRED_ARG">Restorative Care</span></h2>
-                                <p className="IGNORED_BY_TOOL_BUT_REQUIRED_ARG leading-relaxed text-base md:text-lg lowercase italic tracking-wide max-w-xl">
-                                    Reiki is a gentle, energy-based practice that supports deep relaxation and the architecture of natural physiological healing.
-                                </p>
-                            </div>
-                            <div className="flex items-center gap-6 text-[10px] uppercase tracking-[0.4em] font-bold text-charcoal/40 font-sans">
-                                <div className="h-[1px] w-12 bg-charcoal/20" />
-                                <span>NERVOUS SYSTEM SUPPORT</span>
-                            </div>
-                        </div>
 
-                        <div className="lg:col-span-5">
-                            <div className="bg-white p-16 md:p-24 border border-charcoal/10 flex flex-col justify-center items-center text-center space-y-12">
-                                <div className="space-y-4">
-                                    <h4 className="text-2xl font-serif text-charcoal italic tracking-wide">The Session</h4>
-                                    <p className="text-charcoal/50 text-sm leading-relaxed lowercase italic max-w-xs mx-auto">
-                                        Available as a standalone treatment or integrated into your yoga therapy practice.
-                                    </p>
-                                </div>
-                                <div className="text-charcoal font-serif text-4xl tracking-widest border-t border-b border-charcoal/10 py-6 px-12">
-                                    60 MIN
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </section>

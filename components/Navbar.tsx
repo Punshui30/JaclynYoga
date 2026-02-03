@@ -83,9 +83,7 @@ export function Navbar() {
                     <div className="w-16 h-[1px] bg-charcoal/10 my-12" />
 
                     <Link
-                        href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/amblebrook/private-session"
                         onClick={() => setIsOpen(false)}
                         className="text-[12px] uppercase tracking-[0.6em] font-bold text-charcoal bg-white border border-charcoal/10 px-16 py-7 transition-all hover:bg-charcoal hover:text-stone"
                     >

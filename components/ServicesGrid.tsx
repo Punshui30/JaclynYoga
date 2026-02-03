@@ -13,11 +13,7 @@ const services = [
         description: 'Boutique one-on-one sessions tailored for high-threshold nervous system resilience.',
         href: '/services#private-sessions',
     },
-    {
-        title: 'Reiki Restoration',
-        description: 'Energy architecture healing to restore innate balance and physiological calm.',
-        href: '/services#reiki',
-    },
+
     {
         title: 'Gentle Modalities',
         description: 'Curated practices for mobility and recovery within the clinical framework.',
