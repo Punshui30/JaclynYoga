@@ -51,7 +51,7 @@ export function HeroSection() {
                         Brunswick
                     </Link>
                 </nav>
-                <nav className="flex flex-col gap-10 md:gap-14 text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase pointer-events-auto text-right">
+                <nav className="flex flex-col gap-10 md:gap-14 text-[10px] md:text-[13px] tracking-[0.25em] text-[#3a3a3a] uppercase font-medium pointer-events-auto text-right">
                     <Link href="/contact" className="hover:text-charcoal transition-colors">Contact</Link>
                     <Link href="/schedule" className="hover:text-charcoal transition-colors">Schedule</Link>
                     <Link
@@ -68,11 +68,10 @@ export function HeroSection() {
             {/* 2. CENTERED STACK: LOGO -> SUBJECT -> TEXT */}
             <div className="relative flex flex-col items-center justify-between h-[90vh] w-full z-20 pointer-events-none pt-2 pb-8">
 
-                {/* LOGO (ABOVE HER) - SCALED UP FOR MOBILE */}
-                {/* LOGO (ABOVE HER) - SCALED UP FOR MOBILE */}
-                <div className="relative flex flex-col items-center justify-center gap-6 z-30 pointer-events-auto mt-[-5vh]">
+                {/* LOGO (ABOVE HER) - MASSIVE ON MOBILE */}
+                <div className="relative flex flex-col items-center justify-center gap-2 z-30 pointer-events-auto mt-[-20vh]">
                     {/* HAMSA ICON (Cropped) */}
-                    <div className="relative w-[280px] md:w-[320px] h-[280px] md:h-[320px]">
+                    <div className="relative w-[360px] md:w-[420px] h-[360px] md:h-[420px] mb-[-10vh]">
                         <Image
                             src="/images/logo-icon.png"
                             alt="Jaclyn Muir Hamsa"
