@@ -28,15 +28,6 @@ export default function ContactPage() {
                             <h2 className="text-2xl font-serif text-charcoal mb-8 uppercase tracking-widest">Contact Information</h2>
                             <div className="space-y-6">
                                 <div>
-                                    <p className="text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/30 mb-2">Email</p>
-                                    <a
-                                        href="mailto:ladyjaclynmuir@gmail.com"
-                                        className="text-charcoal/80 hover:text-sage transition-colors font-serif italic text-xl tracking-wide lowercase"
-                                    >
-                                        ladyjaclynmuir@gmail.com
-                                    </a>
-                                </div>
-                                <div>
                                     <p className="text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/30 mb-2">Phone</p>
                                     <a
                                         href="tel:240-529-4722"
@@ -63,7 +54,19 @@ export default function ContactPage() {
                         className="bg-white p-12 border border-charcoal/5"
                     >
                         <h2 className="text-2xl font-serif text-charcoal mb-8 uppercase tracking-widest">Send a Message</h2>
-                        <form className="space-y-8">
+                        {/* 
+                            FORMSPREE SETUP:
+                            1. Go to https://formspree.io/
+                            2. Create a new form
+                            3. Copy the "Endpoint" URL
+                            4. Paste it below in the action="" attribute
+                            Example: action="https://formspree.io/f/xyzaqwer"
+                        */}
+                        <form
+                            action="https://formspree.io/f/PLACEHOLDER_FORM_ID"
+                            method="POST"
+                            className="space-y-8"
+                        >
                             <div className="space-y-4 border-b border-charcoal/10 pb-6">
                                 <label htmlFor="name" className="block text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/30 font-sans">
                                     Name

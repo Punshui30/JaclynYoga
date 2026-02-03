@@ -38,9 +38,9 @@ export function Footer() {
                         <a href="https://instagram.com/jaclyn_muir_yoga" target="_blank" rel="noopener noreferrer" className="text-charcoal/30 hover:text-charcoal transition-colors">
                             <Instagram size={24} strokeWidth={1} />
                         </a>
-                        <a href="mailto:hello@jaclynmuir.com" className="text-charcoal/30 hover:text-charcoal transition-colors">
+                        <Link href="/contact" className="text-charcoal/30 hover:text-charcoal transition-colors">
                             <Mail size={24} strokeWidth={1} />
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -68,12 +68,12 @@ export function Footer() {
                     <p className="micro-eyebrow text-charcoal/80">Direct Channel</p>
                     <div className="space-y-16">
                         <div className="space-y-4">
-                            <a
-                                href="mailto:hello@jaclynmuir.com"
+                            <Link
+                                href="/contact"
                                 className="text-charcoal/80 hover:text-sage transition-colors block text-xl font-serif italic tracking-wide lowercase"
                             >
-                                hello@jaclynmuir.com
-                            </a>
+                                Visit Contact Page
+                            </Link>
                             <p className="text-[10px] uppercase tracking-[0.4em] text-charcoal/20 font-bold">Frederick, MD · Online Worldwide</p>
                         </div>
 
