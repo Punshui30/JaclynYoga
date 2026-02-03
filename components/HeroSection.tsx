@@ -69,14 +69,27 @@ export function HeroSection() {
             <div className="relative flex flex-col items-center justify-between h-[90vh] w-full z-20 pointer-events-none pt-2 pb-8">
 
                 {/* LOGO (ABOVE HER) - SCALED UP FOR MOBILE */}
-                <div className="relative w-[240px] md:w-[320px] h-[240px] md:h-[320px] z-30 pointer-events-auto">
-                    <Image
-                        src="/images/logo.png"
-                        alt="Jaclyn Muir Logo"
-                        fill
-                        className="object-contain"
-                        priority
-                    />
+                <div className="relative flex flex-col items-center justify-center gap-6 z-30 pointer-events-auto mt-[-5vh]">
+                    {/* HAMSA ICON (Cropped) */}
+                    <div className="relative w-[180px] md:w-[240px] h-[180px] md:h-[240px]">
+                        <Image
+                            src="/images/logo-icon.png"
+                            alt="Jaclyn Muir Hamsa"
+                            fill
+                            className="object-contain"
+                            priority
+                        />
+                    </div>
+
+                    {/* RAINBOW TEXT (HTML - Replaces Text in Logo) */}
+                    <div className="text-center space-y-2">
+                        <p className="font-sans font-bold text-[10px] md:text-[12px] tracking-[0.2em] uppercase bg-gradient-to-r from-[#ff8a8a] via-[#f7d969] to-[#8ab4ff] text-transparent bg-clip-text leading-relaxed">
+                            YOGA <span className="text-charcoal/30 px-1">·</span> YOGA THERAPY <span className="text-charcoal/30 px-1">·</span> REIKI
+                        </p>
+                        <p className="font-serif text-[18px] md:text-[24px] text-charcoal/80 italic tracking-wide">
+                            Jaclyn Muir
+                        </p>
+                    </div>
                 </div>
 
                 {/* SUBJECT (CENTER) - BAREFOOT & GROUNDED */}
