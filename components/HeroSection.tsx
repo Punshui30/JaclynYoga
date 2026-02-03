@@ -81,10 +81,10 @@ export function HeroSection() {
                         />
                     </div>
 
-                    {/* ACCESSIBLE TEXT (High Contrast) */}
-                    <div className="text-center space-y-2">
-                        <p className="font-sans font-bold text-[11px] md:text-[13px] tracking-[0.2em] uppercase text-charcoal leading-relaxed">
-                            YOGA <span className="text-charcoal px-1">·</span> YOGA THERAPY <span className="text-charcoal px-1">·</span> REIKI
+                    {/* ACCESSIBLE RAINBOW TEXT (High Saturation) */}
+                    <div className="text-center">
+                        <p className="font-sans font-black text-[11px] md:text-[14px] tracking-[0.25em] uppercase bg-gradient-to-r from-[#e64c4c] via-[#d18e00] to-[#2b72ff] text-transparent bg-clip-text leading-relaxed">
+                            YOGA <span className="text-charcoal/40 px-1">·</span> YOGA THERAPY <span className="text-charcoal/40 px-1">·</span> REIKI
                         </p>
                     </div>
                 </div>
