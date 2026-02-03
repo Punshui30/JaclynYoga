@@ -31,9 +31,9 @@ export function HeroSection() {
             className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center"
             style={{
                 // TWO-TONE STUDIO BACKGROUND
-                // Reference Analysis: Wall #ebe0d5 (Beige/Sun Yoga Brand)
-                // Floor: #e1d6cc (Slightly darker/grounded per verbal request)
-                background: 'linear-gradient(to bottom, #ebe0d5 0%, #ebe0d5 60%, #e1d6cc 100%)'
+                // Wall: #ebe0d5 (Exact Beige from Ref)
+                // Floor: #ffffff (White floor from Ref - "Sun Yoga" style)
+                background: 'linear-gradient(to bottom, #ebe0d5 0%, #ebe0d5 55%, #ffffff 100%)'
             }}
         >
 
@@ -107,7 +107,7 @@ export function HeroSection() {
                     />
 
                     <Image
-                        src="/images/hero-true-cutout.png"
+                        src="/images/hero-ultimate-cutout.png"
                         alt="Jaclyn Muir Meditation"
                         fill
                         className="object-contain object-bottom"
