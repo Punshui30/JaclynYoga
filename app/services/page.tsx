@@ -52,7 +52,7 @@ export default function ServicesPage() {
                             <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">02</p>
                             <h2 className="text-3xl lg:text-4xl font-serif text-charcoal leading-tight uppercase tracking-widest">Private <br /><span className="italic IGNORED_BY_TOOL_BUT_REQUIRED_ARG">Instruction</span></h2>
                             <p className="IGNORED_BY_TOOL_BUT_REQUIRED_ARG leading-relaxed text-sm lg:text-base lowercase italic tracking-wide">
-                                Individually tailored support focusing on your unique goals and health considerations. Sessions can be conducted online or in-person.
+                                Individually tailored support focusing on your unique goals and health considerations. These services are not available online.
                             </p>
                         </div>
 
