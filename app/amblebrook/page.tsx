@@ -24,7 +24,7 @@ export default function AmblebrookPage() {
                         <div className="space-y-8">
                             <h3 className="text-2xl font-serif text-charcoal uppercase tracking-widest">Private Sessions</h3>
                             <p className="text-charcoal/50 text-sm leading-relaxed lowercase italic">
-                                Amblebrook residents can book classes and private instruction via their client portal.
+                                group classes are available for booking via the homeowner portal. Private work can be booked at this link.
                             </p>
                         </div>
                         <div className="pt-16">
@@ -44,7 +44,7 @@ export default function AmblebrookPage() {
                         <div className="space-y-8">
                             <h3 className="text-2xl font-serif text-charcoal uppercase tracking-widest">Community Classes</h3>
                             <p className="text-charcoal/50 text-sm leading-relaxed lowercase italic">
-                                View the schedule for upcoming group classes held within the community center.
+                                view the schedule for upcoming group classes held at the Rock Creek Fitness Center in the Movement Studio.
                             </p>
                         </div>
                         <div className="pt-16">

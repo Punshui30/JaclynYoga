@@ -59,7 +59,7 @@ export default function ServicesPage() {
                         <div className="lg:col-span-8 space-y-0 border-t border-charcoal/10">
                             {[
                                 { title: 'Yoga Therapy Intake', desc: 'Comprehensive 90-minute initial consultation and therapy plan development.', time: '90 Min', label: 'Assessment' },
-                                { title: 'Therapy Follow-Up', desc: '60-minute sessions dedicated to implementing and refining your practice.', time: '60 Min', label: 'Support' },
+                                { title: 'Yoga Therapy Follow-Up', desc: '60-minute sessions dedicated to implementing and refining your practice.', time: '60 Min', label: 'Support' },
                                 { title: 'Private Yoga Session', desc: '60-minute one-on-one sessions focusing on personalized movement and breathwork.', time: '60 Min', label: 'Practice' },
                             ].map((item) => (
                                 <div key={item.title} className="flex flex-col md:flex-row justify-between items-start gap-12 p-12 md:p-16 border-b border-charcoal/10 group hover:bg-bone transition-all duration-700">
