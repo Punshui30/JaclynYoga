@@ -14,6 +14,7 @@ const navLinks = [
     { name: 'Brunswick', href: '/brunswick' },
     { name: 'Contact', href: '/contact' },
     { name: 'Schedule', href: '/schedule' },
+    { name: 'Amblebrook', href: '/amblebrook' },
 ];
 
 export function Navbar() {
@@ -49,7 +50,7 @@ export function Navbar() {
 
                     {/* DESKTOP NAV */}
                     <div className="hidden md:flex items-center gap-6 lg:gap-10">
-                        {navLinks.filter(link => link.name !== 'Home').map((link) => (
+                        {navLinks.filter(link => link.name !== 'Home' && link.name !== 'Amblebrook').map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
@@ -107,16 +108,6 @@ export function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-
-                        <div className="w-16 h-[1px] bg-charcoal/10 my-4" />
-
-                        <Link
-                            href="/amblebrook"
-                            onClick={() => setIsOpen(false)}
-                            className="text-[11px] uppercase tracking-[0.6em] font-bold text-charcoal bg-white border border-charcoal/10 px-10 py-5 transition-all hover:bg-charcoal hover:text-stone"
-                        >
-                            Amblebrook
-                        </Link>
                     </div>
 
                     {/* FOOTER OF MENU */}
