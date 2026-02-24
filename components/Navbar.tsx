@@ -23,64 +23,69 @@ export function Navbar() {
     if (pathname === '/') return null;
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-[100] bg-background/90 backdrop-blur-sm">
-            <div className="max-w-[1600px] mx-auto px-8 md:px-20 lg:px-32 h-24 md:h-28 flex items-center justify-between border-b border-charcoal/5 relative z-[110]">
-                <Link
-                    href="/"
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center gap-6 hover:opacity-80 transition-all group"
-                >
-                    <div className="relative w-20 h-20 md:w-32 md:h-32 filter saturate-[0.8] opacity-100">
-                        <Image
-                            src="/images/logo.png"
-                            alt="Jaclyn Muir Logo"
-                            fill
-                            className="object-contain"
-                        />
-                    </div>
-                    <span className="text-[14px] font-serif text-charcoal tracking-[0.4em] uppercase hidden sm:block">
-                        Jaclyn Muir
-                    </span>
-                </Link>
+        <>
+            <nav className={cn(
+                "fixed top-0 left-0 right-0 z-[110] transition-all duration-500",
+                isOpen ? "bg-stone" : "bg-background/90 backdrop-blur-sm border-b border-charcoal/5"
+            )}>
+                <div className="max-w-[1600px] mx-auto px-8 md:px-20 lg:px-32 h-24 md:h-28 flex items-center justify-between">
+                    <Link
+                        href="/"
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center gap-6 hover:opacity-80 transition-all group"
+                    >
+                        <div className="relative w-20 h-20 md:w-32 md:h-32 filter saturate-[0.8] opacity-100">
+                            <Image
+                                src="/images/logo.png"
+                                alt="Jaclyn Muir Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <span className="text-[14px] font-serif text-charcoal tracking-[0.4em] uppercase hidden sm:block">
+                            Jaclyn Muir
+                        </span>
+                    </Link>
 
-                {/* DESKTOP NAV */}
-                <div className="hidden md:flex items-center gap-6 lg:gap-10">
-                    {navLinks.filter(link => link.name !== 'Home').map((link) => (
+                    {/* DESKTOP NAV */}
+                    <div className="hidden md:flex items-center gap-6 lg:gap-10">
+                        {navLinks.filter(link => link.name !== 'Home').map((link) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                className={cn(
+                                    "text-[10px] lg:text-[11px] uppercase tracking-[0.3em] transition-all font-bold",
+                                    pathname === link.href ? "text-charcoal" : "text-charcoal/40 hover:text-charcoal"
+                                )}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
                         <Link
-                            key={link.name}
-                            href={link.href}
+                            href="/amblebrook"
                             className={cn(
-                                "text-[10px] lg:text-[11px] uppercase tracking-[0.3em] transition-all font-bold",
-                                pathname === link.href ? "text-charcoal" : "text-charcoal/40 hover:text-charcoal"
+                                "text-[10px] lg:text-[11px] uppercase tracking-[0.3em] font-bold transition-all px-6 py-2 border",
+                                pathname === '/amblebrook'
+                                    ? "bg-charcoal text-white border-charcoal"
+                                    : "bg-transparent text-charcoal/60 border-charcoal/20 hover:border-charcoal hover:text-charcoal"
                             )}
                         >
-                            {link.name}
+                            Amblebrook
                         </Link>
-                    ))}
-                    <Link
-                        href="/amblebrook"
-                        className={cn(
-                            "text-[10px] lg:text-[11px] uppercase tracking-[0.3em] font-bold transition-all px-6 py-2 border",
-                            pathname === '/amblebrook'
-                                ? "bg-charcoal text-white border-charcoal"
-                                : "bg-transparent text-charcoal/60 border-charcoal/20 hover:border-charcoal hover:text-charcoal"
-                        )}
-                    >
-                        Amblebrook
-                    </Link>
-                </div>
-
-                {/* MOBILE TRIGGER */}
-                <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden text-[11px] uppercase tracking-[0.4em] font-bold text-charcoal/60 flex items-center gap-4 py-2"
-                >
-                    {isOpen ? 'Close' : 'Menu'}
-                    <div className="w-6 h-6 flex items-center justify-center">
-                        {isOpen ? <X size={20} strokeWidth={1} /> : <Menu size={20} strokeWidth={1} />}
                     </div>
-                </button>
-            </div>
+
+                    {/* MOBILE TRIGGER */}
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="md:hidden text-[11px] uppercase tracking-[0.4em] font-bold text-charcoal/60 flex items-center gap-4 py-2"
+                    >
+                        {isOpen ? 'Close' : 'Menu'}
+                        <div className="w-6 h-6 flex items-center justify-center">
+                            {isOpen ? <X size={20} strokeWidth={1} /> : <Menu size={20} strokeWidth={1} />}
+                        </div>
+                    </button>
+                </div>
+            </nav>
 
             {/* MOBILE OVERLAY: ARCHITECTURAL VAULT */}
             <div className={cn(
@@ -124,6 +129,6 @@ export function Navbar() {
                     </div>
                 </div>
             </div>
-        </nav>
+        </>
     );
 }
