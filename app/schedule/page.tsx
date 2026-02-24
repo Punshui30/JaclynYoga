@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function SchedulePage() {
     return (
-        <div className="min-h-screen bg-luxuryIvory pt-40 pb-32 px-8 md:px-20 lg:px-32">
+        <div className="min-h-screen bg-luxuryIvory pt-32 md:pt-40 pb-32 px-8 md:px-20 lg:px-32">
             <div className="max-w-[1200px] mx-auto">
                 <header className="mb-24 text-center">
                     <p className="text-[10px] uppercase tracking-[0.6em] font-sans font-bold text-sageGray mb-4">Availability</p>
@@ -17,7 +17,7 @@ export default function SchedulePage() {
                 </header>
 
                 {/* Group Offerings */}
-                <section className="mb-24">
+                <section className="mb-16 md:mb-24">
                     <h2 className="text-3xl font-serif text-charcoal mb-12 uppercase tracking-widest text-center">Group Offerings</h2>
                     <div className="grid grid-cols-1 gap-4 md:gap-6">
                         {[
@@ -53,7 +53,7 @@ export default function SchedulePage() {
                 </section>
 
                 {/* Clinic Hours */}
-                <section className="mb-24">
+                <section className="mb-16 md:mb-24">
                     <h2 className="text-3xl font-serif text-charcoal mb-12 uppercase tracking-widest text-center">Clinic Hours</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
@@ -84,7 +84,7 @@ export default function SchedulePage() {
                 </section>
 
                 {/* Booking CTA */}
-                <div className="mt-24 p-12 bg-white border border-charcoal/5 text-center flex flex-col items-center gap-8">
+                <div className="mt-12 md:mt-24 p-8 md:p-12 bg-white border border-charcoal/5 text-center flex flex-col items-center gap-8">
                     <p className="text-sm text-charcoal/50 font-serif italic max-w-lg">
                         Ready to book a private session or have questions about group classes?
                     </p>
@@ -92,7 +92,7 @@ export default function SchedulePage() {
                         href="https://sequencewiz.com/booking/booking-form?uid=c438e188-daf5-4b0a-9269-5861f3fd88b9&get_all=1"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-16 py-6 bg-charcoal text-white text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-sageGray transition-all"
+                        className="px-8 md:px-16 py-6 bg-charcoal text-white text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-sageGray transition-all"
                     >
                         Book a Private Session
                     </a>

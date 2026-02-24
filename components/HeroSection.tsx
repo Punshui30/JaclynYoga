@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useTransform, useScroll } from 'framer-motion';
 
 export function HeroSection() {
     // Parallax mouse movement
@@ -15,6 +15,17 @@ export function HeroSection() {
     const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-5, 5]), springConfig);
     const translateX = useSpring(useTransform(mouseX, [-0.5, 0.5], [-15, 15]), springConfig);
     const translateY = useSpring(useTransform(mouseY, [-0.5, 0.5], [-10, 10]), springConfig);
+
+    // Scroll Parallax (Works on all devices including mobile)
+    const { scrollY } = useScroll();
+    const scrollYParallax = useTransform(scrollY, [0, 1000], [0, 300]);
+    const scrollYSpring = useSpring(scrollYParallax, springConfig);
+
+    // Combine mouse and scroll movement for the subject
+    const combinedY = useTransform(
+        [translateY, scrollYSpring],
+        ([mY, sY]) => (mY as number) + (sY as number)
+    );
 
     const handleMouseMove = (e: React.MouseEvent) => {
         const { clientX, clientY } = e;
@@ -85,7 +96,7 @@ export function HeroSection() {
                 <motion.div
                     style={{
                         rotateX, rotateY,
-                        x: translateX, y: translateY,
+                        x: translateX, y: combinedY,
                         perspective: 1000
                     }}
                     className="relative w-full max-w-[42vh] h-[42vh] md:max-w-[65vh] md:h-[65vh] pointer-events-auto flex justify-center items-end"

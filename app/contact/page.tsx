@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function ContactPage() {
     return (
-        <div className="min-h-screen bg-luxuryIvory pt-40 pb-32 px-8 md:px-20 lg:px-32">
+        <div className="min-h-screen bg-luxuryIvory pt-32 md:pt-40 pb-32 px-8 md:px-20 lg:px-32">
             <div className="max-w-[1200px] mx-auto">
                 <header className="mb-24 text-center">
                     <p className="text-[10px] uppercase tracking-[0.6em] font-sans font-bold text-sageGray mb-4">Get in Touch</p>
@@ -28,7 +28,7 @@ export default function ContactPage() {
                             <h2 className="text-2xl font-serif text-charcoal mb-8 uppercase tracking-widest">Contact Information</h2>
                             <div className="space-y-6">
                                 <div>
-                                    <p className="text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/30 mb-2">Phone</p>
+                                    <p className="text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/50 mb-2">Phone</p>
                                     <a
                                         href="tel:240-529-4722"
                                         className="text-charcoal/80 hover:text-sage transition-colors font-serif text-xl tracking-wide"
@@ -37,7 +37,7 @@ export default function ContactPage() {
                                     </a>
                                 </div>
                                 <div className="pt-6 border-t border-charcoal/10">
-                                    <p className="text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/30 mb-2">Credentials</p>
+                                    <p className="text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/50 mb-2">Credentials</p>
                                     <p className="text-charcoal/60 text-sm tracking-wide">
                                         Jaclyn Muir, MS, E-RYT 200, RYT 500, C-IAYT
                                     </p>
@@ -68,7 +68,7 @@ export default function ContactPage() {
                             className="space-y-8"
                         >
                             <div className="space-y-4 border-b border-charcoal/10 pb-6">
-                                <label htmlFor="name" className="block text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/30 font-sans">
+                                <label htmlFor="name" className="block text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/50 font-sans">
                                     Name
                                 </label>
                                 <input
@@ -81,7 +81,7 @@ export default function ContactPage() {
                                 />
                             </div>
                             <div className="space-y-4 border-b border-charcoal/10 pb-6">
-                                <label htmlFor="email" className="block text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/30 font-sans">
+                                <label htmlFor="email" className="block text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/50 font-sans">
                                     Email
                                 </label>
                                 <input
@@ -94,7 +94,7 @@ export default function ContactPage() {
                                 />
                             </div>
                             <div className="space-y-4 border-b border-charcoal/10 pb-6">
-                                <label htmlFor="phone" className="block text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/30 font-sans">
+                                <label htmlFor="phone" className="block text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/50 font-sans">
                                     Phone (Optional)
                                 </label>
                                 <input
@@ -106,7 +106,7 @@ export default function ContactPage() {
                                 />
                             </div>
                             <div className="space-y-4 border-b border-charcoal/10 pb-12">
-                                <label htmlFor="message" className="block text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/30 font-sans">
+                                <label htmlFor="message" className="block text-[9px] uppercase tracking-[0.4em] font-bold text-charcoal/50 font-sans">
                                     Message
                                 </label>
                                 <textarea
