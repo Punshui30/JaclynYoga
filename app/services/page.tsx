@@ -76,8 +76,34 @@ export default function ServicesPage() {
                         </div>
                     </div>
 
+                </div>
 
+                {/* Reiki Sessions */}
+                <div id="reiki-sessions" className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start pb-20">
+                    <div className="lg:col-span-4 space-y-12">
+                        <p className="text-[10px] uppercase tracking-[0.5em] font-sans font-bold text-charcoal/30">03</p>
+                        <h2 className="text-3xl lg:text-4xl font-serif text-charcoal leading-tight uppercase tracking-widest">Reiki <br /><span className="italic text-charcoal/60 lowercase">Healing</span></h2>
+                        <p className="text-charcoal/60 leading-relaxed text-sm lg:text-base lowercase italic tracking-wide">
+                            A subtle and effective form of energy healing using spiritually guided life force energy. Used to reduce stress and promote relaxation.
+                        </p>
+                    </div>
 
+                    <div className="lg:col-span-8 space-y-0 border-t border-charcoal/10">
+                        {[
+                            { title: 'Reiki Treatment Session', desc: '60 minutes of passive energy work aimed at restoring balance and deep relaxation.', time: '60 Min', label: 'Healing' },
+                        ].map((item) => (
+                            <div key={item.title} className="flex flex-col md:flex-row justify-between items-center gap-12 p-12 border-b border-charcoal/10 group hover:bg-bone transition-all duration-700">
+                                <div className="md:max-w-md w-full space-y-4">
+                                    <h3 className="text-xl font-serif text-charcoal italic tracking-wide">{item.title}</h3>
+                                    <p className="text-charcoal/50 text-sm leading-relaxed lowercase italic">{item.desc}</p>
+                                </div>
+                                <div className="md:text-right space-y-2 flex flex-col justify-center items-end min-w-[100px]">
+                                    <span className="text-charcoal font-serif text-2xl tracking-[0.1em] text-right">{item.time}</span>
+                                    <p className="text-[9px] uppercase tracking-[0.4em] text-charcoal/30 font-sans font-bold text-right">{item.label}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
         </div>
