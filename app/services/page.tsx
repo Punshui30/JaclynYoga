@@ -88,13 +88,19 @@ export default function ServicesPage() {
                         </p>
                     </div>
 
-                    <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-charcoal/10">
+                    <div className="lg:col-span-8 space-y-0 border-t border-charcoal/10">
                         {[
-                            { title: 'Reiki Treatment Session', desc: '60 minutes of passive energy work aimed at restoring balance and deep relaxation. A subtle and effective form of energy healing.' },
-                        ].map((item, idx) => (
-                            <div key={item.title} className={cn("p-12 md:p-16 border-b border-charcoal/10", idx % 2 === 0 ? "md:border-r" : "")}>
-                                <h3 className="text-[13px] font-sans font-bold text-charcoal uppercase tracking-[0.3em] mb-6">{item.title}</h3>
-                                <p className="text-charcoal/50 text-sm leading-relaxed lowercase italic">{item.desc}</p>
+                            { title: 'Reiki Treatment Session', desc: '60 minutes of passive energy work aimed at restoring balance and deep relaxation.', time: '60 Min', label: 'Healing' },
+                        ].map((item) => (
+                            <div key={item.title} className="flex flex-col md:flex-row justify-between items-start gap-12 p-12 md:p-16 border-b border-charcoal/10 group hover:bg-bone transition-all duration-700">
+                                <div className="md:max-w-md space-y-4">
+                                    <h3 className="text-xl font-serif text-charcoal italic tracking-wide">{item.title}</h3>
+                                    <p className="text-charcoal/50 text-sm leading-relaxed lowercase italic">{item.desc}</p>
+                                </div>
+                                <div className="md:text-right space-y-2">
+                                    <span className="text-charcoal font-serif text-2xl tracking-[0.1em]">{item.time}</span>
+                                    <p className="text-[9px] uppercase tracking-[0.4em] text-charcoal/30 font-sans font-bold">{item.label}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
