@@ -82,6 +82,28 @@ export default function AboutPage() {
                             </ul>
                         </div>
 
+                        <div className="bg-white p-16 md:p-20 border border-charcoal/5">
+                            <h3 className="text-[11px] font-sans font-bold text-charcoal uppercase tracking-[0.3em] mb-12">Yoga Alliance Credentials</h3>
+                            <div className="flex items-center gap-8">
+                                <div className="relative w-28 h-28 flex-shrink-0">
+                                    <Image
+                                        src="/images/ERYT200.png"
+                                        alt="E-RYT 200 Registered Experienced Yoga Teacher 2025"
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+                                <div className="relative w-28 h-28 flex-shrink-0">
+                                    <Image
+                                        src="/images/RYT500.png"
+                                        alt="RYT 500 Registered Yoga Teacher 2025"
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="bg-charcoal p-16 md:p-20 border border-charcoal/10">
                             <div className="space-y-12">
                                 <div className="space-y-6">

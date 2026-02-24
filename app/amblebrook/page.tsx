@@ -58,6 +58,24 @@ export default function AmblebrookPage() {
                     </div>
                 </div>
             </section>
+
+            <section className="py-24 md:py-48 px-8 md:px-20 lg:px-32 bg-background border-b border-charcoal/5">
+                <div className="max-w-[1000px] mx-auto w-full">
+                    <div className="w-full aspect-video relative border border-charcoal/10 bg-white p-2 md:p-4">
+                        <div className="w-full h-full relative">
+                            <iframe
+                                className="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/BMDavJ1INb4?si=EnBw2HFCO25i-FMk"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
