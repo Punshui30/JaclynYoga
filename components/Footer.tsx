@@ -8,7 +8,7 @@ const footerLinks = [
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Private Session', href: '/amblebrook/private-session' },
-    { name: 'Class Schedule', href: 'https://www.rootsandriveryoga.com/classes', isExternal: true },
+    { name: 'Class Schedule', href: '/schedule' },
 ];
 
 export function Footer() {
@@ -52,8 +52,6 @@ export function Footer() {
                             <li key={link.href}>
                                 <Link
                                     href={link.href}
-                                    target={link.isExternal ? "_blank" : undefined}
-                                    rel={link.isExternal ? "noopener noreferrer" : undefined}
                                     className="text-charcoal/40 hover:text-charcoal transition-all text-[11px] uppercase tracking-[0.5em] font-sans font-bold"
                                 >
                                     {link.name}

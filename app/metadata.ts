@@ -16,7 +16,6 @@ export const metadata: Metadata = {
         'Chronic Pain Yoga Therapy',
         'Jaclyn Muir',
         'Jaclyn Muir Yoga',
-        'Roots and River Yoga Brunswick',
         'Yoga for Mobility Settings',
         'Holistic Wellness Frederick'
     ],

@@ -11,7 +11,6 @@ const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Offerings', href: '/services' },
-    { name: 'Brunswick', href: '/brunswick' },
     { name: 'Contact', href: '/contact' },
     { name: 'Schedule', href: '/schedule' },
     { name: 'Amblebrook', href: '/amblebrook' },
