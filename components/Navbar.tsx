@@ -10,8 +10,10 @@ import { Menu, X } from 'lucide-react';
 const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Class Schedule', href: 'https://www.rootsandriveryoga.com/classes', isExternal: true },
+    { name: 'Offerings', href: '/services' },
+    { name: 'Brunswick', href: '/brunswick' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Schedule', href: '/schedule' },
 ];
 
 export function Navbar() {
@@ -41,9 +43,31 @@ export function Navbar() {
                     </span>
                 </Link>
 
-                {/* DESKTOP NAV - HIDDEN (Moved to Hero) */}
-                <div className="hidden items-center gap-16">
-                    {/* Links moved to HeroSection for perspective layout */}
+                {/* DESKTOP NAV */}
+                <div className="hidden md:flex items-center gap-6 lg:gap-10">
+                    {navLinks.filter(link => link.name !== 'Home').map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className={cn(
+                                "text-[10px] lg:text-[11px] uppercase tracking-[0.3em] transition-all font-bold",
+                                pathname === link.href ? "text-charcoal" : "text-charcoal/40 hover:text-charcoal"
+                            )}
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
+                    <Link
+                        href="/amblebrook"
+                        className={cn(
+                            "text-[10px] lg:text-[11px] uppercase tracking-[0.3em] font-bold transition-all px-6 py-2 border",
+                            pathname === '/amblebrook'
+                                ? "bg-charcoal text-white border-charcoal"
+                                : "bg-transparent text-charcoal/60 border-charcoal/20 hover:border-charcoal hover:text-charcoal"
+                        )}
+                    >
+                        Amblebrook
+                    </Link>
                 </div>
 
                 {/* MOBILE TRIGGER */}
@@ -69,8 +93,6 @@ export function Navbar() {
                             key={link.name}
                             href={link.href}
                             onClick={() => setIsOpen(false)}
-                            target={link.isExternal ? "_blank" : undefined}
-                            rel={link.isExternal ? "noopener noreferrer" : undefined}
                             className={cn(
                                 "text-4xl font-serif tracking-[0.1em] transition-all duration-700",
                                 pathname === link.href ? "text-charcoal" : "text-charcoal/30 hover:text-charcoal"

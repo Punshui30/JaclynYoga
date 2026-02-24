@@ -44,9 +44,7 @@ export function HeroSection() {
                     <Link href="/about" className="hover:opacity-60 transition-opacity">About</Link>
                     <Link href="/services" className="hover:opacity-60 transition-opacity">Offerings</Link>
                     <Link
-                        href="https://www.rootsandriveryoga.com/classes"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/brunswick"
                         className="hover:opacity-60 transition-opacity"
                     >
                         Brunswick

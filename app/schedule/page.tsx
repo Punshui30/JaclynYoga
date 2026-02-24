@@ -23,7 +23,6 @@ export default function SchedulePage() {
                         {[
                             { day: 'Monday', time: '12:00-12:50pm', class: 'Chair Yoga', location: 'Amblebrook' },
                             { day: 'Monday', time: '1:15-2:30pm', class: 'Yin Yoga', location: 'Amblebrook' },
-                            { day: 'Tuesday', time: '12:00-1:00pm', class: 'Slow Vinyasa Flow', location: 'Roots & River Yoga' },
                             { day: 'Wednesday', time: '10:15-11:30am', class: 'Gentle Yoga', location: 'Amblebrook' },
                             { day: 'Wednesday', time: '12:00-12:50pm', class: 'Chair Yoga', location: 'Amblebrook' },
                             { day: 'Thursday', time: '—', class: 'No scheduled practices', location: '' },
