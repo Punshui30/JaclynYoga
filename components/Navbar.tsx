@@ -84,41 +84,43 @@ export function Navbar() {
 
             {/* MOBILE OVERLAY: ARCHITECTURAL VAULT */}
             <div className={cn(
-                "fixed inset-0 bg-stone z-[105] md:hidden transition-all duration-1000 cubic-bezier(0.19, 1, 0.22, 1) flex flex-col justify-center px-12",
+                "fixed inset-0 bg-stone z-[105] md:hidden transition-all duration-1000 ease-in-out overflow-y-auto",
                 isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
             )}>
-                <div className="flex flex-col gap-12 items-center text-center">
-                    {navLinks.map((link) => (
+                <div className="min-h-full flex flex-col justify-between pt-32 pb-16 px-6">
+                    <div className="flex flex-col gap-8 items-center text-center pt-4">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                onClick={() => setIsOpen(false)}
+                                className={cn(
+                                    "text-3xl font-serif tracking-[0.1em] transition-all duration-700",
+                                    pathname === link.href ? "text-charcoal" : "text-charcoal/30 hover:text-charcoal"
+                                )}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+
+                        <div className="w-16 h-[1px] bg-charcoal/10 my-4" />
+
                         <Link
-                            key={link.name}
-                            href={link.href}
+                            href="/amblebrook"
                             onClick={() => setIsOpen(false)}
-                            className={cn(
-                                "text-4xl font-serif tracking-[0.1em] transition-all duration-700",
-                                pathname === link.href ? "text-charcoal" : "text-charcoal/30 hover:text-charcoal"
-                            )}
+                            className="text-[11px] uppercase tracking-[0.6em] font-bold text-charcoal bg-white border border-charcoal/10 px-10 py-5 transition-all hover:bg-charcoal hover:text-stone"
                         >
-                            {link.name}
+                            Amblebrook
                         </Link>
-                    ))}
+                    </div>
 
-                    <div className="w-16 h-[1px] bg-charcoal/10 my-12" />
-
-                    <Link
-                        href="/amblebrook"
-                        onClick={() => setIsOpen(false)}
-                        className="text-[12px] uppercase tracking-[0.6em] font-bold text-charcoal bg-white border border-charcoal/10 px-16 py-7 transition-all hover:bg-charcoal hover:text-stone"
-                    >
-                        Amblebrook
-                    </Link>
-                </div>
-
-                {/* FOOTER OF MENU */}
-                <div className="absolute bottom-24 left-0 right-0 px-12 flex flex-col items-center gap-8 text-center">
-                    <p className="text-[10px] uppercase tracking-[0.6em] font-bold text-charcoal/20">Private Clinical Practice</p>
-                    <div className="space-y-3">
-                        <p className="text-charcoal/40 text-[11px] uppercase tracking-[0.3em] font-bold italic">Frederick, MD</p>
-                        <p className="text-charcoal/40 text-[11px] uppercase tracking-[0.3em] font-bold italic">Online Worldwide</p>
+                    {/* FOOTER OF MENU */}
+                    <div className="mt-16 flex flex-col items-center gap-6 text-center">
+                        <p className="text-[10px] uppercase tracking-[0.6em] font-bold text-charcoal/20">Private Clinical Practice</p>
+                        <div className="space-y-2">
+                            <p className="text-charcoal/40 text-[11px] uppercase tracking-[0.3em] font-bold italic">Frederick, MD</p>
+                            <p className="text-charcoal/40 text-[11px] uppercase tracking-[0.3em] font-bold italic">Online Worldwide</p>
+                        </div>
                     </div>
                 </div>
             </div>
