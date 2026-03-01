@@ -19,36 +19,86 @@ export default function SchedulePage() {
                 {/* Group Offerings */}
                 <section className="mb-16 md:mb-24">
                     <h2 className="text-3xl font-serif text-charcoal mb-12 uppercase tracking-widest text-center">Group Offerings</h2>
-                    <div className="grid grid-cols-1 gap-4 md:gap-6">
-                        {[
-                            { day: 'Monday', time: '12:00-12:50pm', class: 'Chair Yoga', location: 'Amblebrook' },
-                            { day: 'Monday', time: '1:15-2:30pm', class: 'Yin Yoga', location: 'Amblebrook' },
-                            { day: 'Wednesday', time: '10:15-11:30am', class: 'Gentle Yoga', location: 'Amblebrook' },
-                            { day: 'Wednesday', time: '12:00-12:50pm', class: 'Chair Yoga', location: 'Amblebrook' },
-                            { day: 'Friday', time: '10:15-11:30am', class: 'Gentle Yoga', location: 'Amblebrook' },
-                            { day: 'Friday', time: '12:00-12:50pm', class: 'Chair Yoga', location: 'Amblebrook' },
-                        ].map((item, index) => (
-                            <motion.div
-                                key={`${item.day}-${index}`}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.05 }}
-                                className="group grid grid-cols-1 md:grid-cols-4 gap-4 bg-white border border-charcoal/5 p-8 hover:border-charcoal/20 transition-all"
-                            >
-                                <h3 className="font-serif text-xl text-charcoal tracking-wide uppercase group-hover:italic transition-all">
-                                    {item.day}
-                                </h3>
-                                <p className="text-charcoal/80 font-sans text-sm tracking-wide">
-                                    {item.time}
-                                </p>
-                                <p className="text-charcoal/60 lowercase italic text-sm">
-                                    {item.class}
-                                </p>
-                                <p className="text-charcoal/40 text-xs uppercase tracking-widest">
-                                    {item.location}
-                                </p>
-                            </motion.div>
-                        ))}
+
+                    <div className="space-y-16">
+                        {/* Amblebrook Section */}
+                        <div className="space-y-8">
+                            <div className="flex items-center gap-6">
+                                <h3 className="text-xl font-serif text-charcoal uppercase tracking-[0.2em]">Amblebrook</h3>
+                                <div className="h-[1px] flex-grow bg-charcoal/10" />
+                                <span className="text-[10px] uppercase tracking-widest text-charcoal/40 font-bold">Residents Only</span>
+                            </div>
+                            <div className="grid grid-cols-1 gap-4 md:gap-6">
+                                {[
+                                    { day: 'Monday', time: '12:00-12:50pm', class: 'Chair Yoga' },
+                                    { day: 'Monday', time: '1:15-2:30pm', class: 'Yin Yoga' },
+                                    { day: 'Wednesday', time: '10:15-11:30am', class: 'Gentle Yoga' },
+                                    { day: 'Wednesday', time: '12:00-12:50pm', class: 'Chair Yoga' },
+                                    { day: 'Friday', time: '10:15-11:30am', class: 'Slow Flow Yoga' },
+                                    { day: 'Friday', time: '12:00-12:50pm', class: 'Chair Yoga' },
+                                ].map((item, index) => (
+                                    <motion.div
+                                        key={`amblebrook-${index}`}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: index * 0.05 }}
+                                        className="group grid grid-cols-1 md:grid-cols-3 gap-4 bg-white border border-charcoal/5 p-8 hover:border-charcoal/20 transition-all"
+                                    >
+                                        <h4 className="font-serif text-xl text-charcoal tracking-wide uppercase group-hover:italic transition-all">
+                                            {item.day}
+                                        </h4>
+                                        <p className="text-charcoal/80 font-sans text-sm tracking-wide">
+                                            {item.time}
+                                        </p>
+                                        <p className="text-charcoal/60 lowercase italic text-sm">
+                                            {item.class}
+                                        </p>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Brunswick Section */}
+                        <div className="space-y-8">
+                            <div className="flex items-center gap-6">
+                                <h3 className="text-xl font-serif text-charcoal uppercase tracking-[0.2em]">Brunswick</h3>
+                                <div className="h-[1px] flex-grow bg-charcoal/10" />
+                                <span className="text-[10px] uppercase tracking-widest text-charcoal/40 font-bold">Roots & River Yoga</span>
+                            </div>
+                            <div className="grid grid-cols-1 gap-4 md:gap-6">
+                                {[
+                                    { day: 'Tuesday', time: '12:00-1:00pm', class: 'Slow Vinyasa Flow' },
+                                ].map((item, index) => (
+                                    <motion.div
+                                        key={`brunswick-${index}`}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.3 + index * 0.05 }}
+                                        className="group grid grid-cols-1 md:grid-cols-3 gap-4 bg-white border border-charcoal/5 p-8 hover:border-charcoal/20 transition-all"
+                                    >
+                                        <h4 className="font-serif text-xl text-charcoal tracking-wide uppercase group-hover:italic transition-all">
+                                            {item.day}
+                                        </h4>
+                                        <p className="text-charcoal/80 font-sans text-sm tracking-wide">
+                                            {item.time}
+                                        </p>
+                                        <p className="text-charcoal/60 lowercase italic text-sm">
+                                            {item.class}
+                                        </p>
+                                    </motion.div>
+                                ))}
+                            </div>
+                            <div className="pt-4 text-center">
+                                <a
+                                    href="https://www.rootsandriveryoga.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[10px] uppercase tracking-[0.4em] font-bold text-charcoal/40 hover:text-charcoal transition-all border-b border-charcoal/10 pb-1"
+                                >
+                                    Visit Roots & River Yoga →
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 

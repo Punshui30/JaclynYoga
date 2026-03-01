@@ -21,22 +21,28 @@ export default function BrunswickPage() {
                     <div className="bg-white p-16 md:p-24 border border-charcoal/10 flex flex-col justify-between group hover:border-charcoal/20 transition-all duration-700 h-full">
                         <div className="space-y-8">
                             <h3 className="text-2xl font-serif text-charcoal uppercase tracking-widest">Slow Vinyasa Flow</h3>
-                            <div className="space-y-6 pt-4 text-charcoal/60 text-sm leading-relaxed lowercase italic">
-                                <p>I offer the class:</p>
-                                <ul className="space-y-4 list-none pl-0">
-                                    <li className="flex items-center gap-3">
-                                        <span className="w-1 h-1 bg-sage rounded-full flex-shrink-0"></span>
-                                        In-person
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <span className="w-1 h-1 bg-sage rounded-full flex-shrink-0"></span>
-                                        Live via Zoom
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <span className="w-1 h-1 bg-sage rounded-full flex-shrink-0"></span>
-                                        Or you can receive a link to a recording good for 6 days!
-                                    </li>
-                                </ul>
+                            <div className="space-y-6 pt-4">
+                                <div className="space-y-2">
+                                    <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-charcoal/30">Tuesdays</p>
+                                    <p className="text-charcoal/60 text-sm lowercase italic">12:00pm - 1:00pm</p>
+                                </div>
+                                <div className="space-y-4 pt-4 text-charcoal/60 text-sm leading-relaxed lowercase italic">
+                                    <p>I offer this class:</p>
+                                    <ul className="space-y-3 list-none pl-0">
+                                        <li className="flex items-center gap-3">
+                                            <span className="w-1 h-1 bg-sage rounded-full flex-shrink-0"></span>
+                                            In-person at Roots & River
+                                        </li>
+                                        <li className="flex items-center gap-3">
+                                            <span className="w-1 h-1 bg-sage rounded-full flex-shrink-0"></span>
+                                            Live via Zoom
+                                        </li>
+                                        <li className="flex items-center gap-3">
+                                            <span className="w-1 h-1 bg-sage rounded-full flex-shrink-0"></span>
+                                            Recording valid for 6 days
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div className="pt-16">

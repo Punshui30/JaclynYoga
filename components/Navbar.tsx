@@ -11,6 +11,7 @@ const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Offerings', href: '/services' },
+    { name: 'Brunswick', href: '/brunswick' },
     { name: 'Contact', href: '/contact' },
     { name: 'Schedule', href: '/schedule' },
     { name: 'Amblebrook', href: '/amblebrook' },
@@ -49,7 +50,7 @@ export function Navbar() {
 
                     {/* DESKTOP NAV */}
                     <div className="hidden md:flex items-center gap-6 lg:gap-10">
-                        {navLinks.filter(link => link.name !== 'Home' && link.name !== 'Amblebrook').map((link) => (
+                        {navLinks.filter(link => link.name !== 'Home' && link.name !== 'Amblebrook' && link.name !== 'Brunswick').map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
@@ -61,6 +62,17 @@ export function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
+                        <Link
+                            href="/brunswick"
+                            className={cn(
+                                "text-[10px] lg:text-[11px] uppercase tracking-[0.3em] font-bold transition-all px-6 py-2 border",
+                                pathname === '/brunswick'
+                                    ? "bg-charcoal text-white border-charcoal"
+                                    : "bg-transparent text-charcoal/60 border-charcoal/20 hover:border-charcoal hover:text-charcoal"
+                            )}
+                        >
+                            Brunswick
+                        </Link>
                         <Link
                             href="/amblebrook"
                             className={cn(

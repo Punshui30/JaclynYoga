@@ -7,7 +7,8 @@ import { Mail, Instagram } from 'lucide-react';
 const footerLinks = [
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Private Session', href: '/amblebrook/private-session' },
+    { name: 'Amblebrook', href: '/amblebrook' },
+    { name: 'Brunswick', href: '/brunswick' },
     { name: 'Class Schedule', href: '/schedule' },
 ];
 

@@ -39,20 +39,37 @@ export default function AmblebrookPage() {
                         </div>
                     </div>
 
-                    {/* Info Card or Placeholder */}
+                    {/* Info Card */}
                     <div className="bg-white p-16 md:p-24 border border-charcoal/10 flex flex-col justify-between group hover:border-charcoal/20 transition-all duration-700">
                         <div className="space-y-8">
                             <h3 className="text-2xl font-serif text-charcoal uppercase tracking-widest">Community Classes</h3>
-                            <p className="text-charcoal/50 text-sm leading-relaxed lowercase italic">
-                                view the schedule for upcoming group classes held at the Rock Creek Fitness Center in the Movement Studio.
-                            </p>
+                            <div className="space-y-6 pt-4">
+                                <div className="space-y-2">
+                                    <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-charcoal/30">Monday</p>
+                                    <p className="text-charcoal/60 text-sm lowercase italic">12:00-12:50pm • Chair Yoga</p>
+                                    <p className="text-charcoal/60 text-sm lowercase italic">1:15-2:30pm • Yin Yoga</p>
+                                </div>
+                                <div className="space-y-2">
+                                    <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-charcoal/30">Wednesday</p>
+                                    <p className="text-charcoal/60 text-sm lowercase italic">10:15-11:30am • Gentle Yoga</p>
+                                    <p className="text-charcoal/60 text-sm lowercase italic">12:00-12:50pm • Chair Yoga</p>
+                                </div>
+                                <div className="space-y-2">
+                                    <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-charcoal/30">Friday</p>
+                                    <p className="text-charcoal/60 text-sm lowercase italic">10:15-11:30am • Slow Flow Yoga</p>
+                                    <p className="text-charcoal/60 text-sm lowercase italic">12:00-12:50pm • Chair Yoga</p>
+                                </div>
+                            </div>
                         </div>
                         <div className="pt-16">
+                            <p className="text-[10px] text-charcoal/40 font-serif italic mb-6">
+                                Book via the Resident Portal or Movement Studio.
+                            </p>
                             <Link
                                 href="/schedule"
                                 className="inline-block text-[10px] uppercase tracking-[0.5em] font-bold text-charcoal/40 hover:text-charcoal transition-all border-b border-charcoal/10 pb-2"
                             >
-                                View Schedule
+                                View Full Schedule
                             </Link>
                         </div>
                     </div>

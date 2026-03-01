@@ -60,6 +60,12 @@ export function HeroSection() {
                     <Link href="/contact" className="hover:text-charcoal transition-colors">Contact</Link>
                     <Link href="/schedule" className="hover:text-charcoal transition-colors">Schedule</Link>
                     <Link
+                        href="/brunswick"
+                        className="font-bold hover:opacity-60 transition-opacity"
+                    >
+                        Brunswick
+                    </Link>
+                    <Link
                         href="/amblebrook"
                         className="font-bold hover:opacity-60 transition-opacity max-w-[120px] md:max-w-none ml-auto"
                     >
@@ -72,9 +78,9 @@ export function HeroSection() {
             <div className="relative flex flex-col items-center justify-between h-[90vh] w-full z-20 pointer-events-none pt-2 pb-8">
 
                 {/* LOGO (ABOVE HER) - LIFTED FOR HEAD CLEARANCE */}
-                <div className="relative flex flex-col items-center justify-center gap-0.5 z-30 pointer-events-auto mt-[-14vh] md:mt-[-5vh]">
+                <div className="relative flex flex-col items-center justify-center gap-0.5 z-30 pointer-events-auto mt-[-8vh] md:mt-[-2vh]">
                     {/* HAMSA ICON (Cropped) */}
-                    <div className="relative w-[320px] md:w-[380px] h-[320px] md:h-[380px] mb-[-4vh]">
+                    <div className="relative w-[240px] md:w-[280px] h-[240px] md:h-[280px] mb-[-4vh]">
                         <Image
                             src="/images/logo-icon.png"
                             alt="Jaclyn Muir Hamsa"
@@ -99,7 +105,7 @@ export function HeroSection() {
                         x: translateX, y: combinedY,
                         perspective: 1000
                     }}
-                    className="relative w-full max-w-[42vh] h-[42vh] md:max-w-[65vh] md:h-[65vh] pointer-events-auto flex justify-center items-end"
+                    className="relative w-full max-w-[50vh] h-[50vh] md:max-w-[75vh] md:h-[75vh] pointer-events-auto flex justify-center items-end"
                 >
                     {/* WARM GLOW (Backlight) - Subtle/Premium */}
                     <div
