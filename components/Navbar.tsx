@@ -50,7 +50,7 @@ export function Navbar() {
 
                     {/* DESKTOP NAV */}
                     <div className="hidden md:flex items-center gap-6 lg:gap-10">
-                        {navLinks.filter(link => link.name !== 'Home' && link.name !== 'Amblebrook' && link.name !== 'Brunswick').map((link) => (
+                        {navLinks.filter(link => link.name !== 'Home' && link.name !== 'Amblebrook' && link.name !== 'Contact' && link.name !== 'Schedule').map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
@@ -63,15 +63,26 @@ export function Navbar() {
                             </Link>
                         ))}
                         <Link
-                            href="/brunswick"
+                            href="/contact"
                             className={cn(
                                 "text-[10px] lg:text-[11px] uppercase tracking-[0.3em] font-bold transition-all px-6 py-2 border",
-                                pathname === '/brunswick'
+                                pathname === '/contact'
                                     ? "bg-charcoal text-white border-charcoal"
                                     : "bg-transparent text-charcoal/60 border-charcoal/20 hover:border-charcoal hover:text-charcoal"
                             )}
                         >
-                            Brunswick
+                            Contact
+                        </Link>
+                        <Link
+                            href="/schedule"
+                            className={cn(
+                                "text-[10px] lg:text-[11px] uppercase tracking-[0.3em] font-bold transition-all px-6 py-2 border",
+                                pathname === '/schedule'
+                                    ? "bg-charcoal text-white border-charcoal"
+                                    : "bg-transparent text-charcoal/60 border-charcoal/20 hover:border-charcoal hover:text-charcoal"
+                            )}
+                        >
+                            Schedule
                         </Link>
                         <Link
                             href="/amblebrook"

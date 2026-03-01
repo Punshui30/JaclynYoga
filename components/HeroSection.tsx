@@ -54,17 +54,11 @@ export function HeroSection() {
                 <nav className="flex flex-col gap-10 md:gap-14 text-[9px] md:text-[13px] tracking-[0.15em] md:tracking-[0.25em] text-[#3a3a3a] uppercase font-medium pointer-events-auto">
                     <Link href="/about" className="hover:opacity-60 transition-opacity">About</Link>
                     <Link href="/services" className="hover:opacity-60 transition-opacity">Offerings</Link>
-
+                    <Link href="/brunswick" className="hover:opacity-60 transition-opacity">Brunswick</Link>
                 </nav>
                 <nav className="flex flex-col gap-10 md:gap-14 text-[9px] md:text-[13px] tracking-[0.15em] md:tracking-[0.25em] text-[#3a3a3a] uppercase font-medium pointer-events-auto text-right">
                     <Link href="/contact" className="hover:text-charcoal transition-colors">Contact</Link>
                     <Link href="/schedule" className="hover:text-charcoal transition-colors">Schedule</Link>
-                    <Link
-                        href="/brunswick"
-                        className="font-bold hover:opacity-60 transition-opacity"
-                    >
-                        Brunswick
-                    </Link>
                     <Link
                         href="/amblebrook"
                         className="font-bold hover:opacity-60 transition-opacity max-w-[120px] md:max-w-none ml-auto"
